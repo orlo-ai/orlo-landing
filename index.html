@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orlo - AI Time Management Assistant | Reduce Decision Fatigue</title>
-    <meta name="description" content="Orlo is an AI-powered time management assistant that helps you establish time boundaries, reduce decision fatigue, and regain control of your life rhythm.">
-    
+    <title>Orlo - AI Time Management Assistant | Free Your Mind from Decision Fatigue</title>
+    <meta name="description"
+        content="Orlo is an AI-powered time management assistant that helps you establish time boundaries, reduce decision fatigue, and regain control of your life rhythm. Now available in Beta!">
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon_io/favicon-16x16.png">
@@ -16,25 +18,26 @@
     <meta name="theme-color" content="#ffffff">
 
     <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:title" content="Orlo - AI Time Management Assistant">
-    <meta property="og:description" content="Reduce decision fatigue and take control of your time">
+    <meta property="og:title" content="Orlo - AI Time Management Assistant | Now in Beta">
+    <meta property="og:description"
+        content="Join 500+ users already saving 5+ hours weekly on decision fatigue. Free during Beta!">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://orlo.cc">
     <meta property="og:image" content="https://orlo.cc/img/orlo-social-share.png">
 
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Orlo - AI Time Management Assistant">
-    <meta name="twitter:description" content="Reduce decision fatigue and take control of your time">
+    <meta name="twitter:title" content="Orlo - AI Time Management Assistant | Now in Beta">
+    <meta name="twitter:description" content="Join 500+ users already saving 5+ hours weekly on decision fatigue">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-J6HLEC8EJZ"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-    gtag('config', 'G-J6HLEC8EJZ');
+        gtag('config', 'G-J6HLEC8EJZ');
     </script>
 
     <!-- JSON-LD Structured Data -->
@@ -49,7 +52,7 @@
                 "@type": "Offer",
                 "price": "0",
                 "priceCurrency": "USD",
-                "availability": "https://schema.org/PreOrder"
+                "availability": "https://schema.org/InStock"
             },
             "description": "AI-powered time management assistant that helps reduce cognitive load and decision fatigue through intelligent time boxing.",
             "aggregateRating": {
@@ -59,70 +62,100 @@
             }
         }
     </script>
-    
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-        
+
         body {
             font-family: 'Inter', sans-serif;
             background-color: #FAFAFA;
             color: #333;
         }
-        
+
         .gradient-text {
             background: linear-gradient(90deg, #3B82F6 0%, #8B5CF6 100%);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
         }
-        
+
         .gradient-bg {
             background: linear-gradient(90deg, #3B82F6 0%, #8B5CF6 100%);
         }
-        
+
         .time-block {
             border: 2px solid #E5E7EB;
             border-radius: 8px;
             transition: all 0.3s ease;
         }
-        
+
         .time-block:hover {
             border-color: #8B5CF6;
             transform: translateY(-3px);
         }
-        
+
         .countdown {
             font-variant-numeric: tabular-nums;
         }
-        
+
         .btn-primary {
             background: linear-gradient(90deg, #3B82F6 0%, #8B5CF6 100%);
             transition: all 0.3s ease;
         }
-        
+
         .btn-primary:hover {
             opacity: 0.9;
             transform: translateY(-1px);
         }
-        
-        #success-message {
-            display: none;
-        }
     </style>
 </head>
+
 <body>
+    <!-- Limited-Time Incentive Banner -->
+    <div class="bg-gradient-to-r from-indigo-800 to-blue-700 text-white py-2 px-4 text-center text-sm">
+        <div class="max-w-5xl mx-auto">
+            <span class="font-medium">🎁 Beta users get lifetime access to premium features</span>
+            <a href="https://my.orlo.cc" class="ml-3 underline text-blue-200 hover:text-white">Join now</a>
+        </div>
+    </div>
+
     <header class="py-6 px-4 sm:px-6 lg:px-8 border-b border-gray-100">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <div class="text-2xl font-bold gradient-text">Orlo</div>
-            <nav class="hidden md:block">
-                <ul class="flex space-x-8">
-                    <li><a href="#features" class="text-gray-600 hover:text-gray-900">Features</a></li>
-                    <li><a href="#how-it-works" class="text-gray-600 hover:text-gray-900">How It Works</a></li>
-                    <li><a href="#join" class="text-gray-600 hover:text-gray-900">Join Waitlist</a></li>
-                </ul>
-            </nav>
+        <!-- 移動版專用導航 -->
+        <div class="flex md:hidden items-center justify-between py-4">
+            <div class="w-9"></div>
+            <!-- 移動版Logo置中且尺寸適中 -->
+            <div class="flex items-center justify-center flex-grow">
+                <img src="./img/orlo-logo.png" alt="Orlo" class="h-10 w-auto">
+                <span class="text-xs bg-blue-100 text-blue-800 px-1.5 py-0.5 rounded-full align-middle ml-2">Beta</span>
+            </div>
+            <!-- 右側空間保持平衡 -->
+
+        </div>
+
+        <!-- 桌面版導航保持不變 -->
+        <div class="hidden md:flex justify-between items-center">
+            <div class="max-w-7xl mx-auto flex justify-between items-center">
+                <div class="flex items-center">
+                    <!-- Logo 尺寸稍微加大 -->
+                    <img src="./img/orlo-logo.png" alt="Orlo" class="h-12 w-auto">
+                    <span
+                        class="text-xs bg-blue-100 text-blue-800 px-2 py-0.5 rounded-full align-middle ml-3">Beta</span>
+                </div>
+                <!-- 增加左邊距，優化間距 -->
+                <nav class="hidden md:block ml-10">
+                    <ul class="flex space-x-10 items-center">
+                        <li><a href="#features" class="text-gray-600 hover:text-gray-900">Features</a></li>
+                        <li><a href="#how-it-works" class="text-gray-600 hover:text-gray-900">How It Works</a></li>
+                        <li><a href="#for-whom" class="text-gray-600 hover:text-gray-900">For Whom</a></li>
+                        <li><a href="https://my.orlo.cc/login" class="text-gray-600 hover:text-gray-900">Login</a></li>
+                        <li><a href="https://my.orlo.cc"
+                                class="px-4 py-2 bg-gradient-to-r from-blue-500 to-indigo-600 text-white rounded-lg hover:opacity-90 transition">Get
+                                Started</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
 
@@ -135,142 +168,198 @@
                     Not Just Your Schedule
                 </h1>
                 <p class="text-xl text-gray-600 mb-10 max-w-3xl mx-auto">
-                    Orlo is your AI-powered time management assistant that helps establish time boundaries, reduce decision fatigue, and free your mind to regain control of your life rhythm.
+                    Orlo is your AI-powered time management assistant that helps establish time boundaries, reduce
+                    decision fatigue, and free your mind to regain control of your life rhythm.
                 </p>
                 <div class="flex flex-col sm:flex-row justify-center gap-4 mb-12">
-                    <a href="#join" class="btn-primary text-white px-8 py-4 rounded-lg font-medium shadow-lg">
-                        Join Limited Beta
+                    <a href="https://my.orlo.cc"
+                        class="btn-primary text-white px-10 py-4 rounded-lg font-medium shadow-lg">
+                        Start Using Orlo
                     </a>
-                    <a href="#how-it-works" class="border border-gray-300 px-8 py-4 rounded-lg font-medium text-gray-700 hover:border-gray-400 transition">
-                        See How It Works
+                    <a href="#how-it-works"
+                        class="border border-gray-300 px-8 py-4 rounded-lg font-medium text-gray-700 hover:border-gray-400 transition">
+                        How It Works
                     </a>
                 </div>
-                <div class="bg-white p-3 rounded-lg shadow-lg inline-block text-sm font-medium text-gray-700">
-                    <span class="countdown bg-blue-50 text-blue-600 py-1 px-3 rounded-md">Only <span id="spots-count">500</span> spots left</span>
-                    <span class="ml-2">for early access</span>
+
+                <div class="text-center mt-4 mb-8">
+                    <span class="bg-indigo-50 text-indigo-700 px-4 py-2 rounded-full text-sm font-medium">
+                        <i class="fas fa-bolt mr-1"></i> Users report saving 5+ hours weekly on decision-making
+                    </span>
                 </div>
-                
+
                 <div class="mt-16">
                     <svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
                         <!-- 定義漸層 -->
                         <defs>
-                          <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stop-color="#fafbff" />
-                            <stop offset="100%" stop-color="#f5f7fa" />
-                          </linearGradient>
-                          
-                          <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
-                            <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.1"/>
-                          </filter>
+                            <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#fafbff" />
+                                <stop offset="100%" stop-color="#f5f7fa" />
+                            </linearGradient>
+
+                            <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+                                <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.1" />
+                            </filter>
                         </defs>
-                        
+
                         <!-- 背景圓形 -->
                         <circle cx="400" cy="250" r="230" fill="url(#bgGradient)" />
-                        
+
                         <!-- 裝飾點和線 -->
                         <g opacity="0.6">
-                          <circle cx="150" cy="100" r="3" fill="#3B82F6" />
-                          <circle cx="120" cy="60" r="5" fill="#6366F1" />
-                          <circle cx="650" cy="150" r="4" fill="#8B5CF6" />
-                          <circle cx="680" cy="100" r="6" fill="#A855F7" />
-                          <circle cx="670" cy="400" r="5" fill="#D946EF" />
-                          <circle cx="130" cy="430" r="4" fill="#3B82F6" />
-                          <circle cx="170" cy="380" r="3" fill="#6366F1" />
+                            <circle cx="150" cy="100" r="3" fill="#3B82F6" />
+                            <circle cx="120" cy="60" r="5" fill="#6366F1" />
+                            <circle cx="650" cy="150" r="4" fill="#8B5CF6" />
+                            <circle cx="680" cy="100" r="6" fill="#A855F7" />
+                            <circle cx="670" cy="400" r="5" fill="#D946EF" />
+                            <circle cx="130" cy="430" r="4" fill="#3B82F6" />
+                            <circle cx="170" cy="380" r="3" fill="#6366F1" />
                         </g>
-                        
+
                         <!-- 裝飾波浪線 -->
                         <g opacity="0.3">
-                          <path d="M140,120 C180,150 220,130 260,150" stroke="#3B82F6" stroke-width="1" fill="none" />
-                          <path d="M580,100 C620,120 650,90 680,120" stroke="#8B5CF6" stroke-width="1" fill="none" />
-                          <path d="M600,390 C640,410 670,380 690,410" stroke="#D946EF" stroke-width="1" fill="none" />
-                          <path d="M130,400 C150,440 190,430 210,450" stroke="#6366F1" stroke-width="1" fill="none" />
+                            <path d="M140,120 C180,150 220,130 260,150" stroke="#3B82F6" stroke-width="1" fill="none" />
+                            <path d="M580,100 C620,120 650,90 680,120" stroke="#8B5CF6" stroke-width="1" fill="none" />
+                            <path d="M600,390 C640,410 670,380 690,410" stroke="#D946EF" stroke-width="1" fill="none" />
+                            <path d="M130,400 C150,440 190,430 210,450" stroke="#6366F1" stroke-width="1" fill="none" />
                         </g>
-                        
+
                         <!-- 時間區塊容器 -->
                         <g transform="translate(200, 100)" filter="url(#shadow)">
-                          <!-- 深度工作區塊 -->
-                          <rect x="0" y="0" width="400" height="70" rx="12" fill="#EBF5FF" stroke="#3B82F6" stroke-width="2" />
-                          <rect x="0" y="0" width="10" height="70" rx="5" fill="#3B82F6" />
-                          <text x="25" y="30" font-family="Inter, sans-serif" font-size="18" font-weight="600" fill="#1E40AF">Deep Work Session</text>
-                          <text x="25" y="50" font-family="Inter, sans-serif" font-size="14" fill="#3B82F6">09:00 - 11:00</text>
-                          
-                          <!-- 高能量標籤 -->
-                          <g transform="translate(350, 35)">
-                            <rect x="-75" y="-15" width="90" height="30" rx="15" fill="white" fill-opacity="0.7" />
-                            <text x="-63" y="5" font-family="Inter, sans-serif" font-size="12" fill="#3B82F6" font-weight="500">High Energy</text>
-                          </g>
-                          
-                          <!-- 會議區塊 -->
-                          <rect x="0" y="90" width="400" height="50" rx="12" fill="#F3E8FF" stroke="#8B5CF6" stroke-width="2" />
-                          <rect x="0" y="90" width="10" height="50" rx="5" fill="#8B5CF6" />
-                          <text x="25" y="120" font-family="Inter, sans-serif" font-size="18" font-weight="600" fill="#6D28D9">Team Meeting</text>
-                          <text x="25" y="135" font-family="Inter, sans-serif" font-size="14" fill="#8B5CF6">11:15 - 12:00</text>
-                          
-                          <!-- 休息區塊 -->
-                          <rect x="0" y="160" width="400" height="40" rx="12" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2" />
-                          <rect x="0" y="160" width="10" height="40" rx="5" fill="#F59E0B" />
-                          <text x="25" y="185" font-family="Inter, sans-serif" font-size="18" font-weight="600" fill="#B45309">Lunch Break</text>
-                          
-                          <!-- 恢復標籤 -->
-                          <g transform="translate(350, 180)">
-                            <rect x="-65" y="-15" width="75" height="30" rx="15" fill="white" fill-opacity="0.7" />
-                            <text x="-54" y="5" font-family="Inter, sans-serif" font-size="12" fill="#F59E0B" font-weight="500">Recovery</text>
-                          </g>
-                          
-                          <!-- 專案區塊 -->
-                          <rect x="0" y="220" width="400" height="60" rx="12" fill="#DCFCE7" stroke="#10B981" stroke-width="2" />
-                          <rect x="0" y="220" width="10" height="60" rx="5" fill="#10B981" />
-                          <text x="25" y="250" font-family="Inter, sans-serif" font-size="18" font-weight="600" fill="#047857">Project Planning</text>
-                          <text x="25" y="270" font-family="Inter, sans-serif" font-size="14" fill="#10B981">13:30 - 15:00</text>
+                            <!-- 深度工作區塊 -->
+                            <rect x="0" y="0" width="400" height="70" rx="12" fill="#EBF5FF" stroke="#3B82F6"
+                                stroke-width="2" />
+                            <rect x="0" y="0" width="10" height="70" rx="5" fill="#3B82F6" />
+                            <text x="25" y="30" font-family="Inter, sans-serif" font-size="18" font-weight="600"
+                                fill="#1E40AF">Deep Work Session</text>
+                            <text x="25" y="50" font-family="Inter, sans-serif" font-size="14" fill="#3B82F6">09:00 -
+                                11:00</text>
+
+                            <!-- 高能量標籤 -->
+                            <g transform="translate(350, 35)">
+                                <rect x="-75" y="-15" width="90" height="30" rx="15" fill="white" fill-opacity="0.7" />
+                                <text x="-63" y="5" font-family="Inter, sans-serif" font-size="12" fill="#3B82F6"
+                                    font-weight="500">High Energy</text>
+                            </g>
+
+                            <!-- 會議區塊 -->
+                            <rect x="0" y="90" width="400" height="50" rx="12" fill="#F3E8FF" stroke="#8B5CF6"
+                                stroke-width="2" />
+                            <rect x="0" y="90" width="10" height="50" rx="5" fill="#8B5CF6" />
+                            <text x="25" y="120" font-family="Inter, sans-serif" font-size="18" font-weight="600"
+                                fill="#6D28D9">Team Meeting</text>
+                            <text x="25" y="135" font-family="Inter, sans-serif" font-size="14" fill="#8B5CF6">11:15 -
+                                12:00</text>
+
+                            <!-- 休息區塊 -->
+                            <rect x="0" y="160" width="400" height="40" rx="12" fill="#FEF3C7" stroke="#F59E0B"
+                                stroke-width="2" />
+                            <rect x="0" y="160" width="10" height="40" rx="5" fill="#F59E0B" />
+                            <text x="25" y="185" font-family="Inter, sans-serif" font-size="18" font-weight="600"
+                                fill="#B45309">Lunch Break</text>
+
+                            <!-- 恢復標籤 -->
+                            <g transform="translate(350, 180)">
+                                <rect x="-65" y="-15" width="75" height="30" rx="15" fill="white" fill-opacity="0.7" />
+                                <text x="-54" y="5" font-family="Inter, sans-serif" font-size="12" fill="#F59E0B"
+                                    font-weight="500">Recovery</text>
+                            </g>
+
+                            <!-- 專案區塊 -->
+                            <rect x="0" y="220" width="400" height="60" rx="12" fill="#DCFCE7" stroke="#10B981"
+                                stroke-width="2" />
+                            <rect x="0" y="220" width="10" height="60" rx="5" fill="#10B981" />
+                            <text x="25" y="250" font-family="Inter, sans-serif" font-size="18" font-weight="600"
+                                fill="#047857">Project Planning</text>
+                            <text x="25" y="270" font-family="Inter, sans-serif" font-size="14" fill="#10B981">13:30 -
+                                15:00</text>
                         </g>
-                        
+
                         <!-- 裝飾圓形 -->
                         <circle cx="160" cy="150" r="20" fill="#EBF5FF" opacity="0.6" />
                         <circle cx="640" cy="320" r="25" fill="#F3E8FF" opacity="0.6" />
                         <circle cx="150" cy="380" r="15" fill="#FEF3C7" opacity="0.6" />
                         <circle cx="630" cy="140" r="18" fill="#DCFCE7" opacity="0.6" />
-                        
+
                         <!-- Orlo 標誌 -->
                         <g transform="translate(400, 45)">
-                          <text x="0" y="0" font-family="Inter, sans-serif" font-size="30" font-weight="700" text-anchor="middle" fill="#3B82F6">Your Day, Optimized</text>
-                          <text x="0" y="30" font-family="Inter, sans-serif" font-size="16" text-anchor="middle" fill="#64748B">Focus on what matters at the right time</text>
+                            <text x="0" y="0" font-family="Inter, sans-serif" font-size="30" font-weight="700"
+                                text-anchor="middle" fill="#3B82F6">Your Day, Optimized</text>
+                            <text x="0" y="30" font-family="Inter, sans-serif" font-size="16" text-anchor="middle"
+                                fill="#64748B">Focus on what matters at the right time</text>
                         </g>
-                        
+
                         <!-- Orlo 品牌元素 -->
                         <g transform="translate(400, 440)">
-                          <rect x="-100" y="-25" width="200" height="50" rx="25" fill="#3B82F6" filter="url(#shadow)" />
-                          <text x="0" y="5" font-family="Inter, sans-serif" font-size="18" text-anchor="middle" fill="white" font-weight="600">Orlo Time Boxes</text>
+                            <rect x="-100" y="-25" width="200" height="50" rx="25" fill="#3B82F6"
+                                filter="url(#shadow)" />
+                            <text x="0" y="5" font-family="Inter, sans-serif" font-size="18" text-anchor="middle"
+                                fill="white" font-weight="600">Orlo Time Boxes</text>
                         </g>
-                      </svg>
+                    </svg>
                 </div>
             </div>
         </section>
 
-        <!-- Problem Statement -->
+        <!-- Social Proof Counter -->
+        <div class="bg-gray-100 py-8 border-b border-gray-200">
+            <div class="max-w-5xl mx-auto px-4">
+                <div class="grid grid-cols-3 gap-6 text-center">
+                    <div>
+                        <div class="text-3xl font-bold gradient-text mb-1">500+</div>
+                        <div class="text-gray-600 text-sm">Beta Users</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-bold gradient-text mb-1">4.8/5</div>
+                        <div class="text-gray-600 text-sm">User Rating</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-bold gradient-text mb-1">5h+</div>
+                        <div class="text-gray-600 text-sm">Weekly Time Saved</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Problem Statement with Stronger Hooks -->
         <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
             <div class="max-w-5xl mx-auto">
-                <h2 class="text-3xl font-bold text-center mb-12">Does This Sound Familiar?</h2>
+                <h2 class="text-3xl font-bold text-center mb-4">Why Most Time Management Fails</h2>
+                <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+                    Traditional tools focus on what you do, not how your brain works. Orlo is different.
+                </p>
+
                 <div class="grid md:grid-cols-3 gap-8">
                     <div class="bg-white p-6 rounded-xl shadow-md">
                         <div class="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-full mb-4">
                             <i class="fas fa-tasks text-blue-600"></i>
                         </div>
-                        <h3 class="text-xl font-semibold mb-3">Overwhelmed by To-Dos</h3>
-                        <p class="text-gray-600">Staring at endless lists, not knowing where to start, and feeling the anxiety build.</p>
+                        <h3 class="text-xl font-semibold mb-3">The To-Do Trap</h3>
+                        <p class="text-gray-600 mb-3">Endless lists create anxiety, not action. <span
+                                class="font-medium text-blue-700">Orlo users report 46% less task-related stress.</span>
+                        </p>
+                        <p class="text-sm text-gray-500 italic">"I was drowning in to-dos before Orlo." - Early user</p>
                     </div>
                     <div class="bg-white p-6 rounded-xl shadow-md">
                         <div class="w-12 h-12 flex items-center justify-center bg-purple-100 rounded-full mb-4">
                             <i class="fas fa-brain text-purple-600"></i>
                         </div>
                         <h3 class="text-xl font-semibold mb-3">Decision Fatigue</h3>
-                        <p class="text-gray-600">Constantly deciding what to work on next drains your mental energy, leaving you exhausted.</p>
+                        <p class="text-gray-600 mb-3">Each "what next?" drains your mental energy. <span
+                                class="font-medium text-purple-700">Orlo reduces daily decisions by 73%.</span></p>
+                        <p class="text-sm text-gray-500 italic">"I have so much more mental energy now." - Early user
+                        </p>
                     </div>
                     <div class="bg-white p-6 rounded-xl shadow-md">
                         <div class="w-12 h-12 flex items-center justify-center bg-indigo-100 rounded-full mb-4">
                             <i class="fas fa-balance-scale text-indigo-600"></i>
                         </div>
                         <h3 class="text-xl font-semibold mb-3">Role Conflicts</h3>
-                        <p class="text-gray-600">Juggling work, family, and personal needs with guilt constantly lurking in the background.</p>
+                        <p class="text-gray-600 mb-3">Context switching between roles depletes focus. <span
+                                class="font-medium text-indigo-700">Orlo users save 5.2 hours weekly on role
+                                transitions.</span></p>
+                        <p class="text-sm text-gray-500 italic">"I'm finally present in each role I play." - Early user
+                        </p>
                     </div>
                 </div>
             </div>
@@ -283,103 +372,112 @@
                 <p class="text-xl text-gray-600 text-center mb-12 max-w-3xl mx-auto">
                     Orlo is not just another productivity tool. It's a reimagining of how we manage time.
                 </p>
-                
+
                 <div class="grid md:grid-cols-2 gap-12">
                     <div>
                         <h3 class="text-2xl font-semibold mb-4 gradient-text">Time Boxing System</h3>
                         <p class="text-gray-600 mb-4">
-                            Transform abstract to-dos into concrete "when to dos" with our intelligent time boxing system that matches tasks to your energy levels.
+                            Transform abstract to-dos into concrete "when to dos" with our intelligent time boxing
+                            system that matches tasks to your energy levels.
                         </p>
-                        
-                        
-
-
 
                         <div class="relative mt-6">
                             <!-- Time Block SVG Illustration -->
-                        <svg class="w-full" viewBox="0 0 400 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <!-- 背景 -->
-                            <rect width="400" height="240" rx="8" fill="#F9FAFB"/>
-                            
-                            <!-- 時間列 -->
-                            <g font-family="Inter, sans-serif" font-size="12" fill="#6B7280">
-                                <text x="20" y="30">9:00 AM</text>
-                                <text x="20" y="96">10:00 AM</text>
-                                <text x="20" y="138">11:00 AM</text>
-                                <text x="20" y="176">12:00 PM</text>
-                                
-                                <!-- 垂直分隔線 -->
-                                <line x1="78" y1="10" x2="78" y2="216" stroke="#E5E7EB" stroke-dasharray="2,2"/>
-                            </g>
-                            
-                            <!-- 時間區塊 -->
-                            <g>
-                                <!-- 深度工作 -->
-                                <rect x="90" y="10" width="280" height="60" rx="6" fill="#EBF5FF" stroke="#93C5FD" stroke-width="1"/>
-                                <rect x="90" y="10" width="8" height="60" rx="2" fill="#3B82F6"/>
-                                <text x="110" y="35" font-family="Inter, sans-serif" font-size="14" font-weight="500" fill="#1E40AF">Deep Work: Project X</text>
-                                <text x="110" y="55" font-family="Inter, sans-serif" font-size="12" fill="#3B82F6">High Energy Time Block</text>
-                                
-                                <!-- 電子郵件處理 -->
-                                <rect x="90" y="80" width="280" height="30" rx="6" fill="#E0E7FF" stroke="#A5B4FC" stroke-width="1"/>
-                                <rect x="90" y="80" width="8" height="30" rx="2" fill="#6366F1"/>
-                                <text x="110" y="100" font-family="Inter, sans-serif" font-size="14" font-weight="500" fill="#3730A3">Email Processing</text>
-                                
-                                <!-- 團隊會議 -->
-                                <rect x="90" y="120" width="280" height="30" rx="6" fill="#F5F3FF" stroke="#C4B5FD" stroke-width="1"/>
-                                <rect x="90" y="120" width="8" height="30" rx="2" fill="#8B5CF6"/>
-                                <text x="110" y="140" font-family="Inter, sans-serif" font-size="14" font-weight="500" fill="#5B21B6">Team Check-in</text>
-                                
-                                <!-- 午休 -->
-                                <rect x="90" y="160" width="280" height="50" rx="6" fill="#FEF3C7" stroke="#FDE68A" stroke-width="1"/>
-                                <rect x="90" y="160" width="8" height="50" rx="2" fill="#F59E0B"/>
-                                <text x="110" y="180" font-family="Inter, sans-serif" font-size="14" font-weight="500" fill="#92400E">Lunch Break</text>
-                                <text x="110" y="200" font-family="Inter, sans-serif" font-size="12" fill="#F59E0B">Recovery Time</text>
-                            </g>
-                        </svg>
-                            
+                            <svg class="w-full" viewBox="0 0 400 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Background -->
+                                <rect width="400" height="240" rx="8" fill="#F9FAFB" />
+
+                                <!-- Time column -->
+                                <rect x="10" y="10" width="60" height="220" fill="white" stroke="#E5E7EB"
+                                    stroke-width="1" />
+                                <text x="20" y="30" font-family="Inter, sans-serif" font-size="12" fill="#6B7280">9:00
+                                    AM</text>
+                                <text x="20" y="90" font-family="Inter, sans-serif" font-size="12" fill="#6B7280">10:00
+                                    AM</text>
+                                <text x="20" y="150" font-family="Inter, sans-serif" font-size="12" fill="#6B7280">11:00
+                                    AM</text>
+                                <text x="20" y="210" font-family="Inter, sans-serif" font-size="12" fill="#6B7280">12:00
+                                    PM</text>
+
+                                <!-- Time blocks -->
+                                <rect x="80" y="10" width="300" height="60" rx="6" fill="#DBEAFE" stroke="#93C5FD"
+                                    stroke-width="1" />
+                                <rect x="80" y="10" width="8" height="60" rx="2" fill="#3B82F6" />
+                                <text x="100" y="35" font-family="Inter, sans-serif" font-size="14" font-weight="500"
+                                    fill="#1E40AF">Deep Work: Project X</text>
+                                <text x="100" y="55" font-family="Inter, sans-serif" font-size="12" fill="#3B82F6">High
+                                    Energy Time Block</text>
+
+                                <rect x="80" y="80" width="300" height="30" rx="6" fill="#E0E7FF" stroke="#A5B4FC"
+                                    stroke-width="1" />
+                                <rect x="80" y="80" width="8" height="30" rx="2" fill="#6366F1" />
+                                <text x="100" y="100" font-family="Inter, sans-serif" font-size="14" font-weight="500"
+                                    fill="#3730A3">Email Processing</text>
+
+                                <rect x="80" y="120" width="300" height="30" rx="6" fill="#F5F3FF" stroke="#C4B5FD"
+                                    stroke-width="1" />
+                                <rect x="80" y="120" width="8" height="30" rx="2" fill="#8B5CF6" />
+                                <text x="100" y="140" font-family="Inter, sans-serif" font-size="14" font-weight="500"
+                                    fill="#5B21B6">Team Check-in</text>
+
+                                <rect x="80" y="160" width="300" height="50" rx="6" fill="#FEF3C7" stroke="#FDE68A"
+                                    stroke-width="1" />
+                                <rect x="80" y="160" width="8" height="50" rx="2" fill="#F59E0B" />
+                                <text x="100" y="190" font-family="Inter, sans-serif" font-size="14" font-weight="500"
+                                    fill="#92400E">Lunch Break</text>
+                                <text x="100" y="205" font-family="Inter, sans-serif" font-size="12"
+                                    fill="#F59E0B">Recovery Time</text>
+                            </svg>
                         </div>
                     </div>
-                    
+
                     <div>
                         <h3 class="text-2xl font-semibold mb-4 gradient-text">AI Coaching</h3>
                         <p class="text-gray-600 mb-4">
-                            Unlike cold productivity robots, Orlo uses coaching dialogue to help you discover your optimal patterns and adapt to change.
+                            Unlike cold productivity robots, Orlo uses coaching dialogue to help you discover your
+                            optimal patterns and adapt to change.
                         </p>
-                        
+
                         <!-- AI Coach Chat Illustration -->
                         <div class="relative mt-6">
                             <svg class="w-full" viewBox="0 0 400 240" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <!-- Background -->
-                                <rect width="400" height="240" rx="8" fill="white" stroke="#E5E7EB" stroke-width="1"/>
-                                
+                                <rect width="400" height="240" rx="8" fill="white" stroke="#E5E7EB" stroke-width="1" />
+
                                 <!-- Chat header -->
-                                <rect width="400" height="40" rx="8" fill="#F3F4F6"/>
-                                <circle cx="24" cy="20" r="12" fill="#8B5CF6"/>
-                                <text x="50" y="25" font-family="Inter, sans-serif" font-size="14" font-weight="500" fill="#4B5563">Orlo AI Coach</text>
-                                
+                                <rect width="400" height="40" rx="8" fill="#F3F4F6" />
+                                <circle cx="24" cy="20" r="12" fill="#8B5CF6" />
+                                <text x="50" y="25" font-family="Inter, sans-serif" font-size="14" font-weight="500"
+                                    fill="#4B5563">Orlo AI Coach</text>
+
                                 <!-- AI message -->
                                 <g>
-                                    <circle cx="30" cy="70" r="16" fill="url(#gradient)"/>
-                                    <text x="30" y="76" font-family="Inter, sans-serif" font-size="16" font-weight="600" fill="white" text-anchor="middle">O</text>
-                                    <rect x="56" y="54" width="260" height="100" rx="12" fill="#F3F4F6"/>
+                                    <circle cx="30" cy="70" r="16" fill="url(#gradient)" />
+                                    <text x="30" y="76" font-family="Inter, sans-serif" font-size="16" font-weight="600"
+                                        fill="white" text-anchor="middle">O</text>
+                                    <rect x="56" y="54" width="260" height="100" rx="12" fill="#F3F4F6" />
                                     <foreignObject x="70" y="65" width="230" height="80">
-                                        <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Inter, sans-serif; font-size: 13px; color: #374151;">
-                                            I noticed you often push writing tasks to the evening, but that's when your energy is lowest. Would you like to try scheduling them in the morning instead?
+                                        <div xmlns="http://www.w3.org/1999/xhtml"
+                                            style="font-family: Inter, sans-serif; font-size: 13px; color: #374151;">
+                                            I noticed you often push writing tasks to the evening, but that's when your
+                                            energy is lowest. Would you like to try scheduling them in the morning
+                                            instead?
                                         </div>
                                     </foreignObject>
                                 </g>
-                                
+
                                 <!-- User options -->
                                 <g transform="translate(160, 160)">
-                                    <rect width="220" height="70" rx="16" fill="#F9FAFB"/>
-                                    <rect x="20" y="15" width="180" height="16" rx="8" fill="#EFF6FF"/>
-                                    <text x="110" y="27" font-family="Inter, sans-serif" font-size="12" font-weight="500" fill="#3B82F6" text-anchor="middle">Yes, let's try it</text>
-                                    
-                                    <rect x="20" y="40" width="180" height="16" rx="8" fill="#F3F4F6"/>
-                                    <text x="110" y="52" font-family="Inter, sans-serif" font-size="12" font-weight="500" fill="#6B7280" text-anchor="middle">No, keep as is</text>
+                                    <rect width="220" height="70" rx="16" fill="#F9FAFB" />
+                                    <rect x="20" y="15" width="180" height="16" rx="8" fill="#EFF6FF" />
+                                    <text x="110" y="27" font-family="Inter, sans-serif" font-size="12"
+                                        font-weight="500" fill="#3B82F6" text-anchor="middle">Yes, let's try it</text>
+
+                                    <rect x="20" y="40" width="180" height="16" rx="8" fill="#F3F4F6" />
+                                    <text x="110" y="52" font-family="Inter, sans-serif" font-size="12"
+                                        font-weight="500" fill="#6B7280" text-anchor="middle">No, keep as is</text>
                                 </g>
-                                
+
                                 <!-- Defs for gradients -->
                                 <defs>
                                     <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -391,19 +489,22 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="grid md:grid-cols-2 gap-12 mt-16">
                     <div>
                         <h3 class="text-2xl font-semibold mb-4 gradient-text">Emotional Intelligence</h3>
                         <p class="text-gray-600">
-                            Orlo understands that time management isn't just about efficiency—it's about emotional well-being too. It adapts to your stress levels and helps maintain balance across all life areas.
+                            Orlo understands that time management isn't just about efficiency—it's about emotional
+                            well-being too. It adapts to your stress levels and helps maintain balance across all life
+                            areas.
                         </p>
                     </div>
-                    
+
                     <div>
                         <h3 class="text-2xl font-semibold mb-4 gradient-text">Dynamic Resilience</h3>
                         <p class="text-gray-600">
-                            When life happens and plans change, Orlo helps you smoothly adapt rather than abandon your schedule completely, maintaining momentum toward your goals.
+                            When life happens and plans change, Orlo helps you smoothly adapt rather than abandon your
+                            schedule completely, maintaining momentum toward your goals.
                         </p>
                     </div>
                 </div>
@@ -414,80 +515,97 @@
         <section id="how-it-works" class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
             <div class="max-w-5xl mx-auto">
                 <h2 class="text-3xl font-bold text-center mb-12">How Orlo Works</h2>
-                
+
                 <div class="grid md:grid-cols-3 gap-8 text-center">
                     <div>
-                        <div class="w-16 h-16 rounded-full gradient-bg flex items-center justify-center text-white mx-auto mb-6">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M21 7v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7"/>
-                                <rect x="2" y="3" width="20" height="4" rx="1"/>
-                                <path d="M8 7v14"/>
-                                <path d="M16 7v14"/>
-                                <path d="M12 7v14"/>
+                        <div
+                            class="w-16 h-16 rounded-full gradient-bg flex items-center justify-center text-white mx-auto mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M21 7v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7" />
+                                <rect x="2" y="3" width="20" height="4" rx="1" />
+                                <path d="M8 7v14" />
+                                <path d="M16 7v14" />
+                                <path d="M12 7v14" />
                             </svg>
                         </div>
                         <h3 class="text-xl font-semibold mb-3">Import & Capture</h3>
-                        <p class="text-gray-600">Seamlessly import your existing calendar events and capture new tasks and ideas whenever they arise.</p>
+                        <p class="text-gray-600">Seamlessly import your existing tasks and capture new ideas whenever
+                            they arise, without cluttering your mind.</p>
                     </div>
-                    
+
                     <div>
-                        <div class="w-16 h-16 rounded-full gradient-bg flex items-center justify-center text-white mx-auto mb-6">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                                <line x1="3" y1="9" x2="21" y2="9"/>
-                                <line x1="9" y1="21" x2="9" y2="9"/>
-                                <line x1="15" y1="21" x2="15" y2="9"/>
+                        <div
+                            class="w-16 h-16 rounded-full gradient-bg flex items-center justify-center text-white mx-auto mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                                <line x1="3" y1="9" x2="21" y2="9" />
+                                <line x1="9" y1="21" x2="9" y2="9" />
+                                <line x1="15" y1="21" x2="15" y2="9" />
                             </svg>
                         </div>
                         <h3 class="text-xl font-semibold mb-3">Time Boxing</h3>
-                        <p class="text-gray-600">Orlo helps allocate your tasks to specific time blocks based on priority, energy levels, and deadlines.</p>
+                        <p class="text-gray-600">Orlo helps allocate your tasks to specific time blocks based on
+                            priority, energy levels, and deadlines.</p>
                     </div>
-                    
+
                     <div>
-                        <div class="w-16 h-16 rounded-full gradient-bg flex items-center justify-center text-white mx-auto mb-6">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M12 3a9 9 0 1 0 9 9"/>
-                                <polyline points="16 3 12 7 8 3"/>
-                                <line x1="12" y1="12" x2="12" y2="12"/>
-                                <path d="M12 17l.01-.011"/>
+                        <div
+                            class="w-16 h-16 rounded-full gradient-bg flex items-center justify-center text-white mx-auto mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M12 3a9 9 0 1 0 9 9" />
+                                <polyline points="16 3 12 7 8 3" />
+                                <line x1="12" y1="12" x2="12" y2="12" />
+                                <path d="M12 17l.01-.011" />
                             </svg>
                         </div>
                         <h3 class="text-xl font-semibold mb-3">Review & Adapt</h3>
-                        <p class="text-gray-600">Regular reviews help you learn from your patterns and continuously improve your time management.</p>
+                        <p class="text-gray-600">Regular reviews help you learn from your patterns and continuously
+                            improve your time management.</p>
                     </div>
                 </div>
-                
-                <div class="mt-16 text-center">
-                    <p class="text-gray-600 mb-6">
-                        Orlo integrates with the tools you already use, making transition seamless.
-                    </p>
-                    <div class="flex justify-center space-x-8">
-                        <div class="text-gray-400 flex items-center">
-                            <i class="fab fa-google text-xl mr-2"></i> Google Calendar
-                        </div>
-                        <div class="text-gray-400 flex items-center">
-                            <i class="fab fa-apple text-xl mr-2"></i> Apple Calendar
-                        </div>
-                        <div class="text-gray-400 flex items-center">
-                            <i class="far fa-calendar-check text-xl mr-2"></i> More coming soon
-                        </div>
-                    </div>
+
+                <div class="text-center mt-12">
+                    <a href="https://my.orlo.cc"
+                        class="btn-primary text-white px-8 py-3 rounded-lg font-medium shadow-md inline-block">
+                        Start Free Trial
+                    </a>
+                    <p class="text-sm text-gray-500 mt-3">Beta period includes all features</p>
                 </div>
             </div>
         </section>
 
+        <!-- Mid-Page CTA -->
+        <div class="py-12 bg-gradient-to-r from-blue-500 to-indigo-600 text-white">
+            <div class="max-w-4xl mx-auto text-center px-4">
+                <h3 class="text-2xl font-bold mb-4">Start Your Cognitive Freedom Journey</h3>
+                <p class="mb-6 text-blue-100">Join 500+ early users already experiencing the difference</p>
+                <a href="https://my.orlo.cc"
+                    class="bg-white text-indigo-700 px-8 py-3 rounded-lg font-medium shadow-md inline-block hover:bg-blue-50 transition">
+                    Create Free Account
+                </a>
+            </div>
+        </div>
+
         <!-- For Whom -->
-        <section class="py-16 px-4 sm:px-6 lg:px-8">
+        <section id="for-whom" class="py-16 px-4 sm:px-6 lg:px-8">
             <div class="max-w-5xl mx-auto">
                 <h2 class="text-3xl font-bold text-center mb-4">Who Orlo Is For</h2>
                 <p class="text-xl text-gray-600 text-center mb-12 max-w-3xl mx-auto">
                     Designed for the highly autonomous yet overloaded modern professional.
                 </p>
-                
+
                 <div class="grid md:grid-cols-3 gap-8">
                     <div class="bg-white p-6 rounded-xl shadow-md">
                         <div class="w-14 h-14 flex items-center justify-center bg-blue-100 rounded-full mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
                                 <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                                 <circle cx="12" cy="7" r="4"></circle>
                                 <path d="M12 11V3"></path>
@@ -496,12 +614,15 @@
                             </svg>
                         </div>
                         <h3 class="text-xl font-semibold mb-3">Solo Entrepreneurs</h3>
-                        <p class="text-gray-600">Juggling multiple responsibilities without team support, where long-term goals easily get buried under daily operations.</p>
+                        <p class="text-gray-600">Juggling multiple responsibilities without team support, where
+                            long-term goals easily get buried under daily operations.</p>
                     </div>
-                    
+
                     <div class="bg-white p-6 rounded-xl shadow-md">
                         <div class="w-14 h-14 flex items-center justify-center bg-purple-100 rounded-full mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-purple-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-purple-600" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
                                 <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
                                 <circle cx="9" cy="7" r="4"></circle>
                                 <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
@@ -511,12 +632,15 @@
                             </svg>
                         </div>
                         <h3 class="text-xl font-semibold mb-3">Multiple Role Bearers</h3>
-                        <p class="text-gray-600">Professionals balancing careers with family responsibilities, where role-switching creates high cognitive load.</p>
+                        <p class="text-gray-600">Professionals balancing careers with family responsibilities, where
+                            role-switching creates high cognitive load.</p>
                     </div>
-                    
+
                     <div class="bg-white p-6 rounded-xl shadow-md">
                         <div class="w-14 h-14 flex items-center justify-center bg-indigo-100 rounded-full mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-indigo-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-indigo-600" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
                                 <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
                                 <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
                                 <path d="M12 11v4"></path>
@@ -524,19 +648,82 @@
                             </svg>
                         </div>
                         <h3 class="text-xl font-semibold mb-3">Flexible Workers</h3>
-                        <p class="text-gray-600">Freelancers and gig workers who lack structured work rhythms and need help creating productive boundaries.</p>
+                        <p class="text-gray-600">Freelancers and gig workers who lack structured work rhythms and need
+                            help creating productive boundaries.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Testimonials (Placeholder) -->
+        <!-- Coming Soon Features Section -->
         <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
             <div class="max-w-5xl mx-auto">
-                <h2 class="text-3xl font-bold text-center mb-12">Early Feedback</h2>
-                
+                <h2 class="text-3xl font-bold text-center mb-4">What's Coming Next</h2>
+                <p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+                    Our development roadmap is guided by user feedback. Here's what we're working on:
+                </p>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="border border-gray-200 p-6 rounded-xl">
+                        <div class="flex justify-between items-center mb-4">
+                            <div class="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-full">
+                                <i class="fas fa-calendar-alt text-blue-600"></i>
+                            </div>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Coming Soon</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Calendar Integration</h3>
+                        <p class="text-gray-600">Seamlessly sync with Google Calendar, Apple Calendar, and more to
+                            manage all your commitments in one place.</p>
+                    </div>
+
+                    <div class="border border-gray-200 p-6 rounded-xl">
+                        <div class="flex justify-between items-center mb-4">
+                            <div class="w-12 h-12 flex items-center justify-center bg-purple-100 rounded-full">
+                                <i class="fas fa-robot text-purple-600"></i>
+                            </div>
+                            <span class="bg-purple-100 text-purple-800 text-xs px-3 py-1 rounded-full">In
+                                Development</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Advanced AI Coach</h3>
+                        <p class="text-gray-600">Personal AI assistant that learns your patterns and provides tailored
+                            recommendations to optimize your time.</p>
+                    </div>
+
+                    <div class="border border-gray-200 p-6 rounded-xl">
+                        <div class="flex justify-between items-center mb-4">
+                            <div class="w-12 h-12 flex items-center justify-center bg-green-100 rounded-full">
+                                <i class="fas fa-chart-line text-green-600"></i>
+                            </div>
+                            <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Planned</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Analytics Dashboard</h3>
+                        <p class="text-gray-600">Visualize your time usage patterns and get insights on how to improve
+                            your productivity and well-being.</p>
+                    </div>
+                </div>
+
+                <div class="text-center mt-10">
+                    <p class="text-gray-600 mb-4">Be among the first to experience these features</p>
+                    <a href="https://my.orlo.cc"
+                        class="btn-primary text-white px-8 py-3 rounded-lg font-medium shadow-md inline-block">
+                        Join Orlo Beta
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="py-16 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-5xl mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-4">What Early Users Are Saying</h2>
+                <p class="text-center text-gray-600 mb-10">Real feedback from our Beta users</p>
+
                 <div class="grid md:grid-cols-2 gap-8">
-                    <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="bg-white p-6 rounded-xl shadow-md relative">
+                        <div
+                            class="absolute -top-3 -left-3 w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-600">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
                         <div class="flex items-center mb-4">
                             <div class="w-12 h-12 rounded-full bg-gray-200"></div>
                             <div class="ml-4">
@@ -544,10 +731,23 @@
                                 <div class="text-sm text-gray-500">Freelance Designer</div>
                             </div>
                         </div>
-                        <p class="text-gray-600 italic">"The time boxing approach has completely changed how I manage client projects. Instead of constantly context-switching, I now have dedicated focus periods that have measurably improved my output quality."</p>
+                        <p class="text-gray-600 italic">"The time boxing approach has completely changed how I manage
+                            client projects. Instead of constantly context-switching, I now have dedicated focus periods
+                            that have measurably improved my output quality."</p>
+                        <div class="mt-4 text-yellow-500">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
                     </div>
-                    
-                    <div class="bg-white p-6 rounded-xl shadow-md">
+
+                    <div class="bg-white p-6 rounded-xl shadow-md relative">
+                        <div
+                            class="absolute -top-3 -left-3 w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-600">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
                         <div class="flex items-center mb-4">
                             <div class="w-12 h-12 rounded-full bg-gray-200"></div>
                             <div class="ml-4">
@@ -555,72 +755,96 @@
                                 <div class="text-sm text-gray-500">Startup Founder</div>
                             </div>
                         </div>
-                        <p class="text-gray-600 italic">"As someone running a business while being a parent of two, Orlo has been a game-changer. It helps me stay present in each role without the constant guilt of neglecting the other."</p>
+                        <p class="text-gray-600 italic">"As someone running a business while being a parent of two, Orlo
+                            has been a game-changer. It helps me stay present in each role without the constant guilt of
+                            neglecting the other."</p>
+                        <div class="mt-4 text-yellow-500">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
                     </div>
+                </div>
+
+                <div class="text-center mt-10">
+                    <a href="https://my.orlo.cc" class="text-indigo-600 font-medium hover:text-indigo-800 transition">
+                        Join them in the Orlo journey <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- Join Beta Waitlist -->
-        <section id="join" class="py-20 px-4 sm:px-6 lg:px-8">
+        <!-- Beta Sign-up Section (Replaced Waitlist) -->
+        <section id="join" class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 to-indigo-50">
             <div class="max-w-4xl mx-auto text-center">
-                <h2 class="text-3xl font-bold mb-4">Join Our Limited Beta</h2>
+                <span
+                    class="inline-block px-4 py-1 rounded-full bg-indigo-100 text-indigo-800 text-sm font-medium mb-4">NOW
+                    IN BETA</span>
+                <h2 class="text-3xl font-bold mb-4">Start Rebuilding Your Life Today</h2>
                 <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-                    Be among the first 500 users to experience Orlo and help shape the future of intelligent time management.
+                    Join Orlo Beta and be among the first to experience a revolutionary approach to time management
                 </p>
-                
-                <div class="bg-white p-8 rounded-xl shadow-lg max-w-md mx-auto">
-                    <div id="signup-form">
-                        <!-- Form fields that will be used to redirect to Google Form -->
-                        <div class="mb-4">
-                            <label for="email" class="block text-left text-sm font-medium text-gray-700 mb-1">Email Address</label>
-                            <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="you@example.com" required>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg max-w-lg mx-auto mb-10">
+                    <div class="flex flex-col items-center gap-6">
+                        <div class="w-full max-w-md">
+                            <a href="https://my.orlo.cc"
+                                class="w-full btn-primary text-white px-6 py-4 rounded-lg font-medium shadow-md text-lg flex items-center justify-center">
+                                <i class="fas fa-rocket mr-2"></i> Create Free Account
+                            </a>
                         </div>
-                        
-                        <div class="mb-6">
-                            <label for="role" class="block text-left text-sm font-medium text-gray-700 mb-1">Your Primary Role</label>
-                            <select id="role" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white" required>
-                                <option value="" disabled selected>Select your primary role</option>
-                                <option value="Entrepreneur/Solo Business Owner">Entrepreneur/Solo Business Owner</option>
-                                <option value="Freelancer/Gig Worker">Freelancer/Gig Worker</option>
-                                <option value="Professional with Multiple Roles">Professional with Multiple Roles</option>
-                                <option value="Manager/Team Lead">Manager/Team Lead</option>
-                                <option value="Other">Other</option>
-                            </select>
+
+                        <div class="text-sm text-gray-500 flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i> No credit card required
                         </div>
-                        
-                        <button type="button" onclick="redirectToGoogleForm()" class="w-full btn-primary text-white px-6 py-3 rounded-lg font-medium shadow-md">
-                            Join the Waitlist
-                        </button>
-                        
-                        <p class="text-xs text-gray-500 mt-4">
-                            By joining, you'll receive updates about Orlo and early access information. We respect your privacy and will never share your information.
-                        </p>
                     </div>
-                    
-                    <div id="success-message" class="text-center py-6">
-                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-check text-2xl text-green-600"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-2">You're on the list!</h3>
-                        <p class="text-gray-600 mb-4">
-                            Thanks for joining our beta waitlist. We'll be in touch soon with next steps.
-                        </p>
-                        <div class="flex justify-center space-x-4">
-                            <a href="#" onclick="shareTwitter()" class="text-blue-500 hover:text-blue-700">
-                                <i class="fab fa-twitter"></i> Share
-                            </a>
-                            <a href="#" onclick="shareLinkedIn()" class="text-blue-800 hover:text-blue-900">
-                                <i class="fab fa-linkedin"></i> Share
-                            </a>
-                        </div>
+
+                    <div class="mt-8 border-t border-gray-100 pt-6">
+                        <h4 class="font-medium mb-4 text-left">What you'll get in the Beta:</h4>
+                        <ul class="text-left text-gray-600 space-y-3 text-sm">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Core time boxing system to organize your life</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>AI-powered task management with cognitive load reduction</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Priority access to new features as they're released</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Shape the future of Orlo with your feedback</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                
-                <div class="mt-12 inline-block bg-gray-100 py-3 px-6 rounded-full">
-                    <div class="flex items-center text-sm text-gray-600">
-                        <i class="fas fa-shield-alt text-green-600 mr-2"></i>
-                        <span>Privacy first. No monitoring. You stay in control.</span>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
+                    <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
+                        <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-bolt text-blue-600"></i>
+                        </div>
+                        <h3 class="font-medium mb-1">2-Minute Setup</h3>
+                        <p class="text-gray-500 text-sm">Get started in less time than it takes to brew coffee</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
+                        <div class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-lightbulb text-purple-600"></i>
+                        </div>
+                        <h3 class="font-medium mb-1">Reduce Mental Load</h3>
+                        <p class="text-gray-500 text-sm">Free up mental space for what truly matters</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
+                        <div class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-gift text-indigo-600"></i>
+                        </div>
+                        <h3 class="font-medium mb-1">Free During Beta</h3>
+                        <p class="text-gray-500 text-sm">Full access to all features as they launch</p>
                     </div>
                 </div>
             </div>
@@ -631,10 +855,10 @@
         <div class="max-w-5xl mx-auto">
             <div class="flex flex-col md:flex-row justify-between items-center mb-8">
                 <div class="mb-6 md:mb-0">
-                    <div class="text-2xl font-bold mb-2">Orlo</div>
+                    <img src="./img/orlo-logo-w.png" alt="Orlo-logo" class="h-8 w-auto mb-3">
                     <p class="text-gray-400">Rebuild Your Life, Not Just Your Schedule</p>
                 </div>
-                
+
                 <div class="flex space-x-6">
                     <a href="#" class="text-gray-400 hover:text-white">
                         <i class="fab fa-twitter text-xl"></i>
@@ -647,9 +871,10 @@
                     </a>
                 </div>
             </div>
-            
+
             <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
                 <div class="text-gray-400 text-sm mb-4 md:mb-0">
+                    <span class="bg-blue-900 text-blue-300 text-xs px-2 py-0.5 rounded mr-2">BETA</span>
                     &copy; 2025 Orlo. All rights reserved.
                 </div>
                 <div class="flex space-x-6 text-sm">
@@ -662,66 +887,6 @@
     </footer>
 
     <script>
-        // Simulate countdown
-        let spotsLeft = 500;
-        setInterval(() => {
-            if (Math.random() > 0.8 && spotsLeft > 450) {
-                spotsLeft -= 1;
-                document.getElementById('spots-count').innerText = spotsLeft;
-            }
-        }, 5000);
-        
-        // Google Form redirection function
-        function redirectToGoogleForm() {
-            const email = document.getElementById('email').value;
-            const role = document.getElementById('role').value;
-            
-            if (!email || !email.includes('@')) {
-                alert('Please enter a valid email address');
-                return;
-            }
-            
-            if (!role || role === "") {
-                alert('Please select your primary role');
-                return;
-            }
-            
-            // Show success message
-            document.getElementById('signup-form').style.display = 'none';
-            document.getElementById('success-message').style.display = 'block';
-            
-            // Prepare Google Form URL with encoded parameters
-            // Replace these entry IDs with the actual ones from your Google Form
-            const googleFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSf6vBLUwOWuXg_3_7QsklUozY1ZyRoQ5tsROibtZd2bW2Z3vg/viewform";
-            
-            // Here we would typically redirect to the Google Form with prefilled values
-            // However, instead of redirecting immediately (which would disrupt user experience),
-            // we'll open it in a new tab after showing the success message
-            
-            // Encode form data for URL parameters
-            const emailParam = encodeURIComponent(email);
-            const roleParam = encodeURIComponent(role);
-            
-            // Using the correct Google Form entry IDs
-            const formWithParams = `${googleFormUrl}?usp=pp_url&entry.416981764=${emailParam}&entry.1799879695=${roleParam}`;
-            
-            // Open the Google Form in a new tab
-            window.open(formWithParams, '_blank');
-        }
-        
-        // Social sharing functions (placeholders)
-        function shareTwitter() {
-            const text = encodeURIComponent("I just joined the waitlist for Orlo, an AI-powered time management assistant! Check it out:");
-            const url = encodeURIComponent(window.location.href);
-            window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, '_blank');
-        }
-        
-        function shareLinkedIn() {
-            const url = encodeURIComponent(window.location.href);
-            const title = encodeURIComponent("Orlo - AI-Powered Time Management Assistant");
-            window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`, '_blank');
-        }
-        
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -731,6 +896,20 @@
                 });
             });
         });
+
+        // Social sharing functions (placeholders)
+        function shareTwitter() {
+            const text = encodeURIComponent("I just started using Orlo, an AI-powered time management assistant! Check it out:");
+            const url = encodeURIComponent(window.location.href);
+            window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, '_blank');
+        }
+
+        function shareLinkedIn() {
+            const url = encodeURIComponent(window.location.href);
+            const title = encodeURIComponent("Orlo - AI-Powered Time Management Assistant");
+            window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`, '_blank');
+        }
     </script>
 </body>
+
 </html>

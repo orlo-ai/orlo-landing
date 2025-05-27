@@ -30,15 +30,8 @@
     <meta name="twitter:title" content="Orlo - AI Time Management Assistant | Now in Beta">
     <meta name="twitter:description" content="Join 500+ users already saving 5+ hours weekly on decision fatigue">
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J6HLEC8EJZ"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-J6HLEC8EJZ');
-    </script>
+    <!-- Google Analytics -->
+    <script src="js/analytics.js"></script>
 
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
@@ -142,7 +135,8 @@
                     <img src="./img/orlo-logo.png" alt="Orlo" class="h-12 w-auto">
                     <span
                         class="text-xs bg-blue-100 text-blue-800 px-2 py-0.5 rounded-full align-middle ml-3">Beta</span>
-                </div><div class="w-28"></div>
+                </div>
+                <div class="w-28"></div>
                 <!-- 增加左邊距，優化間距 -->
                 <nav class="hidden md:block ml-10">
                     <ul class="flex space-x-10 items-center">
@@ -851,39 +845,11 @@
         </section>
     </main>
 
-    <footer class="py-12 px-4 sm:px-6 lg:px-8 bg-gray-900 text-white">
-        <div class="max-w-5xl mx-auto">
-            <div class="flex flex-col md:flex-row justify-between items-center mb-8">
-                <div class="mb-6 md:mb-0">
-                    <div class="text-2xl font-bold mb-2">Orlo</div>
-                    <p class="text-gray-400">Rebuild Your Life, Not Just Your Schedule</p>
-                </div>
-                
-                <div class="flex space-x-6">
-                    <a href="#" class="text-gray-400 hover:text-white">
-                        <i class="fab fa-twitter text-xl"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-white">
-                        <i class="fab fa-linkedin text-xl"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-white">
-                        <i class="fab fa-instagram text-xl"></i>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <div class="text-gray-400 text-sm mb-4 md:mb-0">
-                    &copy; 2025 Orlo. All rights reserved.
-                </div>
-                <div class="flex space-x-6 text-sm">
-                    <a href="privacy-policy.html" class="text-gray-400 hover:text-white">Privacy Policy</a>
-                    <a href="terms-of-service.html" class="text-gray-400 hover:text-white">Terms of Service</a>
-                    <a href="mailto:hello@orlo.cc" class="text-gray-400 hover:text-white">Contact</a>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Footer Loader Script -->
+    <script src="js/footer-loader.js"></script>
 
     <script>
         // Smooth scrolling for anchor links

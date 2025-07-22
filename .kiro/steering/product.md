@@ -1,28 +1,43 @@
-# Product Overview
+---
+inclusion: always
+---
 
-Orlo is an AI-powered time management assistant that helps users establish time boundaries, reduce decision fatigue, and regain control of their life rhythm. The product focuses on rebuilding users' lives, not just their schedules.
+# Product Guidelines
 
-## Core Value Proposition
-- **Time Boxing System**: Transform abstract to-dos into concrete "when to dos" with intelligent time boxing that matches tasks to energy levels
-- **AI Coaching**: Uses coaching dialogue to help users discover optimal patterns and adapt to change
-- **Emotional Intelligence**: Adapts to stress levels and maintains balance across all life areas
-- **Dynamic Resilience**: Helps users smoothly adapt when plans change rather than abandon schedules
+Orlo is an AI-powered time management assistant focused on rebuilding users' lives through intelligent time boundaries and decision fatigue reduction.
 
-## Target Audience
-- Professionals experiencing decision fatigue
-- People struggling with role conflicts and context switching
-- Users seeking to optimize their energy and focus throughout the day
-- Individuals wanting to reduce task-related stress
+## Core Messaging & Copy Guidelines
+- **Primary Value**: "Rebuild your life, not just your schedule"
+- **Tone**: Professional yet empathetic, focusing on life transformation over productivity hacks
+- **Key Concepts**: Time boxing, energy optimization, decision reduction, adaptive resilience
+- **Avoid**: Generic productivity language, overwhelming feature lists, technical jargon
 
-## Key Metrics
-- 500+ Beta users
-- 4.8/5 user rating
-- Users report saving 5+ hours weekly on decision-making
-- 46% reduction in task-related stress
+## User Experience Principles
+- **Simplicity First**: Minimize cognitive load in all interactions
+- **Energy-Aware Design**: Match interface complexity to user's likely energy state
+- **Adaptive Messaging**: Content should acknowledge stress and role conflicts
+- **Progress Over Perfection**: Emphasize adaptation and resilience over rigid scheduling
+
+## Content Strategy
+- **Headlines**: Focus on life transformation outcomes (saving time, reducing stress)
+- **Features**: Present as solutions to specific pain points (decision fatigue, context switching)
+- **Social Proof**: Emphasize time saved and stress reduction metrics
+- **CTAs**: Use action-oriented language that implies life improvement
+
+## Key Metrics to Highlight
+- 5+ hours weekly saved on decision-making
+- 46% reduction in task-related stress  
 - 73% reduction in daily decisions
-- 5.2 hours weekly saved on role transitions
+- 4.8/5 user satisfaction rating
 
-## Current Status
-- Beta phase with lifetime access for early users
-- Free during Beta period
-- Web-based application with plans for mobile expansion
+## Beta Phase Considerations
+- Emphasize "lifetime access" value proposition
+- Highlight exclusivity and early adopter benefits
+- Focus on community and feedback-driven development
+- Maintain urgency around limited beta availability
+
+## Target User Pain Points
+- Decision fatigue from constant task prioritization
+- Role conflicts and context switching overhead
+- Energy misalignment with scheduled activities
+- Schedule abandonment when plans change

@@ -1,6 +1,7 @@
 # Project Structure
 
 ## Root Directory Layout
+
 ```
 /
 ├── index.html              # Main landing page
@@ -14,10 +15,12 @@
 ```
 
 ## JavaScript Organization (`/js/`)
+
 - **analytics.js**: Google Analytics GA4 setup and custom event tracking
 - **footer-loader.js**: Utility for dynamically loading footer component
 
 ## Assets Organization (`/img/`)
+
 - **favicon_io/**: Complete favicon package with multiple sizes and formats
 - **orlo-logo.png**: Main brand logo
 - **orlo-logo-w.png**: White version of logo
@@ -27,12 +30,14 @@
 ## Page Structure Conventions
 
 ### HTML Structure
+
 - All pages use semantic HTML5 markup
 - Consistent header with logo and navigation
 - Footer loaded via JavaScript or included directly
 - Proper meta tags for SEO and social sharing
 
 ### CSS Conventions
+
 - Tailwind CSS utility classes for styling
 - Custom CSS in `<style>` blocks within HTML files
 - Consistent color scheme using CSS custom properties:
@@ -41,18 +46,21 @@
   - Text: `#333`
 
 ### Component Patterns
+
 - **Header**: Logo, navigation, and CTA buttons
 - **Hero Section**: Main value proposition with gradient text
 - **Feature Sections**: Grid layouts with icons and descriptions
 - **Footer**: Contact info, social links, legal pages
 
 ## Naming Conventions
+
 - **Files**: kebab-case for HTML files (`privacy-policy.html`)
 - **CSS Classes**: Tailwind utility classes + custom classes with descriptive names
 - **JavaScript**: camelCase for variables and functions
 - **Images**: descriptive names with hyphens (`orlo-logo.png`)
 
 ## Development Guidelines
+
 - Keep all dependencies external (CDN-based)
 - Maintain consistent Inter font usage across all pages
 - Use Font Awesome icons consistently

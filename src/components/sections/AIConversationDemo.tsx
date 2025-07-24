@@ -88,11 +88,10 @@ export default function AIConversationDemo({ conversation }: AIConversationDemoP
                               {message.analysis.map((item, index) => (
                                 <div
                                   key={index}
-                                  className={`p-2 rounded border ${
-                                    item.type === 'success'
-                                      ? 'bg-green-50 border-green-200'
-                                      : 'bg-yellow-50 border-yellow-200'
-                                  }`}
+                                  className={item.type === 'success'
+                                    ? 'p-2 rounded border bg-green-50 border-green-200'
+                                    : 'p-2 rounded border bg-yellow-50 border-yellow-200'
+                                  }
                                 >
                                   <div className="text-sm">
                                     {item.type === 'success' ? '✅' : '⚡'}{' '}

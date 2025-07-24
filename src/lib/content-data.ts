@@ -4,45 +4,46 @@ import { UserPersona, ChatMessage, TimeBlock } from '@/types/user';
 // 主要頁面內容數據
 export const pageContent: PageContent = {
   meta: {
-    title: 'Orlo - AI Time Management Assistant | Free Your Mind from Decision Fatigue',
-    description: 'Orlo is an AI-powered time management assistant that helps you establish time boundaries, reduce decision fatigue, and regain control of your life rhythm. Now available in Beta!',
-    keywords: ['AI', 'time management', 'productivity', 'decision fatigue', 'time boxing'],
+    title: 'Orlo - Your AI Chief of Staff | Stop Managing Time, Start Partnering with AI',
+    description: 'Stop managing time. Start partnering with AI that manages it for you. Like having a senior executive\'s personal assistant - but for your entire life.',
+    keywords: ['AI', 'Chief of Staff', 'time management', 'AI assistant', 'productivity', 'personal assistant', 'AI partnership'],
     ogImage: 'https://orlo.cc/img/orlo-social-share.png'
   },
   
   hero: {
-    badge: '🎁 Beta users get lifetime access to premium features',
-    headline: 'Rebuild Your Life,',
-    subheadline: 'Not Just Your Schedule',
-    description: 'Orlo is your AI-powered time management assistant that helps establish time boundaries, reduce decision fatigue, and free your mind to regain control of your life rhythm.',
+    badge: 'Join 500+ professionals',
+    headline: 'Your AI',
+    subheadline: 'Chief of Staff',
+    description: 'Your AI partner that manages time, so you don\'t have to.',
     buttons: [
       {
-        text: 'Start Using Orlo',
+        text: 'Meet Your AI Chief of Staff',
         href: 'https://my.orlo.cc',
         variant: 'primary',
-        icon: 'fas fa-rocket'
+        icon: 'fas fa-handshake'
       },
       {
-        text: 'How It Works',
-        href: '#how-it-works',
-        variant: 'outline'
+        text: 'Watch Demo',
+        href: '#demo',
+        variant: 'outline',
+        icon: 'fas fa-play'
       }
     ],
     metrics: [
       {
-        value: '500+',
-        label: 'Beta Users',
-        icon: 'fas fa-users'
-      },
-      {
-        value: '4.8/5',
-        label: 'User Rating',
-        icon: 'fas fa-star'
-      },
-      {
-        value: '5h+',
-        label: 'Weekly Time Saved',
+        value: '5+ hours',
+        label: 'Weekly time saved',
         icon: 'fas fa-clock'
+      },
+      {
+        value: '73%',
+        label: 'Less decision fatigue',
+        icon: 'fas fa-brain'
+      },
+      {
+        value: 'Zero',
+        label: 'Setup complexity',
+        icon: 'fas fa-check-circle'
       }
     ]
   },
@@ -121,7 +122,7 @@ export const pageContent: PageContent = {
         timestamp: new Date(),
         insight: {
           type: 'recommendation',
-          title: '🎯 My Recommendation:',
+          title: 'My Recommendation:',
           points: [
             'Block 9-11 AM for your highest-impact launch task',
             'Batch your 3 meetings in the afternoon',
@@ -287,11 +288,11 @@ export const pageContent: PageContent = {
   testimonials: [
     {
       id: '1',
-      name: 'Sarah Chen',
-      role: 'Startup Founder',
+      name: 'Sarah Kim',
+      role: 'Solo Consultant',
       avatar: '/img/testimonials/sarah.jpg',
       rating: 5,
-      content: 'Orlo has been a game-changer for my productivity. I&apos;ve saved over 7 hours per week on decision-making alone.',
+      content: 'It\'s like having a super-smart assistant who never sleeps. My AI Chief of Staff knows I\'m creative in the morning and handles logistics in the afternoon. I focus on what matters.',
       metrics: {
         timeSaved: '7.5 hours/week',
         stressReduction: '82%'
@@ -299,11 +300,11 @@ export const pageContent: PageContent = {
     },
     {
       id: '2',
-      name: 'Marcus Johnson',
-      role: 'Designer & Father',
+      name: 'Marcus Lee',
+      role: 'Startup Founder & Dad',
       avatar: '/img/testimonials/marcus.jpg',
       rating: 5,
-      content: 'Finally, a tool that understands I&apos;m not just a worker - I&apos;m a whole person with multiple roles.',
+      content: 'My AI Chief of Staff protects my family time like a bodyguard and optimizes my work time like a consultant. No more guilt, no more overwhelm.',
       metrics: {
         timeSaved: '5.2 hours/week',
         stressReduction: '65%'
@@ -311,11 +312,11 @@ export const pageContent: PageContent = {
     },
     {
       id: '3',
-      name: 'Alex Rivera',
-      role: 'Freelance Developer',
+      name: 'Alex Thompson',
+      role: 'Freelance Designer',
       avatar: '/img/testimonials/alex.jpg',
       rating: 5,
-      content: 'The AI coaching feels like having a personal assistant who actually gets how my brain works.',
+      content: 'I went from chaos to calm. My AI Chief of Staff handles the juggling so I can focus on delivering amazing work. Clients notice the difference.',
       metrics: {
         timeSaved: '6.8 hours/week',
         stressReduction: '73%'
@@ -324,25 +325,43 @@ export const pageContent: PageContent = {
   ],
 
   pricing: {
-    title: 'Partnership, Not Subscription',
-    description: 'Join as a founding partner in your productivity transformation',
+    title: 'Meet Your AI Chief of Staff',
+    description: 'Start the partnership that will transform how you work and live.',
     plans: [
       {
-        id: 'beta',
-        name: 'Beta Partnership',
-        price: 'Free',
-        period: 'during beta',
-        description: 'Full access to all features while we build together',
+        id: 'trial',
+        name: 'Free Partnership Trial',
+        price: '$0',
+        period: '14 days to meet your AI Chief of Staff',
+        description: 'Experience the partnership risk-free',
         features: [
-          'AI Chief of Staff',
-          'Intelligent time boxing',
-          'Energy-aware scheduling',
-          'Decision fatigue reduction',
-          'Lifetime access to premium features',
-          'Direct feedback channel to founders'
+          'Complete AI time management system',
+          'Smart scheduling & instant reshuffling',
+          'Energy pattern learning & optimization',
+          'Calendar integrations & mobile access'
         ],
         cta: {
-          text: 'Join Beta Partnership',
+          text: 'Start Free Partnership',
+          href: 'https://my.orlo.cc',
+          variant: 'outline'
+        },
+        highlight: false
+      },
+      {
+        id: 'pro',
+        name: 'Full AI Chief of Staff',
+        price: '$12',
+        period: 'per month, billed annually',
+        description: 'Your complete AI partner for life and work optimization',
+        features: [
+          'Everything in Free, plus:',
+          'Advanced AI coaching & strategic insights',
+          'Multi-role management & boundaries',
+          'Productivity analytics & optimization',
+          'Priority support & feature access'
+        ],
+        cta: {
+          text: 'Get Full AI Chief of Staff',
           href: 'https://my.orlo.cc',
           variant: 'primary'
         },
@@ -353,14 +372,20 @@ export const pageContent: PageContent = {
 
   sections: [],
   cta: {
-    title: 'Ready to Rebuild Your Life?',
-    description: 'Join 500+ professionals who\'ve already partnered with their AI Chief of Staff',
+    title: 'Ready to Meet Your AI Chief of Staff?',
+    description: 'Join 500+ professionals who\'ve already found their perfect AI partner. Stop managing time. Start partnering with AI that manages it for you.',
     buttons: [
       {
-        text: 'Start Your Partnership',
+        text: 'Meet Your AI Chief of Staff',
         href: 'https://my.orlo.cc',
         variant: 'primary',
         icon: 'fas fa-handshake'
+      },
+      {
+        text: 'Watch Partnership Demo',
+        href: '#demo',
+        variant: 'outline',
+        icon: 'fas fa-play'
       }
     ]
   }

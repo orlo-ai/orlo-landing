@@ -99,16 +99,17 @@ export default function SocialProof({ testimonials }: SocialProofProps) {
               <button
                 key={index}
                 onClick={() => setCurrentTestimonial(index)}
-                className={`w-3 h-3 rounded-full transition-colors ${
-                  index === currentTestimonial ? 'bg-blue-600' : 'bg-gray-300'
-                }`}
+                className={index === currentTestimonial 
+                  ? 'w-3 h-3 rounded-full transition-colors bg-blue-600' 
+                  : 'w-3 h-3 rounded-full transition-colors bg-gray-300'
+                }
               />
             ))}
           </div>
         </div>
 
         {/* Overall Stats */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+        <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
           <div>
             <div className="text-4xl font-bold gradient-text mb-2">7.5h</div>
             <div className="text-gray-600">Average weekly time saved</div>

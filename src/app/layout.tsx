@@ -6,15 +6,15 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://orlo.cc'),
-  title: 'Orlo - AI-Powered Time Management Assistant',
+  title: 'Orlo - Your AI Chief of Staff | Stop Managing Time, Start Partnering with AI',
   description:
-    '重建你的生活，而不只是你的行程表。Orlo 透過智能時間邊界和決策疲勞減少，幫助你管理時間。',
+    'Stop managing time. Start partnering with AI that manages it for you. Like having a senior executive\'s personal assistant - but for your entire life.',
   keywords:
-    'time management, AI assistant, productivity, scheduling, decision fatigue, 時間管理, AI助手, 生產力, 行程管理, 決策疲勞',
+    'AI, Chief of Staff, time management, AI assistant, productivity, personal assistant, AI partnership, executive assistant',
   authors: [{ name: 'Orlo Team' }],
   openGraph: {
-    title: 'Orlo - AI-Powered Time Management Assistant',
-    description: '重建你的生活，而不只是你的行程表',
+    title: 'Orlo - Your AI Chief of Staff | Stop Managing Time, Start Partnering with AI',
+    description: 'Stop managing time. Start partnering with AI that manages it for you.',
     url: 'https://orlo.cc',
     siteName: 'Orlo',
     images: [
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
         url: '/img/orlo-social-share.png',
         width: 1200,
         height: 630,
-        alt: 'Orlo - AI-Powered Time Management Assistant',
+        alt: 'Orlo - Your AI Chief of Staff',
       },
     ],
     locale: 'zh_TW',
@@ -30,8 +30,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Orlo - AI-Powered Time Management Assistant',
-    description: '重建你的生活，而不只是你的行程表',
+    title: 'Orlo - Your AI Chief of Staff',
+    description: 'Stop managing time. Start partnering with AI that manages it for you.',
     images: ['/img/orlo-social-share.png'],
   },
   icons: {

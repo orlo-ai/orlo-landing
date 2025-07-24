@@ -6,39 +6,30 @@ export default function Footer() {
 
   const footerLinks = {
     product: {
-      title: '產品',
+      title: 'Product',
       links: [
-        { name: '功能', href: '#features' },
-        { name: '定價', href: '#pricing' },
-        { name: '更新日誌', href: '#changelog' },
+        { name: 'Features', href: '#features' },
+        { name: 'Pricing', href: '#pricing' },
+        { name: 'Demo', href: '#demo' },
         { name: 'API', href: '#api' },
       ],
     },
-    company: {
-      title: '公司',
-      links: [
-        { name: '關於我們', href: '#about' },
-        { name: '部落格', href: '#blog' },
-        { name: '職涯', href: '#careers' },
-        { name: '聯絡我們', href: '#contact' },
-      ],
-    },
     support: {
-      title: '支援',
+      title: 'Support',
       links: [
-        { name: '說明中心', href: '#help' },
-        { name: '社群', href: '#community' },
-        { name: '狀態頁面', href: '#status' },
-        { name: '回報問題', href: '#report' },
+        { name: 'Help Center', href: '#help' },
+        { name: 'Community', href: '#community' },
+        { name: 'Contact', href: '#contact' },
+        { name: 'Status', href: '#status' },
       ],
     },
-    legal: {
-      title: '法律',
+    company: {
+      title: 'Company',
       links: [
-        { name: '隱私政策', href: '/privacy-policy' },
-        { name: '服務條款', href: '/terms-of-service' },
-        { name: 'Cookie 政策', href: '#cookies' },
-        { name: '安全性', href: '#security' },
+        { name: 'About', href: '#about' },
+        { name: 'Blog', href: '#blog' },
+        { name: 'Careers', href: '#careers' },
+        { name: 'Press', href: '#press' },
       ],
     },
   };
@@ -74,31 +65,31 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-gray-50 border-t border-gray-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
+    <footer className="bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-4 gap-8">
           {/* Brand Section */}
-          <div className="lg:col-span-2">
-            <Link href="/" className="flex items-center space-x-2 mb-4">
+          <div>
+            <Link href="/" className="flex items-center space-x-2 mb-6">
               <Image
                 src="/img/orlo-logo.png"
-                alt="Orlo Logo"
+                alt="Orlo Logo" 
                 width={32}
                 height={32}
                 className="w-8 h-8"
               />
-              <span className="text-xl font-bold gradient-text">Orlo</span>
+              <span className="text-xl font-bold text-white">Orlo</span>
             </Link>
-            <p className="text-gray-600 mb-6 max-w-md">
-              重建你的生活，而不只是你的行程表。Orlo 透過智能時間邊界和決策疲勞減少，幫助你管理時間。
+            <p className="text-gray-300 text-sm leading-relaxed mb-6">
+              Your AI Chief of Staff that manages time, so you don&apos;t have to. 
+              Built to be your perfect AI Chief of Staff.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social) => (
                 <a
                   key={social.name}
                   href={social.href}
-                  className="text-gray-400 hover:text-blue-600 transition-colors duration-200"
+                  className="text-gray-400 hover:text-white transition-colors duration-200"
                   aria-label={social.name}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -112,7 +103,7 @@ export default function Footer() {
           {/* Links Sections */}
           {Object.entries(footerLinks).map(([key, section]) => (
             <div key={key}>
-              <h3 className="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-4">
+              <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
                 {section.title}
               </h3>
               <ul className="space-y-3">
@@ -120,7 +111,7 @@ export default function Footer() {
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="text-gray-600 hover:text-blue-600 transition-colors duration-200"
+                      className="text-gray-300 hover:text-white transition-colors duration-200 text-sm"
                     >
                       {link.name}
                     </Link>
@@ -131,55 +122,13 @@ export default function Footer() {
           ))}
         </div>
 
-        {/* Newsletter Signup */}
-        <div className="mt-12 pt-8 border-t border-gray-200">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="mb-4 md:mb-0">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                訂閱我們的電子報
-              </h3>
-              <p className="text-gray-600">
-                獲取最新的產品更新和時間管理技巧
-              </p>
-            </div>
-            <div className="flex w-full md:w-auto">
-              <input
-                type="email"
-                placeholder="輸入你的電子郵件"
-                className="flex-1 md:w-64 px-4 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
-              <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-r-md hover:shadow-lg transition-all duration-200 font-medium">
-                訂閱
-              </button>
-            </div>
-          </div>
-        </div>
-
         {/* Bottom Bar */}
-        <div className="mt-8 pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-500 text-sm">
-            © {currentYear} Orlo. 保留所有權利。
+        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
+          <p>
+            © {currentYear} Orlo. All rights reserved. Built to be your perfect AI Chief of Staff. 
+            <Link href="/privacy-policy" className="hover:text-white ml-4">Privacy Policy</Link>
+            <Link href="/terms-of-service" className="hover:text-white ml-4">Terms of Service</Link>
           </p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link
-              href="/privacy-policy"
-              className="text-gray-500 hover:text-blue-600 text-sm transition-colors duration-200"
-            >
-              隱私政策
-            </Link>
-            <Link
-              href="/terms-of-service"
-              className="text-gray-500 hover:text-blue-600 text-sm transition-colors duration-200"
-            >
-              服務條款
-            </Link>
-            <Link
-              href="#cookies"
-              className="text-gray-500 hover:text-blue-600 text-sm transition-colors duration-200"
-            >
-              Cookie 設定
-            </Link>
-          </div>
         </div>
       </div>
     </footer>

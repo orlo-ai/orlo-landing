@@ -10,25 +10,17 @@ body {
   color: #333;
 }
 
-.gradient-text {
-  background: linear-gradient(90deg, #3b82f6 0%, #8b5cf6 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
 
-.gradient-bg {
-  background: linear-gradient(90deg, #3b82f6 0%, #8b5cf6 100%);
-}
 
 .btn-primary {
-  background: linear-gradient(90deg, #3b82f6 0%, #8b5cf6 100%);
+  background: var(--primary-gradient);
   transition: all 0.3s ease;
+  box-shadow: 0 4px 15px 0 rgba(102, 126, 234, 0.4);
 }
 
 .btn-primary:hover {
-  opacity: 0.9;
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px 0 rgba(102, 126, 234, 0.6);
 }
 
 .time-block {
@@ -114,8 +106,11 @@ body {
 :root {
   --primary-blue: #3b82f6;
   --primary-purple: #8b5cf6;
-  --background: #fafafa;
-  --text-color: #333;
+  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --accent-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  --text-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --background: #fafbff;
+  --text-color: #1a202c;
 }
 
 body {
@@ -124,22 +119,15 @@ body {
 }
 
 .gradient-text {
-  background: linear-gradient(
-    135deg,
-    var(--primary-blue),
-    var(--primary-purple)
-  );
+  background: var(--text-gradient);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   background-clip: text;
+  color: transparent;
+  font-weight: 700;
 }
 
 .gradient-bg {
-  background: linear-gradient(
-    135deg,
-    var(--primary-blue),
-    var(--primary-purple)
-  );
+  background: var(--primary-gradient);
 }
 
 /* Glass effect utilities */
@@ -178,6 +166,71 @@ html {
 
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(135deg, #2563eb, #7c3aed);
+}
+
+/* Gradient Border System */
+.gradient-border {
+  background: var(--primary-gradient);
+  padding: 2px;
+  border-radius: 16px;
+}
+
+.gradient-border-content {
+  background: white;
+  border-radius: 14px;
+}
+
+/* Drag and Drop Visual */
+.drag-indicator {
+  cursor: grab;
+  transition: all 0.3s ease;
+}
+
+.drag-indicator:hover {
+  transform: scale(1.1);
+}
+
+.drag-indicator:active {
+  cursor: grabbing;
+}
+
+/* Product Screenshot Styles */
+.product-screenshot {
+  border-radius: 16px;
+  box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.product-screenshot:hover {
+  transform: scale(1.02);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .hero-content {
+    text-align: center;
+  }
+
+  .product-demo {
+    margin-top: 1.5rem;
+  }
+
+  /* Improved mobile touch targets */
+  .btn-primary {
+    min-height: 44px;
+    padding: 12px 24px;
+  }
+
+  /* Better mobile spacing */
+  .time-block {
+    margin-bottom: 8px;
+  }
+
+  /* Mobile text scaling */
+  .gradient-text {
+    line-height: 1.1;
+  }
 }
 
 /* Animation utilities */

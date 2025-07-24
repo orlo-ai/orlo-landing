@@ -15,7 +15,7 @@ export default function ProblemSection({ problems }: ProblemSectionProps) {
           Traditional tools focus on what you do, not how your brain works. Orlo is different.
         </p>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {problems.map((problem) => (
             <div key={problem.id} className="bg-white p-6 rounded-xl shadow-md">
               <div className="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-full mb-4">

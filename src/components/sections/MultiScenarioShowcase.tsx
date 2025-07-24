@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { ScenarioContent } from '@/types/content';
 
 interface MultiScenarioShowcaseProps {
@@ -19,15 +20,21 @@ export default function MultiScenarioShowcase({ scenarios }: MultiScenarioShowca
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {scenarios.map((scenario) => (
-            <div key={scenario.id} className="bg-white rounded-2xl shadow-lg overflow-hidden">
+            <div key={scenario.id} className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden hover:shadow-2xl transition-shadow duration-300">
               <div className={getPersonaGradientClasses(scenario.persona.gradient)}>
                 <div className="flex items-center">
-                  <div className="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center mr-3">
-                    <i className={getPersonaIcon(scenario.persona.id)} />
+                  <div className="w-12 h-12 rounded-full overflow-hidden mr-3 shadow-md border-2 border-white">
+                    <Image
+                      src={scenario.persona.avatar}
+                      alt={scenario.persona.name}
+                      width={48}
+                      height={48}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <div>
-                    <div className="font-semibold">{scenario.persona.name}</div>
-                    <div className="text-sm opacity-90">
+                    <div className="font-semibold text-white drop-shadow-sm">{scenario.persona.name}</div>
+                    <div className="text-sm text-white/90 drop-shadow-sm">
                       {scenario.persona.role}
                     </div>
                   </div>
@@ -62,7 +69,7 @@ export default function MultiScenarioShowcase({ scenarios }: MultiScenarioShowca
                 <div className="mt-4 p-3 bg-gray-50 rounded-lg">
                   <div className="text-sm text-gray-700">
                     <i className="fas fa-lightbulb text-yellow-500 mr-2" />
-                    <strong>AI Insight:</strong> &ldquo;{scenario.aiInsight}&rdquo;
+                    <strong>AI Insight:</strong> {scenario.aiInsight}
                   </div>
                 </div>
               </div>
@@ -89,9 +96,9 @@ function getPersonaIcon(personaId: string): string {
 
 // 靜態定義所有可能的 persona gradient 類別組合
 const PERSONA_GRADIENT_CLASSES = {
-  'from-blue-500 to-indigo-600': 'bg-gradient-to-r from-blue-500 to-indigo-600 p-4 text-white',
-  'from-purple-500 to-pink-600': 'bg-gradient-to-r from-purple-500 to-pink-600 p-4 text-white',
-  'from-green-500 to-teal-600': 'bg-gradient-to-r from-green-500 to-teal-600 p-4 text-white'
+  'from-blue-600 to-indigo-600': 'bg-gradient-to-r from-blue-600 to-indigo-600 p-4',
+  'from-purple-500 to-violet-600': 'bg-gradient-to-r from-purple-500 to-violet-600 p-4',
+  'from-teal-500 to-cyan-600': 'bg-gradient-to-r from-teal-500 to-cyan-600 p-4'
 } as const;
 
 function getPersonaGradientClasses(gradient: string): string {

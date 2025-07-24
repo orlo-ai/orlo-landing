@@ -23,7 +23,7 @@ export default function HeroSection({
           {/* Left: Hero Content */}
           <div className="hero-content lg:col-span-2">
             {/* Social Proof Badge */}
-            <div className="mb-6 sm:mb-10">
+            <div className="mb-8 sm:mb-12">
               <div className="inline-flex items-center text-sm font-medium text-gray-600 bg-white/60 backdrop-blur-sm px-4 py-2.5 rounded-full border border-gray-200/50 shadow-sm">
                 <div className="flex items-center mr-3">
                   <div className="flex -space-x-1">
@@ -37,18 +37,18 @@ export default function HeroSection({
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.3] mb-6 sm:mb-10">
-              {headline}<br/>
-              <span className="gradient-text">{subheadline}</span>
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-7xl font-bold mb-8 sm:mb-12">
+              <div className="mb-4">{headline}</div>
+              <div className="gradient-text">{subheadline}</div>
             </h1>
 
             {/* Primary Message */}
-            <p className="text-lg sm:text-xl lg:text-2xl text-gray-700 mb-8 sm:mb-12 font-medium leading-[1.6]">
+            <p className="text-lg sm:text-xl lg:text-2xl text-gray-700 mb-10 sm:mb-14 font-medium leading-[1.6]">
               {description}
             </p>
 
             {/* Primary CTA Button */}
-            <div className="mb-3 sm:mb-4">
+            <div className="mb-6 sm:mb-8">
               <Link
                 href={buttons[0].href}
                 className="inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold text-base sm:text-lg btn-primary text-white shadow-lg transition-all duration-200"
@@ -59,7 +59,7 @@ export default function HeroSection({
             </div>
 
             {/* Secondary CTA Link */}
-            <div className="mb-6 sm:mb-8">
+            <div className="mb-8 sm:mb-12">
               <Link
                 href={buttons[1].href}
                 className="inline-flex items-center text-gray-600 hover:text-purple-600 font-medium transition-colors duration-200"
@@ -68,39 +68,10 @@ export default function HeroSection({
                 {buttons[1].text}
               </Link>
             </div>
-
-            {/* Key Benefits */}
-            <div className="mb-8 sm:mb-12">
-              {/* Mobile: Horizontal card layout */}
-              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 border border-gray-100 shadow-sm sm:hidden">
-                <div className="grid grid-cols-3 gap-4">
-                  {metrics.map((metric, index) => (
-                    <div key={index} className="text-center">
-                      <div className="text-xl font-bold gradient-text mb-1">
-                        {metric.value}
-                      </div>
-                      <div className="text-xs text-gray-600 font-medium leading-tight">{metric.label}</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Desktop: Original 3-column vertical layout */}
-              <div className="hidden sm:grid sm:grid-cols-1 lg:grid-cols-3 gap-8 pt-8 border-t border-gray-100">
-                {metrics.map((metric, index) => (
-                  <div key={index} className="text-center lg:text-left">
-                    <div className="text-2xl lg:text-3xl font-bold gradient-text mb-2">
-                      {metric.value}
-                    </div>
-                    <div className="text-sm text-gray-600 font-medium">{metric.label}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
 
           {/* Right: Product Demo */}
-          <div className="product-demo lg:col-span-3 mt-6 lg:mt-0">
+          <div className="product-demo lg:col-span-3 mt-8 lg:mt-0">
             <div className="gradient-border">
               <div className="gradient-border-content p-3 sm:p-6">
                 {/* Orlo Dashboard Mock */}
@@ -125,7 +96,7 @@ export default function HeroSection({
                           AI Insight
                         </div>
                         <div className="text-xs text-blue-700 leading-tight">
-                          &quot;I moved your creative work to 9 AM when you&apos;re most focused, and scheduled calls for 2 PM when you prefer interaction.&quot;
+                          I moved your creative work to 9 AM when you&apos;re most focused, and scheduled calls for 2 PM when you prefer interaction.
                         </div>
                       </div>
                     </div>
@@ -224,6 +195,35 @@ export default function HeroSection({
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+        
+        {/* Key Benefits - Moved to bottom */}
+        <div className="mt-12 lg:mt-16">
+          {/* Mobile: Horizontal card layout */}
+          <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-3 border border-gray-100/50 shadow-sm sm:hidden">
+            <div className="grid grid-cols-3 gap-3">
+              {metrics.map((metric, index) => (
+                <div key={index} className="text-center">
+                  <div className="text-base font-medium text-gray-700 mb-1">
+                    {metric.value}
+                  </div>
+                  <div className="text-xs text-gray-500 font-normal leading-tight">{metric.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Desktop: Original 3-column vertical layout */}
+          <div className="hidden sm:grid sm:grid-cols-3 gap-12 pt-8 border-t border-gray-100 max-w-5xl mx-auto">
+            {metrics.map((metric, index) => (
+              <div key={index} className="text-center">
+                <div className="text-2xl lg:text-3xl font-bold gradient-text mb-2">
+                  {metric.value}
+                </div>
+                <div className="text-sm text-gray-600 font-medium">{metric.label}</div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

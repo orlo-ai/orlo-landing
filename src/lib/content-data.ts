@@ -96,13 +96,13 @@ export const pageContent: PageContent = {
     {
       id: 'time-boxing',
       title: 'Time Boxing System',
-      description: 'Transform abstract to-dos into concrete "when to dos" with our intelligent time boxing system that matches tasks to your energy levels.',
+      description: 'Available now: Transform abstract to-dos into concrete "when to dos" with our intelligent time boxing system that matches tasks to your energy levels.',
       icon: 'fas fa-calendar-alt'
     },
     {
       id: 'ai-coaching',
       title: 'AI Coaching',
-      description: 'Unlike cold productivity robots, Orlo uses coaching dialogue to help you discover your optimal patterns and adapt to change.',
+      description: 'Coming soon: Unlike cold productivity robots, Orlo uses coaching dialogue to help you discover your optimal patterns and adapt to change.',
       icon: 'fas fa-robot'
     }
   ],
@@ -118,7 +118,7 @@ export const pageContent: PageContent = {
       {
         id: '2',
         sender: 'ai',
-        content: 'I can see you&apos;re managing a lot right now. Let me help you prioritize and create focus blocks.',
+        content: 'I can see you\'re managing a lot right now. Let me help you prioritize and create focus blocks.',
         timestamp: new Date(),
         insight: {
           type: 'recommendation',
@@ -134,13 +134,13 @@ export const pageContent: PageContent = {
       {
         id: '3',
         sender: 'user',
-        content: 'Yes! But I&apos;m worried about the tasks I&apos;m postponing.',
+        content: 'Yes! But I\'m worried about the tasks I\'m postponing.',
         timestamp: new Date()
       },
       {
         id: '4',
         sender: 'ai',
-        content: 'I understand that concern. I&apos;ve analyzed those 8 tasks:',
+        content: 'I understand that concern. I\'ve analyzed those 8 tasks:',
         timestamp: new Date(),
         analysis: [
           {
@@ -154,7 +154,7 @@ export const pageContent: PageContent = {
             description: 'tasks can be delegated or automated'
           }
         ],
-        followUp: 'I&apos;ll send you a detailed breakdown. Focus on your launch - I&apos;ve got the rest covered.'
+        followUp: 'I\'ll send you a detailed breakdown. Focus on your launch - I\'ve got the rest covered.'
       }
     ]
   },
@@ -164,11 +164,11 @@ export const pageContent: PageContent = {
       id: 'entrepreneur',
       persona: {
         id: 'sarah',
-        name: 'Sarah, Startup Founder',
-        role: 'Juggling product, fundraising, team',
-        description: 'Managing multiple high-stakes priorities',
+        name: 'Sarah Kim, Solo Consultant',
+        role: 'Managing multiple client projects',
+        description: 'Balancing client work and business development',
         avatar: '/img/personas/entrepreneur.jpg',
-        gradient: 'from-blue-500 to-indigo-600'
+        gradient: 'from-blue-600 to-indigo-600'
       },
       schedule: [
         {
@@ -199,17 +199,17 @@ export const pageContent: PageContent = {
           color: 'green'
         }
       ],
-      aiInsight: 'I&apos;ve protected your morning for high-stakes work and batched all admin tasks for Friday afternoon.'
+      aiInsight: 'I\'ve protected your morning for high-stakes work and batched all admin tasks for Friday afternoon.'
     },
     {
       id: 'working-parent',
       persona: {
         id: 'marcus',
-        name: 'Marcus, Dad & Designer',
+        name: 'Marcus Lee, Designer & Dad',
         role: 'Balancing client work & family',
         description: 'Managing professional and family responsibilities',
         avatar: '/img/personas/parent.jpg',
-        gradient: 'from-purple-500 to-pink-600'
+        gradient: 'from-purple-500 to-violet-600'
       },
       schedule: [
         {
@@ -240,17 +240,17 @@ export const pageContent: PageContent = {
           color: 'green'
         }
       ],
-      aiInsight: 'I&apos;ve created hard boundaries around family time and moved all client calls to school hours.'
+      aiInsight: 'I\'ve created hard boundaries around family time and moved all client calls to school hours.'
     },
     {
       id: 'freelancer',
       persona: {
         id: 'alex',
-        name: 'Alex, Freelance Dev',
+        name: 'Alex Thompson, Freelance Developer',
         role: 'Managing 4 clients, 1 passion project',
         description: 'Balancing multiple client projects and personal goals',
         avatar: '/img/personas/freelancer.jpg',
-        gradient: 'from-green-500 to-teal-600'
+        gradient: 'from-teal-500 to-cyan-600'
       },
       schedule: [
         {
@@ -281,7 +281,7 @@ export const pageContent: PageContent = {
           color: 'purple'
         }
       ],
-      aiInsight: 'I&apos;ve grouped similar client work together and protected evening time for your passion project.'
+      aiInsight: 'I\'ve grouped similar client work together and protected evening time for your passion project.'
     }
   ],
 
@@ -292,7 +292,7 @@ export const pageContent: PageContent = {
       role: 'Solo Consultant',
       avatar: '/img/testimonials/sarah.jpg',
       rating: 5,
-      content: 'It\'s like having a super-smart assistant who never sleeps. My AI Chief of Staff knows I\'m creative in the morning and handles logistics in the afternoon. I focus on what matters.',
+      content: 'Managing multiple client projects and proposals as a solo consultant was chaotic until my AI Chief of Staff stepped in. It helps me prioritize high-value client work and streamlines my admin tasks perfectly.',
       metrics: {
         timeSaved: '7.5 hours/week',
         stressReduction: '82%'
@@ -301,10 +301,10 @@ export const pageContent: PageContent = {
     {
       id: '2',
       name: 'Marcus Lee',
-      role: 'Startup Founder & Dad',
+      role: 'Designer & Dad',
       avatar: '/img/testimonials/marcus.jpg',
       rating: 5,
-      content: 'My AI Chief of Staff protects my family time like a bodyguard and optimizes my work time like a consultant. No more guilt, no more overwhelm.',
+      content: 'Balancing client design projects with family responsibilities felt impossible until my AI Chief of Staff created clear boundaries. It schedules my creative work during peak hours and protects quality time with my kids.',
       metrics: {
         timeSaved: '5.2 hours/week',
         stressReduction: '65%'
@@ -313,10 +313,10 @@ export const pageContent: PageContent = {
     {
       id: '3',
       name: 'Alex Thompson',
-      role: 'Freelance Designer',
+      role: 'Freelance Developer',
       avatar: '/img/testimonials/alex.jpg',
       rating: 5,
-      content: 'I went from chaos to calm. My AI Chief of Staff handles the juggling so I can focus on delivering amazing work. Clients notice the difference.',
+      content: 'Managing multiple client projects and deadlines was chaotic until my AI Chief of Staff took over the scheduling. Now I can focus on writing quality code while it handles the juggling.',
       metrics: {
         timeSaved: '6.8 hours/week',
         stressReduction: '73%'
@@ -326,22 +326,23 @@ export const pageContent: PageContent = {
 
   pricing: {
     title: 'Meet Your AI Chief of Staff',
-    description: 'Start the partnership that will transform how you work and live.',
+    description: 'Start with full access today, then choose the partnership level that fits your needs.',
     plans: [
       {
-        id: 'trial',
-        name: 'Free Partnership Trial',
-        price: '$0',
-        period: '14 days to meet your AI Chief of Staff',
-        description: 'Experience the partnership risk-free',
+        id: 'free',
+        name: 'AI Time Assistant',
+        price: 'Free',
+        period: 'Forever',
+        description: 'Perfect for getting started with AI-powered time management',
         features: [
-          'Complete AI time management system',
-          'Smart scheduling & instant reshuffling',
-          'Energy pattern learning & optimization',
-          'Calendar integrations & mobile access'
+          '30-day full feature access',
+          '20 AI conversations per month after trial',
+          'Core scheduling and time blocking',
+          'Basic energy pattern matching',
+          'Single device calendar integration'
         ],
         cta: {
-          text: 'Start Free Partnership',
+          text: 'Start Free Experience',
           href: 'https://my.orlo.cc',
           variant: 'outline'
         },
@@ -349,19 +350,20 @@ export const pageContent: PageContent = {
       },
       {
         id: 'pro',
-        name: 'Full AI Chief of Staff',
-        price: '$12',
-        period: 'per month, billed annually',
-        description: 'Your complete AI partner for life and work optimization',
+        name: 'AI Chief of Staff',
+        price: 'Coming Soon',
+        period: 'Early access pricing available',
+        description: 'Complete AI partnership for serious time optimization and my personal attention',
         features: [
-          'Everything in Free, plus:',
-          'Advanced AI coaching & strategic insights',
-          'Multi-role management & boundaries',
-          'Productivity analytics & optimization',
-          'Priority support & feature access'
+          'Unlimited AI conversations and insights',
+          'Advanced strategic planning analysis',
+          'Multi-role scenario management',
+          'Cross-device sync with full history',
+          'Priority support and direct access to me',
+          'Early access to new features'
         ],
         cta: {
-          text: 'Get Full AI Chief of Staff',
+          text: 'Join Pro Waitlist',
           href: 'https://my.orlo.cc',
           variant: 'primary'
         },
@@ -373,10 +375,10 @@ export const pageContent: PageContent = {
   sections: [],
   cta: {
     title: 'Ready to Meet Your AI Chief of Staff?',
-    description: 'Join 500+ professionals who\'ve already found their perfect AI partner. Stop managing time. Start partnering with AI that manages it for you.',
+    description: 'Join 500+ professionals who\'ve already found their perfect AI partner. Start your full access experience today and discover what AI-powered time management can do for you.',
     buttons: [
       {
-        text: 'Meet Your AI Chief of Staff',
+        text: 'Start Full Access Experience',
         href: 'https://my.orlo.cc',
         variant: 'primary',
         icon: 'fas fa-handshake'

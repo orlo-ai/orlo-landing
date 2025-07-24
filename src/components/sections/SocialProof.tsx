@@ -28,7 +28,7 @@ export default function SocialProof({ testimonials }: SocialProofProps) {
             Real Results from Real People
           </h2>
           <p className="text-xl text-gray-600 mb-8">
-            Join professionals who've transformed their relationship with time
+            Join professionals who&apos;ve transformed their relationship with time
           </p>
           
           {/* Overall Stats - Moved up as social proof */}
@@ -60,7 +60,7 @@ export default function SocialProof({ testimonials }: SocialProofProps) {
             </div>
 
             <blockquote className="text-xl sm:text-2xl text-gray-800 mb-10 italic leading-relaxed max-w-3xl mx-auto">
-              "{testimonials[currentTestimonial].content}"
+              &quot;{testimonials[currentTestimonial].content}&quot;
             </blockquote>
 
             <div className="flex items-center justify-center">

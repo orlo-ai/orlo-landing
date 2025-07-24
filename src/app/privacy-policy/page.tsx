@@ -41,10 +41,10 @@ export default function PrivacyPolicyPage() {
             <div className="prose prose-lg max-w-none">
               <p className="text-gray-700 leading-relaxed">
                 This is the Privacy Policy of the Orlo website and any affiliated
-                software and mobile applications (collectively, the "Site"), operated
-                by Orlo (together with our affiliates and subsidiaries, "Orlo", "we",
-                "us", "our" and terms of similar meaning) and our related products and
-                services (collectively, the "Service" or "Services"). It describes the
+                software and mobile applications (collectively, the &quot;Site&quot;), operated
+                by Orlo (together with our affiliates and subsidiaries, &quot;Orlo&quot;, &quot;we&quot;,
+                &quot;us&quot;, &quot;our&quot; and terms of similar meaning) and our related products and
+                services (collectively, the &quot;Service&quot; or &quot;Services&quot;). It describes the
                 information that we collect from you as part of the normal operation
                 of our Site, and how we use and disclose this information.
               </p>
@@ -77,8 +77,8 @@ export default function PrivacyPolicyPage() {
               <p className="text-gray-700 leading-relaxed">
                 <strong>Log Data.</strong> When you use the Service, we may
                 automatically record information from your Device, its software, and
-                your activity using the Services. This may include the Device's
-                Internet Protocol ("IP") address, browser type, the web page visited
+                your activity using the Services. This may include the Device&apos;s
+                Internet Protocol (&quot;IP&quot;) address, browser type, the web page visited
                 before you came to our website, locale preferences, identification
                 numbers associated with your Devices, date and time stamps associated
                 with transactions, system configuration information, and other
@@ -109,8 +109,8 @@ export default function PrivacyPolicyPage() {
                 <strong>Analytics.</strong> We collect some information using logging
                 and cookies, which can sometimes be correlated with Personal
                 Information. We use this information to monitor and analyze use of the
-                Service, for the Service's technical administration, and to increase
-                our Service's functionality and user-friendliness.
+                Service, for the Service&apos;s technical administration, and to increase
+                our Service&apos;s functionality and user-friendliness.
               </p>
 
               <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
@@ -144,7 +144,7 @@ export default function PrivacyPolicyPage() {
                 necessary to (a) comply with a law, regulation or compulsory legal
                 request; (b) protect the safety of any person from death or serious
                 bodily injury; (c) prevent fraud or abuse of Orlo or its users; or (d)
-                to protect Orlo's property rights.
+                to protect Orlo&apos;s property rights.
               </p>
 
               <p className="text-gray-700 leading-relaxed">

@@ -8,17 +8,19 @@ export default function Footer() {
     product: {
       title: 'Product',
       links: [
+        { name: 'Demo', href: '#demo' },
         { name: 'Features', href: '#features' },
         { name: 'Pricing', href: '#pricing' },
-        { name: 'Demo', href: '#demo' },
+        { name: 'Integrations', href: '#integrations' },
       ],
     },
     support: {
       title: 'Support',
       links: [
         { name: 'Help Center', href: '#help' },
+        { name: 'Contact Us', href: '#contact' },
         { name: 'Community', href: '#community' },
-        { name: 'Contact', href: '#contact' },
+        { name: 'Partnership Guide', href: '#partnership' },
       ],
     },
     company: {
@@ -26,6 +28,8 @@ export default function Footer() {
       links: [
         { name: 'About', href: '#about' },
         { name: 'Blog', href: '#blog' },
+        { name: 'Privacy', href: '#privacy' },
+        { name: 'Terms', href: '#terms' },
       ],
     },
   };
@@ -53,24 +57,22 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8">
+    <footer className="bg-gray-900 text-white py-16 px-4 sm:px-6 lg:px-8" role="contentinfo">
       <div className="max-w-6xl mx-auto">
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-16">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
           {/* Brand Section */}
           <div className="lg:w-80 flex-shrink-0">
-            <Link href="/" className="flex items-center space-x-2 mb-6">
+            <Link href="/" className="inline-block mb-6" aria-label="Orlo - AI Chief of Staff">
               <Image
-                src="/img/orlo-logo-512.png"
-                alt="Orlo Logo" 
-                width={32}
-                height={32}
-                className="w-8 h-8"
+                src="/img/orlo-logo-w.png"
+                alt="Orlo - AI Chief of Staff for time management" 
+                width={120}
+                height={40}
+                className="h-10 w-auto"
               />
-              <span className="text-xl font-bold text-white">Orlo</span>
             </Link>
             <p className="text-gray-300 text-sm leading-relaxed mb-6">
-              Your AI Chief of Staff that manages time, so you don&apos;t have to. 
-              Built to be your perfect AI Chief of Staff.
+              Your AI Chief of Staff for time management and life optimization.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social) => (
@@ -78,9 +80,10 @@ export default function Footer() {
                   key={social.name}
                   href={social.href}
                   className="text-gray-400 hover:text-white transition-colors duration-200"
-                  aria-label={social.name}
+                  aria-label={`Follow Orlo on ${social.name}`}
                   target="_blank"
                   rel="noopener noreferrer"
+                  title={`Orlo AI Chief of Staff on ${social.name}`}
                 >
                   {social.icon}
                 </a>
@@ -89,7 +92,7 @@ export default function Footer() {
           </div>
 
           {/* Links Sections */}
-          <div className="flex-1 grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-8">
+          <nav className="flex-1 grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-8" role="navigation" aria-label="Footer navigation">
             {Object.entries(footerLinks).map(([key, section]) => (
               <div key={key}>
                 <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
@@ -101,6 +104,7 @@ export default function Footer() {
                       <Link
                         href={link.href}
                         className="text-gray-300 hover:text-white transition-colors duration-200 text-sm"
+                        title={`${link.name} - Orlo AI Chief of Staff`}
                       >
                         {link.name}
                       </Link>
@@ -109,22 +113,17 @@ export default function Footer() {
                 </ul>
               </div>
             ))}
-          </div>
+          </nav>
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-800 mt-8 pt-8">
+        <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
             <div className="mb-4 md:mb-0">
               © {currentYear} Orlo. All rights reserved.
             </div>
-            <div className="flex space-x-6">
-              <Link href="/privacy-policy" className="hover:text-white transition-colors duration-200">
-                Privacy Policy
-              </Link>
-              <Link href="/terms-of-service" className="hover:text-white transition-colors duration-200">
-                Terms of Service
-              </Link>
+            <div className="text-center md:text-left">
+              Built to be your perfect AI Chief of Staff.
             </div>
           </div>
         </div>

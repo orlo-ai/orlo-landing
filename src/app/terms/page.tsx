@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -14,7 +15,7 @@ export default function TermsPage() {
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="flex items-center">
             <Link href="/" className="flex items-center hover:opacity-80 transition">
-              <img src="/img/orlo-logo-512.png" alt="Orlo" className="h-10 w-auto" />
+              <Image src="/img/orlo-logo-512.png" alt="Orlo" width={120} height={40} className="h-10 w-auto" />
             </Link>
           </div>
           <nav>
@@ -42,8 +43,8 @@ export default function TermsPage() {
               <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">1. Acceptance of Terms</h2>
               <p className="text-gray-700 leading-relaxed">
                 By accessing or using the Orlo time management application and related
-                services (the "Service"), you agree to comply with and be bound by
-                these Terms and Conditions ("Terms"). If you do not agree to these
+                services (the &quot;Service&quot;), you agree to comply with and be bound by
+                these Terms and Conditions (&quot;Terms&quot;). If you do not agree to these
                 Terms, please do not use our Service.
               </p>
 
@@ -67,7 +68,7 @@ export default function TermsPage() {
               <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">4. Your Data and Privacy</h2>
               <p className="text-gray-700 leading-relaxed">
                 You retain full ownership of your time management data, tasks, and
-                personal information that you submit to the Service ("User Content").
+                personal information that you submit to the Service (&quot;User Content&quot;).
                 By using the Service, you grant us a limited, non-exclusive license to
                 use, store, and process your User Content solely for the purposes of
                 providing and improving the Service.
@@ -120,7 +121,7 @@ export default function TermsPage() {
               <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">8. Intellectual Property</h2>
               <p className="text-gray-700 leading-relaxed">
                 The Service, including its design, features, and functionality
-                (excluding your User Content), is the exclusive property of Orlo's
+                (excluding your User Content), is the exclusive property of Orlo&apos;s
                 service provider. The Service is protected by copyright, trademark,
                 and other intellectual property laws.
               </p>
@@ -153,7 +154,7 @@ export default function TermsPage() {
               <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">11. Modifications to Terms</h2>
               <p className="text-gray-700 leading-relaxed">
                 We reserve the right to modify these Terms at any time. We will
-                provide at least 30 days' notice of material changes by email or
+                provide at least 30 days&apos; notice of material changes by email or
                 through the Service. Your continued use of the Service after changes
                 take effect constitutes acceptance of the new Terms.
               </p>
@@ -171,13 +172,12 @@ export default function TermsPage() {
                   className="text-blue-600 hover:text-blue-800 underline"
                 >
                   hello@orlo.cc
-                </a>{' '}
-                to resolve the matter informally.
+                </a> to resolve the matter informally.
               </p>
 
               <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">13. Disclaimer of Warranties</h2>
               <p className="text-gray-700 leading-relaxed">
-                The Service is provided "as is" without warranties of any kind. We
+                The Service is provided &quot;as is&quot; without warranties of any kind. We
                 disclaim all warranties, express or implied, including warranties of
                 merchantability, fitness for a particular purpose, and
                 non-infringement.

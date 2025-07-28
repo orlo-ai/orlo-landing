@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -14,7 +15,7 @@ export default function PrivacyPolicyPage() {
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="flex items-center">
             <Link href="/" className="flex items-center hover:opacity-80 transition">
-              <img src="/img/orlo-logo-512.png" alt="Orlo" className="h-10 w-auto" />
+              <Image src="/img/orlo-logo-512.png" alt="Orlo" width={120} height={40} className="h-10 w-auto" />
             </Link>
           </div>
           <nav>

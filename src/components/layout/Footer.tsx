@@ -1,8 +1,15 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
+import { useState, useEffect } from 'react';
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear();
+  const [currentYear, setCurrentYear] = useState(2025);
+
+  useEffect(() => {
+    setCurrentYear(new Date().getFullYear());
+  }, []);
 
   const footerLinks = {
     product: {
@@ -28,8 +35,8 @@ export default function Footer() {
       links: [
         { name: 'About', href: '#about' },
         { name: 'Blog', href: '#blog' },
-        { name: 'Privacy', href: '#privacy' },
-        { name: 'Terms', href: '#terms' },
+        { name: 'Privacy', href: '/privacy-policy' },
+        { name: 'Terms', href: '/terms' },
       ],
     },
   };

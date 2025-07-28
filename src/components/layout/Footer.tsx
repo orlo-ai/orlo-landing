@@ -18,7 +18,7 @@ export default function Footer() {
         { name: 'Demo', href: '#demo' },
         { name: 'Features', href: '#features' },
         { name: 'Pricing', href: '#pricing' },
-        { name: 'Integrations', href: '#integrations' },
+        { name: 'Release', href: '/release-notes' },
       ],
     },
     support: {
@@ -27,7 +27,6 @@ export default function Footer() {
         { name: 'Help Center', href: '#help' },
         { name: 'Contact Us', href: '#contact' },
         { name: 'Community', href: '#community' },
-        { name: 'Partnership Guide', href: '#partnership' },
       ],
     },
     company: {

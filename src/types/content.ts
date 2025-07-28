@@ -156,3 +156,91 @@ export interface AnimationConfig {
   delay?: number;
   duration?: number;
 }
+
+// Release Notes 相關型別定義
+export interface ReleaseNote {
+  // 基本資訊
+  title: string;
+  slug: string;
+  version: string;
+  publishedAt: string;
+  updatedAt?: string;
+  
+  // 內容
+  content: string;
+  excerpt: string;
+  
+  // SEO 和 Meta
+  keywords: string[];
+  socialImage?: string;
+  twitterCard?: string;
+  
+  // 分類和標籤
+  category: ReleaseCategory;
+  tags: string[];
+  
+  // 作者資訊
+  author: string;
+  authorImage?: string;
+  
+  
+  // MDX frontmatter 原始資料
+  frontmatter: Record<string, any>;
+}
+
+
+
+export type ReleaseCategory = 'major' | 'minor' | 'patch';
+
+// Release Notes 列表和篩選
+export interface ReleaseNotesListProps {
+  releases: ReleaseNote[];
+  featured?: ReleaseNote[];
+  categories?: ReleaseCategory[];
+  years?: number[];
+}
+
+export interface ReleaseNoteFilters {
+  category?: ReleaseCategory;
+  year?: number;
+  tags?: string[];
+}
+
+// Release Notes 元資料
+export interface ReleaseNotesMetadata {
+  totalCount: number;
+  latestVersion: string;
+  categories: Record<ReleaseCategory, number>;
+  years: number[];
+  popularTags: Array<{ tag: string; count: number }>;
+}
+
+// SEO 相關
+export interface ReleaseNoteSEO {
+  title: string;
+  description: string;
+  keywords: string[];
+  openGraph: {
+    title: string;
+    description: string;
+    image?: string;
+    type: 'article';
+    publishedTime: string;
+    modifiedTime?: string;
+    authors: string[];
+    section: string;
+    tags: string[];
+  };
+  jsonLd: {
+    '@type': 'SoftwareApplication';
+    name: string;
+    version: string;
+    releaseNotes: string;
+    datePublished: string;
+    dateModified?: string;
+    author: {
+      '@type': 'Organization';
+      name: string;
+    };
+  };
+}

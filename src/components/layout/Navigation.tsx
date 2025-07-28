@@ -29,7 +29,7 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="flex items-center">
+            <Link href="/" className="flex items-center">
               <Image
                 src="/img/orlo-logo.png"
                 alt="Orlo Logo"
@@ -37,7 +37,7 @@ export default function Navigation() {
                 height={32}
                 className="h-8 w-auto"
               />
-            </div>
+            </Link>
           </div>
 
           {/* Right Side Navigation Group */}
@@ -77,7 +77,7 @@ export default function Navigation() {
           <button
             className="md:hidden p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100 transition-colors duration-200"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="開啟選單"
+            aria-label="Open menu"
           >
             <svg
               className="w-6 h-6"

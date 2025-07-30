@@ -66,6 +66,13 @@ export default function RootLayout({
     <html lang="zh-TW">
       <head>
         <link rel="manifest" href="/img/favicon_io/site.webmanifest" />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+          crossOrigin="anonymous"
+          referrerPolicy="no-referrer"
+        />
         <script
           async
           src={`https://www.googletagmanager.com/gtag/js?id=G-J6HLEC8EJZ`}

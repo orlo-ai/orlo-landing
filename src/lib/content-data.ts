@@ -24,7 +24,7 @@ export const pageContent: PageContent = {
       },
       {
         text: 'Watch Demo',
-        href: '#demo',
+        href: '/#demo',
         variant: 'outline',
         icon: 'fas fa-play'
       }
@@ -385,7 +385,7 @@ export const pageContent: PageContent = {
       },
       {
         text: 'Watch Partnership Demo',
-        href: '#demo',
+        href: '/#demo',
         variant: 'outline',
         icon: 'fas fa-play'
       }

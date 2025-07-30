@@ -18,9 +18,9 @@ export default function Navigation() {
   }, []);
 
   const navItems = [
-    { name: 'Demo', href: '#demo' },
-    { name: 'Features', href: '#features' },
-    { name: 'Pricing', href: '#pricing' },
+    { name: 'Demo', href: '/#demo' },
+    { name: 'Features', href: '/#features' },
+    { name: 'Pricing', href: '/pricing' },
   ];
 
   return (

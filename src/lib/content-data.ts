@@ -374,17 +374,17 @@ export const pageContent: PageContent = {
 
   sections: [],
   cta: {
-    title: 'Ready to Meet Your AI Chief of Staff?',
-    description: 'Join 500+ professionals who\'ve already found their perfect AI partner. Start your full access experience today and discover what AI-powered time management can do for you.',
+    title: 'Meet Your AI Chief of Staff',
+    description: 'Transform how you manage time with AI that works like a senior executive assistant.',
     buttons: [
       {
-        text: 'Start Full Access Experience',
+        text: 'Get Started Free',
         href: 'https://my.orlo.cc',
         variant: 'primary',
         icon: 'fas fa-handshake'
       },
       {
-        text: 'Watch Partnership Demo',
+        text: 'Watch Demo',
         href: '/#demo',
         variant: 'outline',
         icon: 'fas fa-play'

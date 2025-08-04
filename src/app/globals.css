@@ -293,3 +293,384 @@ html {
 .animate-slide-in-right {
   animation: slideInRight 0.6s ease-out;
 }
+
+/* 3D Transform utilities */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.-rotate-y-2 {
+  transform: rotateY(-2deg);
+}
+
+.rotate-y-0 {
+  transform: rotateY(0deg);
+}
+
+/* AI Demo specific animations */
+@keyframes fadeInUpDemo {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUpDemo 0.8s ease-out forwards;
+}
+
+/* Floating background animations - matching reference design */
+@keyframes floatBackground {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(30px, -30px) scale(1.05); }
+  50% { transform: translate(-20px, 20px) scale(0.95); }
+  75% { transform: translate(-30px, -10px) scale(1.02); }
+}
+
+.animate-float {
+  animation: floatBackground 20s infinite ease-in-out;
+}
+
+/* iOS 風格字體大小 */
+.text-17 {
+  font-size: 17px;
+}
+
+.text-15 {
+  font-size: 15px;
+}
+
+/* Material Design 3 風格 */
+.material-card {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.material-card:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transform: translateY(-2px);
+}
+
+.material-fab {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: all 0.2s ease;
+}
+
+.material-fab:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transform: scale(1.05);
+}
+
+/* 極簡風格 */
+.minimal-item {
+  padding: 16px 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.minimal-item:hover {
+  transform: translateX(4px);
+}
+
+/* 分組模塊風格 */
+.feature-group {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.feature-group-item {
+  transition: background-color 0.15s ease;
+  cursor: pointer;
+}
+
+.feature-group-item:active {
+  transform: scale(0.98);
+  transition: transform 0.1s ease;
+}
+
+/* 🎨 Whimsy Magic - 愉悅互動動畫 */
+
+/* 容器整體呼吸效果 */
+.whimsy-container {
+  animation: whimsy-breathe 8s ease-in-out infinite;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes whimsy-breathe {
+  0%, 100% { 
+    background-color: rgba(255, 255, 255, 0.9);
+    transform: scale(1);
+  }
+  50% { 
+    background-color: rgba(255, 255, 255, 0.95);
+    transform: scale(1.002);
+  }
+}
+
+/* 項目愉悅互動 */
+.whimsy-item {
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+}
+
+.whimsy-item:hover {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(248, 250, 252, 0.9) 100%);
+  transform: translateX(2px);
+}
+
+.whimsy-item:active {
+  transform: translateX(2px) scale(0.98);
+}
+
+/* 圓形圖示魅力彈跳 - 每個都有獨特個性 */
+.whimsy-icon {
+  position: relative;
+  overflow: hidden;
+  will-change: transform;
+}
+
+.whimsy-icon::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+  opacity: 0;
+  transition: all 0.4s ease;
+  pointer-events: none;
+}
+
+.whimsy-icon:hover::before {
+  opacity: 1;
+  animation: whimsy-glow-pulse 1.5s ease-in-out infinite;
+}
+
+/* 彈跳動畫 - 有機且愉悅 */
+@keyframes whimsy-bounce {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  25% { transform: scale(1.1) rotate(-2deg); }
+  50% { transform: scale(1.15) rotate(1deg); }
+  75% { transform: scale(1.05) rotate(-1deg); }
+}
+
+.whimsy-bounce {
+  animation: whimsy-bounce 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* 光暈脈動 */
+@keyframes whimsy-glow-pulse {
+  0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.3; }
+  50% { transform: scale(1.2) rotate(180deg); opacity: 0.1; }
+}
+
+/* SVG 圖示的個性化動畫 */
+.whimsy-svg {
+  transform-origin: center;
+  will-change: transform;
+}
+
+/* 漣漪效果 - 觸控反饋 */
+.whimsy-ripple {
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
+  animation: whimsy-ripple-expand 0.6s ease-out;
+}
+
+@keyframes whimsy-ripple-expand {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+/* 背景圓圈的響應式魅力 */
+.animate-float {
+  animation: floatBackground 20s infinite ease-in-out;
+  transition: all 0.3s ease;
+}
+
+.animate-float:hover {
+  animation-duration: 15s;
+  opacity: 0.08 !important;
+  filter: blur(0.5px);
+}
+
+/* 背景圓圈與內容的呼應效果 */
+.whimsy-bg-circle {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, opacity, filter;
+}
+
+.whimsy-bg-glow {
+  opacity: 0.08 !important;
+  filter: blur(1px);
+  animation-duration: 12s;
+}
+
+/* 滑鼠跟隨視差效果 - 僅桌面版 */
+@media (min-width: 1024px) {
+  .whimsy-bg-circle {
+    transition: transform 0.1s ease-out, opacity 0.5s ease, filter 0.5s ease, animation-duration 0.5s ease;
+  }
+}
+
+/* 進階互動效果 - 磁吸感應 */
+.whimsy-item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.03), transparent);
+  transition: left 0.5s ease;
+  pointer-events: none;
+}
+
+.whimsy-item:hover::after {
+  left: 100%;
+}
+
+/* 長按驚喜效果 */
+.whimsy-item:active .whimsy-icon {
+  animation: whimsy-celebration 0.8s ease-out;
+}
+
+@keyframes whimsy-celebration {
+  0% { transform: scale(1); }
+  25% { transform: scale(1.2) rotate(5deg); }
+  50% { transform: scale(0.9) rotate(-3deg); }
+  75% { transform: scale(1.1) rotate(2deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
+
+/* 無障礙支援 - 尊重使用者的動畫偏好 */
+@media (prefers-reduced-motion: reduce) {
+  .whimsy-container,
+  .whimsy-item,
+  .whimsy-icon,
+  .whimsy-bounce,
+  .animate-float {
+    animation: none !important;
+    transition: opacity 0.2s ease, color 0.2s ease !important;
+  }
+  
+  .whimsy-item:hover {
+    transform: none !important;
+  }
+}
+
+/* 觸控裝置優化 */
+@media (hover: none) and (pointer: coarse) {
+  .whimsy-item:hover {
+    transform: none;
+  }
+  
+  .whimsy-item:active {
+    transform: scale(0.95);
+    background: rgba(59, 130, 246, 0.05);
+  }
+}
+
+/* 🎉 驚喜彩蛋和隱藏互動 */
+
+/* 序列動畫 - 載入時的優雅展現 */
+.whimsy-container .whimsy-item:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.whimsy-container .whimsy-item:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.whimsy-container .whimsy-item:nth-child(5) {
+  animation-delay: 0.3s;
+}
+
+/* 圖示的"眨眼"效果 - 隨機觸發 */
+.whimsy-svg {
+  animation: whimsy-blink 8s infinite;
+}
+
+@keyframes whimsy-blink {
+  0%, 98%, 100% { opacity: 1; }
+  99% { opacity: 0.3; }
+}
+
+/* 成就解鎖效果 - 首次互動 */
+.whimsy-item:active .whimsy-icon::after {
+  content: '✨';
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  font-size: 12px;
+  animation: whimsy-sparkle 1s ease-out;
+  pointer-events: none;
+}
+
+@keyframes whimsy-sparkle {
+  0% {
+    transform: scale(0) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.5) rotate(180deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* 特殊狀態：聖誕節彩蛋 */
+@media (max-width: 768px) {
+  .whimsy-container {
+    position: relative;
+  }
+  
+  .whimsy-container::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 10px;
+    height: 10px;
+    background: radial-gradient(circle, #f59e0b 0%, transparent 70%);
+    border-radius: 50%;
+    opacity: 0;
+    animation: whimsy-heartbeat 3s ease-in-out infinite;
+    pointer-events: none;
+  }
+}
+
+@keyframes whimsy-heartbeat {
+  0%, 90%, 100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  5%, 85% {
+    opacity: 0.6;
+    transform: scale(1.2);
+  }
+}
+
+/* 高對比度模式支援 */
+@media (prefers-contrast: high) {
+  .whimsy-item:hover {
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+  }
+  
+  .whimsy-icon {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+}

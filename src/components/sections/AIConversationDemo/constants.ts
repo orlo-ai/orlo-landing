@@ -34,16 +34,16 @@ export interface BackgroundCircle {
   };
 }
 
-// 功能特色資料
-export const FEATURES: FeatureData[] = [
+// Smart Planning 功能特色資料 - 藍紫漸變系
+export const SMART_PLANNING_FEATURES: FeatureData[] = [
   {
-    id: 'habit-recognition',
-    title: 'Smart Habit Recognition',
-    description: 'Learns your routines and remembers what matters',
+    id: 'learns-rhythms',
+    title: 'Learns Your Rhythms',
+    description: '',
     iconType: 'check',
     color: {
-      bg: 'bg-blue-500',
-      hover: 'group-hover/item:text-blue-600',
+      bg: 'text-blue-600',
+      hover: 'group-hover/item:text-blue-700',
       shadow: 'group-hover/item:shadow-blue-200'
     },
     animation: {
@@ -52,14 +52,63 @@ export const FEATURES: FeatureData[] = [
     }
   },
   {
-    id: 'energy-planning',
-    title: 'Energy-Based Planning',
-    description: 'Schedules tasks around your natural energy cycles',
+    id: 'adapts-changes',
+    title: 'Adapts to Changes',
+    description: '',
+    iconType: 'refresh',
+    color: {
+      bg: 'text-indigo-600',
+      hover: 'group-hover/item:text-indigo-700',
+      shadow: 'group-hover/item:shadow-indigo-200'
+    },
+    animation: {
+      svg: 'group-hover/item:rotate-180',
+      duration: 'duration-500'
+    }
+  },
+  {
+    id: 'optimizes-energy',
+    title: 'Optimizes Energy Flow',
+    description: '',
     iconType: 'lightbulb',
     color: {
-      bg: 'bg-purple-500',
-      hover: 'group-hover/item:text-purple-600',
+      bg: 'text-purple-600',
+      hover: 'group-hover/item:text-purple-700',
       shadow: 'group-hover/item:shadow-purple-200'
+    },
+    animation: {
+      svg: 'group-hover/item:scale-110',
+      duration: 'duration-300'
+    }
+  }
+];
+
+// Day Close 功能特色資料 - 紫粉漸變系
+export const DAY_CLOSE_FEATURES: FeatureData[] = [
+  {
+    id: 'reflect-capture',
+    title: 'Reflect & Capture',
+    description: '',
+    iconType: 'check',
+    color: {
+      bg: 'text-purple-600',
+      hover: 'group-hover/item:text-purple-700',
+      shadow: 'group-hover/item:shadow-purple-200'
+    },
+    animation: {
+      svg: 'group-hover/item:rotate-12',
+      duration: 'duration-300'
+    }
+  },
+  {
+    id: 'learn-grow',
+    title: 'Learn & Grow',
+    description: '',
+    iconType: 'lightbulb',
+    color: {
+      bg: 'text-violet-600',
+      hover: 'group-hover/item:text-violet-700',
+      shadow: 'group-hover/item:shadow-violet-200'
     },
     animation: {
       svg: 'group-hover/item:scale-110',
@@ -67,14 +116,14 @@ export const FEATURES: FeatureData[] = [
     }
   },
   {
-    id: 'instant-adaptation',
-    title: 'Instant Adaptation',
-    description: 'Plans change? AI reschedules everything instantly',
+    id: 'preview-tomorrow',
+    title: 'Preview Tomorrow',
+    description: '',
     iconType: 'refresh',
     color: {
-      bg: 'bg-indigo-500',
-      hover: 'group-hover/item:text-indigo-600',
-      shadow: 'group-hover/item:shadow-indigo-200'
+      bg: 'text-fuchsia-600',
+      hover: 'group-hover/item:text-fuchsia-700',
+      shadow: 'group-hover/item:shadow-fuchsia-200'
     },
     animation: {
       svg: 'group-hover/item:rotate-180',
@@ -126,13 +175,53 @@ export const BACKGROUND_CIRCLES: BackgroundCircle[] = [
   }
 ];
 
-// 影片配置
-export const VIDEO_CONFIG = {
-  src: '/img/mobile_demo_AI_plan.mp4',
-  aspectRatio: '9/16',
-  maxHeight: '600px',
-  fallback: {
-    title: 'Loading AI Demo...',
-    subtitle: 'Please wait a moment'
+// 功能標籤配置
+export interface FunctionTab {
+  id: string;
+  title: string;
+  description: string;
+  video: {
+    src: string;
+    aspectRatio: string;
+    maxHeight: string;
+    fallback: {
+      title: string;
+      subtitle: string;
+    };
+  };
+  features: FeatureData[];
+}
+
+// 多功能標籤配置
+export const FUNCTION_TABS: FunctionTab[] = [
+  {
+    id: 'smart-planning',
+    title: 'Smart Planning',
+    description: 'Learns your patterns, crafts your perfect day',
+    video: {
+      src: '/img/mobile_demo_AI_plan.mp4',
+      aspectRatio: '9/16',
+      maxHeight: '600px',
+      fallback: {
+        title: 'Loading Smart Planning Demo...',
+        subtitle: 'Please wait a moment'
+      }
+    },
+    features: SMART_PLANNING_FEATURES
+  },
+  {
+    id: 'day-close',
+    title: 'Day Close',
+    description: 'Process today, prepare tomorrow, rest peacefully',
+    video: {
+      src: '/img/mobile_demo_day_close.mp4',
+      aspectRatio: '9/16',
+      maxHeight: '600px',
+      fallback: {
+        title: 'Loading Day Close Demo...',
+        subtitle: 'Please wait a moment'
+      }
+    },
+    features: DAY_CLOSE_FEATURES
   }
-};
+];

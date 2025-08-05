@@ -17,7 +17,7 @@ export default function Footer() {
       links: [
         { name: 'Demo', href: '#demo' },
         { name: 'Features', href: '#features' },
-        { name: 'Pricing', href: '#pricing' },
+        { name: 'Pricing', href: '/pricing' },
         { name: 'Release', href: '/release-notes' },
       ],
     },
@@ -74,7 +74,7 @@ export default function Footer() {
                 alt="Orlo - AI Chief of Staff for time management" 
                 width={120}
                 height={40}
-                className="h-10 w-auto"
+                style={{ height: 'auto', width: 'auto', maxWidth: '120px', maxHeight: '40px' }}
               />
             </Link>
             <p className="text-gray-300 text-sm leading-relaxed mb-6">

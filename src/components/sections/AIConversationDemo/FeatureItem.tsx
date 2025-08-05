@@ -25,7 +25,7 @@ export default function FeatureItem({ feature, isLast = false, onActivate }: Fea
   };
 
   // 動態生成 icon 類別名稱
-  const iconClassName = `w-4 h-4 text-white whimsy-svg transition-transform ${feature.animation.duration} ${feature.animation.svg}`;
+  const iconClassName = `w-5 h-5 ${feature.color.bg} whimsy-svg transition-all ${feature.animation.duration} ${feature.animation.svg} ${feature.color.hover}`;
 
   return (
     <>
@@ -38,11 +38,11 @@ export default function FeatureItem({ feature, isLast = false, onActivate }: Fea
         onClick={handleClick}
       >
         <div className="flex items-center gap-4 relative z-10">
-          <div className={`w-8 h-8 ${feature.color.bg} rounded-full flex items-center justify-center flex-shrink-0 whimsy-icon group-hover/item:whimsy-bounce transition-all duration-300 group-hover/item:shadow-lg ${feature.color.shadow}`}>
+          <div className="flex items-center justify-center flex-shrink-0 whimsy-icon group-hover/item:whimsy-bounce transition-all duration-300">
             <Icon type={feature.iconType} className={iconClassName} />
           </div>
           <div className="flex-1 min-w-0">
-            <h3 className={`text-17 font-medium text-gray-900 leading-tight ${feature.color.hover} transition-colors duration-300`}>
+            <h3 className="text-17 font-medium text-gray-900 leading-tight transition-colors duration-300">
               {feature.title}
             </h3>
             <p className="text-15 text-gray-500 mt-0.5 leading-tight group-hover/item:text-gray-600 transition-colors duration-300">

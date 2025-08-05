@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <Layout>
       <HeroSection {...pageContent.hero} />
-      <AIConversationDemo conversation={pageContent.aiDemo} />
+      <AIConversationDemo />
       <MultiScenarioShowcase scenarios={pageContent.scenarios} />
       <SocialProof testimonials={pageContent.testimonials} />
       <SecurityTrust />

@@ -4,6 +4,7 @@ import React, { useState, useCallback } from 'react';
 import VideoDemo from './VideoDemo';
 import FeatureItem from './FeatureItem';
 import { FunctionTab } from './constants';
+import { Button } from '@/components/ui/Button';
 
 interface FunctionShowcaseProps {
   tabs: FunctionTab[];
@@ -54,22 +55,17 @@ export default function FunctionShowcase({ tabs }: FunctionShowcaseProps) {
                 }}
               >
                 {tabs.map((tab) => (
-                  <button
+                  <Button
                     key={tab.id}
                     onClick={() => handleTabChange(tab.id)}
-                    className={`
-                      px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-300 
-                      transform hover:scale-105 active:scale-95 whitespace-nowrap flex-shrink-0
-                      ${activeTabId === tab.id 
-                        ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white' 
-                        : 'bg-white/90 text-gray-600 hover:bg-white hover:text-gray-900 hover:shadow-sm border border-gray-200'
-                      }
-                    `}
+                    variant={activeTabId === tab.id ? 'primary' : 'outline'}
+                    size="md"
+                    className="whitespace-nowrap flex-shrink-0"
                     style={{ scrollSnapAlign: 'start' }}
                     aria-pressed={activeTabId === tab.id}
                   >
                     {tab.title}
-                  </button>
+                  </Button>
                 ))}
               </div>
             </div>
@@ -77,21 +73,15 @@ export default function FunctionShowcase({ tabs }: FunctionShowcaseProps) {
             {/* 桌面版：普通 flex 佈局 */}
             <div className="hidden lg:flex gap-3 justify-start">
               {tabs.map((tab) => (
-                <button
+                <Button
                   key={tab.id}
                   onClick={() => handleTabChange(tab.id)}
-                  className={`
-                    px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-300 
-                    transform hover:scale-105 active:scale-95
-                    ${activeTabId === tab.id 
-                      ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-md' 
-                      : 'bg-white/90 text-gray-600 hover:bg-white hover:text-gray-900 hover:shadow-md border border-gray-200'
-                    }
-                  `}
+                  variant={activeTabId === tab.id ? 'primary' : 'outline'}
+                  size="md"
                   aria-pressed={activeTabId === tab.id}
                 >
                   {tab.title}
-                </button>
+                </Button>
               ))}
             </div>
           </div>

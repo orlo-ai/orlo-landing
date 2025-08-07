@@ -1,7 +1,7 @@
 'use client';
 
 import { HeroContent } from '@/types/content';
-import Link from 'next/link';
+import { ButtonLink } from '@/components/ui/ButtonLink';
 
 interface HeroSectionProps extends HeroContent {}
 
@@ -49,24 +49,29 @@ export default function HeroSection({
 
             {/* Primary CTA Button */}
             <div className="mb-6 sm:mb-8">
-              <Link
+              <ButtonLink
                 href={buttons[0].href}
-                className="inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold text-base sm:text-lg btn-primary text-white shadow-lg transition-all duration-200"
+                variant="primary"
+                size="lg"
+                radius="lg"
+                className="shadow-lg"
               >
                 {buttons[0].icon && <i className={`${buttons[0].icon} mr-2`} />}
                 {buttons[0].text}
-              </Link>
+              </ButtonLink>
             </div>
 
             {/* Secondary CTA Link */}
             <div className="mb-8 sm:mb-12">
-              <Link
+              <ButtonLink
                 href={buttons[1].href}
-                className="inline-flex items-center text-gray-600 hover:text-purple-600 font-medium transition-colors duration-200"
+                variant="link"
+                size="md"
+                className="text-gray-600 hover:text-purple-600"
               >
                 {buttons[1].icon && <i className={`${buttons[1].icon} mr-2`} />}
                 {buttons[1].text}
-              </Link>
+              </ButtonLink>
             </div>
           </div>
 

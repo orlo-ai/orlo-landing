@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { ButtonLink } from '@/components/ui/ButtonLink';
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -58,18 +59,21 @@ export default function Navigation() {
             
             {/* CTA Buttons */}
             <div className="flex items-center space-x-4">
-              <Link
+              <ButtonLink
                 href="https://my.orlo.cc/login"
-                className="text-gray-600 hover:text-gray-900 font-medium"
+                variant="ghost"
+                size="md"
               >
                 Login
-              </Link>
-              <Link
+              </ButtonLink>
+              <ButtonLink
                 href="https://my.orlo.cc"
-                className="btn-primary text-white px-6 py-2 rounded-lg font-medium"
+                variant="primary"
+                size="md"
+                external
               >
                 Get Started
-              </Link>
+              </ButtonLink>
             </div>
           </div>
 
@@ -119,20 +123,29 @@ export default function Navigation() {
                 </Link>
               ))}
               <div className="border-t border-gray-200 pt-4 mt-4">
-                <Link
+                <ButtonLink
                   href="https://my.orlo.cc/login"
-                  className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors duration-200 font-medium"
+                  variant="ghost"
+                  size="md"
+                  fullWidth
+                  className="justify-center mb-2"
                   onClick={() => setIsMobileMenuOpen(false)}
+                  external
                 >
                   Login
-                </Link>
-                <Link
+                </ButtonLink>
+                <ButtonLink
                   href="https://my.orlo.cc"
-                  className="block mx-3 mt-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-full text-center font-medium"
+                  variant="primary"
+                  size="md"
+                  radius="full"
+                  fullWidth
+                  className="justify-center"
                   onClick={() => setIsMobileMenuOpen(false)}
+                  external
                 >
                   Get Started
-                </Link>
+                </ButtonLink>
               </div>
             </div>
           </div>

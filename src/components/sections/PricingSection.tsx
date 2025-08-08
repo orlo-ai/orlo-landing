@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { ButtonLink } from '@/components/ui/ButtonLink';
 import { PricingContent } from '@/types/content';
 
 interface PricingSectionProps {
@@ -36,12 +36,15 @@ export default function PricingSection({ pricing }: PricingSectionProps) {
                       </li>
                     ))}
                   </ul>
-                  <Link
+                  <ButtonLink
                     href={plan.cta.href}
-                    className="w-full btn-primary text-white px-6 py-3 rounded-lg font-semibold block text-center"
+                    variant="primary"
+                    size="lg"
+                    fullWidth
+                    className="justify-center"
                   >
                     {plan.cta.text}
-                  </Link>
+                  </ButtonLink>
                 </div>
               </div>
             ) : (
@@ -60,12 +63,15 @@ export default function PricingSection({ pricing }: PricingSectionProps) {
                     </li>
                   ))}
                 </ul>
-                <Link
+                <ButtonLink
                   href={plan.cta.href}
-                  className="w-full bg-gray-700 text-white px-6 py-3 rounded-lg font-semibold block text-center hover:bg-gray-800 transition"
+                  variant="secondary"
+                  size="lg"
+                  fullWidth
+                  className="justify-center"
                 >
                   {plan.cta.text}
-                </Link>
+                </ButtonLink>
               </div>
             )
           ))}

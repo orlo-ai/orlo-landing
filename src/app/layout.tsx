@@ -6,33 +6,33 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://orlo.cc'),
-  title: 'Orlo - Your AI Chief of Staff | Stop Managing Time, Start Partnering with AI',
+  title: 'Orlo - Your AI Chief of Staff | One Less Thing to Think About',
   description:
-    'Stop managing time. Start partnering with AI that manages it for you. Like having a senior executive\'s personal assistant - but for your entire life.',
+    'Stop managing calendars. Start making decisions. AI handles your scheduling complexity in real-time.',
   keywords:
     'AI, Chief of Staff, time management, AI assistant, productivity, personal assistant, AI partnership, executive assistant',
   authors: [{ name: 'Orlo Team' }],
   openGraph: {
-    title: 'Orlo - Your AI Chief of Staff | Stop Managing Time, Start Partnering with AI',
-    description: 'Stop managing time. Start partnering with AI that manages it for you.',
+    title: 'Orlo - Your AI Chief of Staff | One Less Thing to Think About',
+    description: 'Stop managing calendars. Start making decisions. AI handles your scheduling complexity in real-time.',
     url: 'https://orlo.cc',
     siteName: 'Orlo',
     images: [
       {
-        url: '/img/orlo-social-share.png',
+        url: '/img/orlo-home-1200x630-v1.png',
         width: 1200,
         height: 630,
-        alt: 'Orlo - Your AI Chief of Staff',
+        alt: 'Orlo - Your AI Chief of Staff | One Less Thing to Think About',
       },
     ],
-    locale: 'zh_TW',
+    locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Orlo - Your AI Chief of Staff',
-    description: 'Stop managing time. Start partnering with AI that manages it for you.',
-    images: ['/img/orlo-social-share.png'],
+    title: 'Orlo - Your AI Chief of Staff | One Less Thing to Think About',
+    description: 'Stop managing calendars. Start making decisions. AI handles your scheduling complexity in real-time.',
+    images: ['/img/orlo-home-1200x630-v1.png'],
   },
   icons: {
     icon: [
@@ -65,7 +65,6 @@ export default function RootLayout({
   return (
     <html lang="zh-TW">
       <head>
-        <link rel="manifest" href="/img/favicon_io/site.webmanifest" />
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"

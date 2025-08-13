@@ -199,7 +199,7 @@ export const FUNCTION_TABS: FunctionTab[] = [
     title: 'Smart Planning',
     description: 'Learns your patterns, crafts your perfect day',
     video: {
-      src: '/img/mobile_demo_AI_plan.mp4',
+      src: '/video/mobile_demo_AI_plan.mp4',
       aspectRatio: '9/16',
       maxHeight: '600px',
       fallback: {
@@ -214,7 +214,7 @@ export const FUNCTION_TABS: FunctionTab[] = [
     title: 'Day Close',
     description: 'Process today, prepare tomorrow, rest peacefully',
     video: {
-      src: '/img/mobile_demo_day_close.mp4',
+      src: '/video/mobile_demo_day_close.mp4',
       aspectRatio: '9/16',
       maxHeight: '600px',
       fallback: {

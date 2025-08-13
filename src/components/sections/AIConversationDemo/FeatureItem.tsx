@@ -12,7 +12,7 @@ interface FeatureItemProps {
  * 功能特色項目組件
  * 支援鍵盤導航和 ARIA 無障礙功能
  */
-export default function FeatureItem({ feature, isLast = false, onActivate }: FeatureItemProps) {
+function FeatureItem({ feature, isLast = false, onActivate }: FeatureItemProps) {
   const handleKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
     if (event.key === 'Enter' || event.key === ' ') {
       event.preventDefault();
@@ -33,7 +33,7 @@ export default function FeatureItem({ feature, isLast = false, onActivate }: Fea
         className="px-5 py-4 whimsy-item group/item cursor-pointer relative overflow-hidden"
         role="button"
         tabIndex={0}
-        aria-label={`${feature.title}: ${feature.description}`}
+        aria-label={feature.description ? `${feature.title}: ${feature.description}` : feature.title}
         onKeyDown={handleKeyDown}
         onClick={handleClick}
       >
@@ -45,9 +45,11 @@ export default function FeatureItem({ feature, isLast = false, onActivate }: Fea
             <h3 className="text-17 font-medium text-gray-900 leading-tight transition-colors duration-300">
               {feature.title}
             </h3>
-            <p className="text-15 text-gray-500 mt-0.5 leading-tight group-hover/item:text-gray-600 transition-colors duration-300">
-              {feature.description}
-            </p>
+            {feature.description && (
+              <p className="text-15 text-gray-500 mt-0.5 leading-tight group-hover/item:text-gray-600 transition-colors duration-300">
+                {feature.description}
+              </p>
+            )}
           </div>
         </div>
         <div className="whimsy-ripple absolute inset-0 opacity-0 group-active/item:opacity-100 pointer-events-none"></div>
@@ -60,3 +62,5 @@ export default function FeatureItem({ feature, isLast = false, onActivate }: Fea
     </>
   );
 }
+
+export default React.memo(FeatureItem);

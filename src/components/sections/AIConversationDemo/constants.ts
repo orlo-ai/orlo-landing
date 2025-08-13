@@ -5,7 +5,7 @@
 export interface FeatureData {
   id: string;
   title: string;
-  description: string;
+  description?: string;  // 將 description 設為可選
   iconType: 'check' | 'lightbulb' | 'refresh';
   color: {
     bg: string;
@@ -39,7 +39,6 @@ export const SMART_PLANNING_FEATURES: FeatureData[] = [
   {
     id: 'learns-rhythms',
     title: 'Learns Your Rhythms',
-    description: '',
     iconType: 'check',
     color: {
       bg: 'text-blue-600',
@@ -54,7 +53,6 @@ export const SMART_PLANNING_FEATURES: FeatureData[] = [
   {
     id: 'adapts-changes',
     title: 'Adapts to Changes',
-    description: '',
     iconType: 'refresh',
     color: {
       bg: 'text-indigo-600',
@@ -69,7 +67,6 @@ export const SMART_PLANNING_FEATURES: FeatureData[] = [
   {
     id: 'optimizes-energy',
     title: 'Optimizes Energy Flow',
-    description: '',
     iconType: 'lightbulb',
     color: {
       bg: 'text-purple-600',
@@ -88,7 +85,6 @@ export const DAY_CLOSE_FEATURES: FeatureData[] = [
   {
     id: 'reflect-capture',
     title: 'Reflect & Capture',
-    description: '',
     iconType: 'check',
     color: {
       bg: 'text-purple-600',
@@ -103,7 +99,6 @@ export const DAY_CLOSE_FEATURES: FeatureData[] = [
   {
     id: 'learn-grow',
     title: 'Learn & Grow',
-    description: '',
     iconType: 'lightbulb',
     color: {
       bg: 'text-violet-600',
@@ -118,7 +113,6 @@ export const DAY_CLOSE_FEATURES: FeatureData[] = [
   {
     id: 'preview-tomorrow',
     title: 'Preview Tomorrow',
-    description: '',
     iconType: 'refresh',
     color: {
       bg: 'text-fuchsia-600',
@@ -128,6 +122,98 @@ export const DAY_CLOSE_FEATURES: FeatureData[] = [
     animation: {
       svg: 'group-hover/item:rotate-180',
       duration: 'duration-500'
+    }
+  }
+];
+
+// Suggestions 功能特色資料 - 藍色系
+export const SUGGESTIONS_FEATURES: FeatureData[] = [
+  {
+    id: 'analyzes-context',
+    title: 'Analyzes Context',
+    iconType: 'lightbulb',
+    color: {
+      bg: 'text-blue-600',
+      hover: 'group-hover/item:text-blue-700',
+      shadow: 'group-hover/item:shadow-blue-200'
+    },
+    animation: {
+      svg: 'group-hover/item:scale-110',
+      duration: 'duration-300'
+    }
+  },
+  {
+    id: 'offers-options',
+    title: 'Offers 4 Options',
+    iconType: 'check',
+    color: {
+      bg: 'text-indigo-600',
+      hover: 'group-hover/item:text-indigo-700',
+      shadow: 'group-hover/item:shadow-indigo-200'
+    },
+    animation: {
+      svg: 'group-hover/item:rotate-12',
+      duration: 'duration-300'
+    }
+  },
+  {
+    id: 'zero-thinking',
+    title: 'Zero Thinking',
+    iconType: 'refresh',
+    color: {
+      bg: 'text-cyan-600',
+      hover: 'group-hover/item:text-cyan-700',
+      shadow: 'group-hover/item:shadow-cyan-200'
+    },
+    animation: {
+      svg: 'group-hover/item:rotate-180',
+      duration: 'duration-500'
+    }
+  }
+];
+
+// Smart Tasks 功能特色資料 - 綠色系
+export const SMART_TASKS_FEATURES: FeatureData[] = [
+  {
+    id: 'task-refine',
+    title: 'Task Refine',
+    iconType: 'lightbulb',
+    color: {
+      bg: 'text-emerald-600',
+      hover: 'group-hover/item:text-emerald-700',
+      shadow: 'group-hover/item:shadow-emerald-200'
+    },
+    animation: {
+      svg: 'group-hover/item:scale-110',
+      duration: 'duration-300'
+    }
+  },
+  {
+    id: 'smart-split',
+    title: 'Smart Split',
+    iconType: 'refresh',
+    color: {
+      bg: 'text-teal-600',
+      hover: 'group-hover/item:text-teal-700',
+      shadow: 'group-hover/item:shadow-teal-200'
+    },
+    animation: {
+      svg: 'group-hover/item:rotate-180',
+      duration: 'duration-500'
+    }
+  },
+  {
+    id: 'auto-enrich',
+    title: 'Auto Enrich',
+    iconType: 'check',
+    color: {
+      bg: 'text-green-600',
+      hover: 'group-hover/item:text-green-700',
+      shadow: 'group-hover/item:shadow-green-200'
+    },
+    animation: {
+      svg: 'group-hover/item:rotate-12',
+      duration: 'duration-300'
     }
   }
 ];
@@ -195,8 +281,23 @@ export interface FunctionTab {
 // 多功能標籤配置
 export const FUNCTION_TABS: FunctionTab[] = [
   {
+    id: 'suggestions',
+    title: 'Suggestions',
+    description: 'Never wonder what to do between tasks',
+    video: {
+      src: '/video/mobile_demo_suggestions.mp4',
+      aspectRatio: '9/16',
+      maxHeight: '600px',
+      fallback: {
+        title: 'Loading Suggestions Demo...',
+        subtitle: 'Please wait a moment'
+      }
+    },
+    features: SUGGESTIONS_FEATURES
+  },
+  {
     id: 'smart-planning',
-    title: 'Smart Planning',
+    title: 'Planning',
     description: 'Learns your patterns, crafts your perfect day',
     video: {
       src: '/video/mobile_demo_AI_plan.mp4',
@@ -208,6 +309,21 @@ export const FUNCTION_TABS: FunctionTab[] = [
       }
     },
     features: SMART_PLANNING_FEATURES
+  },
+  {
+    id: 'smart-tasks',
+    title: 'Tasks',
+    description: 'Transform chaos into clear, actionable steps',
+    video: {
+      src: '/video/mobile_demo_task_optimization.mp4',
+      aspectRatio: '9/16',
+      maxHeight: '600px',
+      fallback: {
+        title: 'Loading Smart Tasks Demo...',
+        subtitle: 'Please wait a moment'
+      }
+    },
+    features: SMART_TASKS_FEATURES
   },
   {
     id: 'day-close',

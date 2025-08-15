@@ -100,7 +100,7 @@ export default function FunctionShowcase({ tabs }: FunctionShowcaseProps) {
             <div 
               className="space-y-1 bg-white/90 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-100 whimsy-container group/container transition-all duration-300"
               role="list"
-              aria-label={`${activeTab.title} 功能特色`}
+              aria-label={`${activeTab.title} features`}
             >
               {activeTab.features.map((feature, index) => (
                 <div key={feature.id} role="listitem">

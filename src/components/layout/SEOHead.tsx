@@ -14,7 +14,7 @@ interface SEOMetadataProps {
 
 export function generateSEOMetadata({
   title = 'Orlo - AI-Powered Time Management Assistant',
-  description = '重建你的生活，而不只是你的行程表。Orlo 透過智能時間邊界和決策疲勞減少，幫助你管理時間。',
+  description = 'Rebuild your life, not just your schedule. Orlo helps you manage time through intelligent boundaries and decision fatigue reduction.',
   keywords = 'time management, AI assistant, productivity, scheduling, decision fatigue, 時間管理, AI助手, 生產力',
   ogImage = '/img/orlo-social-share.png',
   ogUrl = 'https://orlo.cc',

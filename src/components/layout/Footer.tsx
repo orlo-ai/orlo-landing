@@ -24,7 +24,7 @@ export default function Footer() {
     support: {
       title: 'Support',
       links: [
-        { name: 'Help Center', href: '/help' },
+        { name: 'Support', href: '/support' },
         { name: 'Contact Us', href: '#contact' },
         { name: 'Community', href: '#community' },
       ],
@@ -33,7 +33,7 @@ export default function Footer() {
       title: 'Company',
       links: [
         { name: 'About', href: '#about' },
-        { name: 'Blog', href: '#blog' },
+        { name: 'Blog', href: '/blog' },
         { name: 'Privacy', href: '/privacy-policy' },
         { name: 'Terms', href: '/terms' },
       ],

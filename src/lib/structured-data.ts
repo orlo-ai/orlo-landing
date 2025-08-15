@@ -47,7 +47,7 @@ export function generateOrganizationSchema(): OrganizationSchema {
     name: 'Orlo',
     url: 'https://orlo.cc',
     logo: 'https://orlo.cc/img/orlo-logo.png',
-    description: '重建你的生活，而不只是你的行程表。Orlo 透過智能時間邊界和決策疲勞減少，幫助你管理時間。',
+    description: 'Rebuild your life, not just your schedule. Orlo helps you manage time through intelligent boundaries and decision fatigue reduction.',
     sameAs: [
       'https://twitter.com/orlo',
       'https://linkedin.com/company/orlo',
@@ -62,7 +62,7 @@ export function generateWebsiteSchema(): WebsiteSchema {
     '@type': 'WebSite',
     name: 'Orlo - AI-Powered Time Management Assistant',
     url: 'https://orlo.cc',
-    description: '重建你的生活，而不只是你的行程表。Orlo 透過智能時間邊界和決策疲勞減少，幫助你管理時間。',
+    description: 'Rebuild your life, not just your schedule. Orlo helps you manage time through intelligent boundaries and decision fatigue reduction.',
     publisher: {
       '@type': 'Organization',
       name: 'Orlo',

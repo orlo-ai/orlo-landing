@@ -24,7 +24,7 @@ export default function Footer() {
     support: {
       title: 'Support',
       links: [
-        { name: 'Help Center', href: '#help' },
+        { name: 'Help Center', href: '/help' },
         { name: 'Contact Us', href: '#contact' },
         { name: 'Community', href: '#community' },
       ],

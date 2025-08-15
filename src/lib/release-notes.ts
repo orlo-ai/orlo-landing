@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import { ReleaseNote, ReleaseNoteFilters, ReleaseNotesMetadata } from '@/types/content';
+import { parseMarkdownFile } from './content-utils';
 
 const RELEASE_NOTES_PATH = path.join(process.cwd(), 'content/release-notes');
 
@@ -30,14 +31,15 @@ export function getReleaseNoteFiles(): string[] {
 export function parseReleaseNote(filename: string): ReleaseNote | null {
   try {
     const filePath = path.join(RELEASE_NOTES_PATH, filename);
-    const fileContent = fs.readFileSync(filePath, 'utf8');
-    const { data: frontmatter, content } = matter(fileContent);
+    const parsed = parseMarkdownFile(filePath, {
+      validateFields: ['title', 'slug', 'version', 'publishedAt']
+    });
     
-    // 驗證必要欄位
-    if (!frontmatter.title || !frontmatter.slug || !frontmatter.version || !frontmatter.publishedAt) {
-      console.warn(`Missing required frontmatter fields in ${filename}`);
+    if (!parsed) {
       return null;
     }
+    
+    const { frontmatter, content } = parsed;
     
     return {
       title: frontmatter.title,
@@ -45,6 +47,7 @@ export function parseReleaseNote(filename: string): ReleaseNote | null {
       version: frontmatter.version,
       publishedAt: frontmatter.publishedAt,
       updatedAt: frontmatter.updatedAt,
+      draft: frontmatter.draft || false,
       content,
       excerpt: frontmatter.excerpt || '',
       keywords: frontmatter.keywords || [],

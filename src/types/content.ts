@@ -165,6 +165,7 @@ export interface ReleaseNote {
   version: string;
   publishedAt: string;
   updatedAt?: string;
+  draft?: boolean;
   
   // 內容
   content: string;

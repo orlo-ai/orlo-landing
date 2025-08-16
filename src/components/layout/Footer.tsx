@@ -15,8 +15,7 @@ export default function Footer() {
     product: {
       title: 'Product',
       links: [
-        { name: 'Demo', href: '#demo' },
-        { name: 'Features', href: '#features' },
+        { name: 'Demo', href: '/#demo' },
         { name: 'Pricing', href: '/pricing' },
         { name: 'Release', href: '/release-notes' },
       ],
@@ -25,14 +24,11 @@ export default function Footer() {
       title: 'Support',
       links: [
         { name: 'Support', href: '/support' },
-        { name: 'Contact Us', href: '#contact' },
-        { name: 'Community', href: '#community' },
       ],
     },
     company: {
       title: 'Company',
       links: [
-        { name: 'About', href: '#about' },
         { name: 'Blog', href: '/blog' },
         { name: 'Privacy', href: '/privacy-policy' },
         { name: 'Terms', href: '/terms' },

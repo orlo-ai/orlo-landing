@@ -1,16 +1,5 @@
 {
   "hooks": {
-    "Notification": [
-      {
-        "matcher": "",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "afplay /users/dukerwin/music/Voice/chioce.mp3"
-          }
-        ]
-      }
-    ],
     "Stop": [
       {
         "matcher": "",
@@ -18,6 +7,17 @@
           {
             "type": "command",
             "command": "afplay /users/dukerwin/music/Voice/finish.mp3"
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "afplay /users/dukerwin/music/Voice/choice.mp3"
           }
         ]
       }

@@ -45,65 +45,51 @@ export function getAllBlogPosts(): BlogPostMetadata[] {
   const posts: BlogPostMetadata[] = [];
   
   try {
-    // 遍歷年份目錄
-    const years = readdirSync(blogContentPath).filter(year => 
-      statSync(join(blogContentPath, year)).isDirectory()
+    // 讀取 blog 目錄下的所有 MDX 檔案
+    const files = readdirSync(blogContentPath).filter(file => 
+      file.endsWith('.mdx') && statSync(join(blogContentPath, file)).isFile()
     );
     
-    years.forEach(year => {
-      const yearPath = join(blogContentPath, year);
-      const months = readdirSync(yearPath).filter(month =>
-        statSync(join(yearPath, month)).isDirectory()
-      );
+    files.forEach(file => {
+      const filePath = join(blogContentPath, file);
+      const slug = file.replace('.mdx', '');
       
-      months.forEach(month => {
-        const monthPath = join(yearPath, month);
-        const files = readdirSync(monthPath).filter(file => 
-          file.endsWith('.mdx')
-        );
+      try {
+        const fileContent = readFileSync(filePath, 'utf8');
+        const { data: frontmatter, content } = matter(fileContent);
         
-        files.forEach(file => {
-          const filePath = join(monthPath, file);
-          const slug = file.replace('.mdx', '');
-          
-          try {
-            const fileContent = readFileSync(filePath, 'utf8');
-            const { data: frontmatter, content } = matter(fileContent);
-            
-            // 驗證必要欄位
-            if (!frontmatter.title || !frontmatter.description) {
-              console.warn(`Missing required fields in ${filePath}`);
-              return;
-            }
-            
-            // 生成摘要
-            const excerpt = frontmatter.excerpt || content.substring(0, 200) + '...';
-            
-            const post: BlogPostMetadata = {
-              id: `${year}-${month}-${slug}`,
-              title: frontmatter.title,
-              description: frontmatter.description,
-              author: frontmatter.author || {
-                name: 'Orlo Team',
-                avatar: '/img/orlo-team-avatar.png'
-              },
-              publishedAt: frontmatter.publishedAt || `${year}-${month}-01`,
-              updatedAt: frontmatter.updatedAt || frontmatter.publishedAt || `${year}-${month}-01`,
-              tags: frontmatter.tags || [],
-              category: frontmatter.category || 'insights',
-              slug: `${year}/${month}/${slug}`,
-              readTime: frontmatter.readTime || `${estimateReadingTime(content)} 分鐘`,
-              featured: frontmatter.featured || false,
-              excerpt,
-              coverImage: frontmatter.coverImage,
-            };
-            
-            posts.push(post);
-          } catch (error) {
-            console.error(`Error reading blog post: ${filePath}`, error);
-          }
-        });
-      });
+        // 驗證必要欄位
+        if (!frontmatter.title || !frontmatter.description) {
+          console.warn(`Missing required fields in ${filePath}`);
+          return;
+        }
+        
+        // 生成摘要
+        const excerpt = frontmatter.excerpt || content.substring(0, 200) + '...';
+        
+        const post: BlogPostMetadata = {
+          id: slug,
+          title: frontmatter.title,
+          description: frontmatter.description,
+          author: frontmatter.author || {
+            name: 'Orlo Team',
+            avatar: '/img/orlo-team-avatar.png'
+          },
+          publishedAt: frontmatter.publishedAt || new Date().toISOString().split('T')[0],
+          updatedAt: frontmatter.updatedAt || frontmatter.publishedAt || new Date().toISOString().split('T')[0],
+          tags: frontmatter.tags || [],
+          category: frontmatter.category || 'insights',
+          slug: slug,
+          readTime: frontmatter.readTime || `${estimateReadingTime(content)} min read`,
+          featured: frontmatter.featured || false,
+          excerpt,
+          coverImage: frontmatter.coverImage,
+        };
+        
+        posts.push(post);
+      } catch (error) {
+        console.error(`Error reading blog post: ${filePath}`, error);
+      }
     });
     
     // 按發布日期排序（最新的在前）
@@ -117,9 +103,9 @@ export function getAllBlogPosts(): BlogPostMetadata[] {
 }
 
 // 獲取單篇 Blog 文章
-export function getBlogPost(year: string, month: string, slug: string): BlogPost | null {
+export function getBlogPost(slug: string): BlogPost | null {
   try {
-    const filePath = join(blogContentPath, year, month, `${slug}.mdx`);
+    const filePath = join(blogContentPath, `${slug}.mdx`);
     const fileContent = readFileSync(filePath, 'utf8');
     const { data: frontmatter, content } = matter(fileContent);
     
@@ -131,21 +117,21 @@ export function getBlogPost(year: string, month: string, slug: string): BlogPost
     const excerpt = frontmatter.excerpt || content.substring(0, 200) + '...';
     
     const post: BlogPost = {
-      id: `${year}-${month}-${slug}`,
+      id: slug,
       title: frontmatter.title,
       description: frontmatter.description,
       content: htmlContent,
       author: frontmatter.author || {
         name: 'Orlo Team',
         avatar: '/img/orlo-team-avatar.png',
-        bio: 'Orlo 團隊致力於透過 AI 技術協助您達成更好的時間管理。'
+        bio: 'The Orlo team is dedicated to helping you achieve better time management through AI technology.'
       },
-      publishedAt: frontmatter.publishedAt || `${year}-${month}-01`,
-      updatedAt: frontmatter.updatedAt || frontmatter.publishedAt || `${year}-${month}-01`,
+      publishedAt: frontmatter.publishedAt || new Date().toISOString().split('T')[0],
+      updatedAt: frontmatter.updatedAt || frontmatter.publishedAt || new Date().toISOString().split('T')[0],
       tags: frontmatter.tags || [],
       category: frontmatter.category || 'insights',
-      slug: `${year}/${month}/${slug}`,
-      readTime: frontmatter.readTime || `${estimateReadingTime(content)} 分鐘`,
+      slug: slug,
+      readTime: frontmatter.readTime || `${estimateReadingTime(content)} min read`,
       featured: frontmatter.featured || false,
       excerpt,
       coverImage: frontmatter.coverImage,
@@ -154,7 +140,7 @@ export function getBlogPost(year: string, month: string, slug: string): BlogPost
     
     return post;
   } catch (error) {
-    console.error(`Error reading blog post: ${year}/${month}/${slug}`, error);
+    console.error(`Error reading blog post: ${slug}`, error);
     return null;
   }
 }
@@ -237,10 +223,9 @@ export function getAllTags(): string[] {
 export function generateStaticParams() {
   try {
     const allPosts = getAllBlogPosts();
-    return allPosts.map(post => {
-      const [year, month, slug] = post.slug.split('/');
-      return { year, month, slug };
-    });
+    return allPosts.map(post => ({
+      slug: post.slug
+    }));
   } catch (error) {
     // 如果沒有文章內容，返回空陣列
     console.warn('No blog posts found, returning empty static params');

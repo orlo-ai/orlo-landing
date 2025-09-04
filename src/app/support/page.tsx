@@ -68,7 +68,7 @@ export default function SupportPage() {
                   Which calendars does Orlo support?
                 </h3>
                 <p className="text-gray-600">
-                  Orlo supports two-way sync with Google Calendar.
+                  We're working on Google Calendar integration to provide seamless two-way sync.
                 </p>
               </div>
 

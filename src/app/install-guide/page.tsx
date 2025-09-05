@@ -47,7 +47,7 @@ export default function InstallGuidePage() {
               
               <div className="mb-4">
                 <p className="text-gray-600">
-                  <strong>Tap "Add to Home screen"</strong> when prompted by Chrome
+                  <strong>Tap &ldquo;Add to Home screen&rdquo;</strong> when prompted by Chrome
                 </p>
               </div>
               
@@ -87,8 +87,8 @@ export default function InstallGuidePage() {
               
               <ol className="text-gray-600 space-y-2 mb-4">
                 <li><strong>1. Tap the Share button</strong> <i className="fas fa-arrow-up-from-bracket text-sm"></i> at the bottom of Safari</li>
-                <li><strong>2. Scroll down and tap "Add to Home Screen"</strong></li>
-                <li><strong>3. Tap "Add" to install</strong></li>
+                <li><strong>2. Scroll down and tap &ldquo;Add to Home Screen&rdquo;</strong></li>
+                <li><strong>3. Tap &ldquo;Add&rdquo; to install</strong></li>
               </ol>
               
               <div className="w-full mb-6">
@@ -126,7 +126,7 @@ export default function InstallGuidePage() {
               </div>
               
               <div className="text-gray-600 mb-4">
-                <p><strong>Click the install icon</strong> in your browser's address bar</p>
+                <p><strong>Click the install icon</strong> in your browser&rsquo;s address bar</p>
               </div>
               
               <div className="w-full mb-6">

@@ -120,6 +120,8 @@ export interface PricingPlan {
   features: string[];
   cta: CTAButton;
   highlight?: boolean;
+  badge?: string;
+  priceNote?: string;
 }
 
 export interface Section {

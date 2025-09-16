@@ -330,40 +330,41 @@ export const pageContent: PageContent = {
     plans: [
       {
         id: 'free',
-        name: 'AI Time Assistant',
+        name: 'Starter',
         price: 'Free',
-        period: 'Forever',
+        period: 'Forever free, no credit card required',
         description: 'Perfect for getting started with AI-powered time management',
         features: [
-          '30-day full feature access',
-          '20 AI conversations per month after trial',
-          'Core scheduling and time blocking',
-          'Basic energy pattern matching',
-          'Single device calendar integration'
+          'Core time boxing with daily planning',
+          'Quick capture for ideas and tasks',
+          'Today view dashboard',
+          'Basic AI suggestions (daily limit)',
+          'Mobile and web access'
         ],
         cta: {
-          text: 'Start Free Experience',
+          text: 'Start Free',
           href: 'https://my.orlo.cc',
-          variant: 'outline'
+          variant: 'secondary'
         },
         highlight: false
       },
       {
         id: 'pro',
-        name: 'AI Chief of Staff',
-        price: 'Coming Soon',
-        period: 'Early access pricing available',
-        description: 'Complete AI partnership for serious time optimization and my personal attention',
+        name: 'Pro',
+        price: '$8',
+        period: '/month',
+        description: 'Unlock the full power of your AI Chief of Staff',
+        priceNote: 'Billed annually at $96/year',
         features: [
-          'Unlimited AI conversations and insights',
-          'Advanced strategic planning analysis',
-          'Multi-role scenario management',
-          'Cross-device sync with full history',
-          'Priority support and direct access to me',
+          'Everything in Starter, plus:',
+          'Unlimited AI planning and task optimization',
+          'Advanced day summaries with actionable insights',
+          'Weekly and monthly reviews with AI coaching',
+          'Priority email support',
           'Early access to new features'
         ],
         cta: {
-          text: 'Join Pro Waitlist',
+          text: 'Start Free',
           href: 'https://my.orlo.cc',
           variant: 'primary'
         },

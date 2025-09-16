@@ -692,8 +692,151 @@ html {
     background: rgba(0, 0, 0, 0.05);
     border: 1px solid rgba(0, 0, 0, 0.2);
   }
-  
+
   .whimsy-icon {
     border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+}
+
+/* ✨ Pricing Section 專用樣式 */
+
+/* 定價卡片簡化樣式 - 移除浮起動畫 */
+.pricing-card {
+  transition: box-shadow 0.2s ease;
+}
+
+.pricing-card:hover {
+  box-shadow: 0 8px 25px -8px rgba(0, 0, 0, 0.1);
+}
+
+/* 特色卡片的獨特樣式 */
+.pricing-card-featured {
+  background: linear-gradient(180deg, #faf5ff 0%, #ffffff 100%);
+  border: 2px solid #6366f1 !important;
+}
+
+.pricing-card-featured:hover {
+  border-color: #8b5cf6 !important;
+  box-shadow: 0 8px 25px -8px rgba(99, 102, 241, 0.15);
+}
+
+/* 徽章動畫 */
+.pricing-badge {
+  animation: pricing-badge-float 2s ease-in-out infinite;
+  box-shadow: 0 4px 14px 0 rgba(99, 102, 241, 0.4);
+}
+
+@keyframes pricing-badge-float {
+  0%, 100% {
+    transform: translateY(0px) translateX(-50%);
+  }
+  50% {
+    transform: translateY(-2px) translateX(-50%);
+  }
+}
+
+/* 功能列表簡潔樣式 - 移除動畫 */
+
+/* 價格數字統一樣式 */
+.pricing-amount {
+  color: #1e293b;
+  font-weight: 700;
+}
+
+/* 信任指標區塊的微妙動畫 */
+.pricing-trust {
+  opacity: 0;
+  animation: pricing-trust-fade-in 0.8s ease-out 0.6s forwards;
+}
+
+@keyframes pricing-trust-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 信任指標項目的懸停效果 */
+.pricing-trust-item {
+  transition: all 0.3s ease;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.pricing-trust-item:hover {
+  background: rgba(99, 102, 241, 0.05);
+  transform: translateY(-2px);
+}
+
+/* 按鈕的特殊動畫效果 */
+.pricing-cta-primary {
+  position: relative;
+  overflow: hidden;
+}
+
+.pricing-cta-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.pricing-cta-primary:hover::before {
+  left: 100%;
+}
+
+/* 響應式設計優化 */
+@media (max-width: 768px) {
+  .pricing-card {
+    margin-bottom: 1rem;
+  }
+
+  .pricing-badge {
+    animation: none;
+  }
+
+  .pricing-card:active {
+    opacity: 0.9;
+  }
+}
+
+/* 無障礙和動畫偏好設定 */
+@media (prefers-reduced-motion: reduce) {
+  .pricing-card,
+  .pricing-badge,
+  .pricing-feature,
+  .pricing-check-icon,
+  .pricing-trust,
+  .pricing-trust-item,
+  .pricing-cta-primary {
+    animation: none !important;
+    transition: opacity 0.2s ease, color 0.2s ease !important;
+  }
+
+}
+
+/* 高對比度模式的特殊處理 */
+@media (prefers-contrast: high) {
+  .pricing-card-featured {
+    border: 3px solid #000 !important;
+    background: #fff !important;
+  }
+
+  .pricing-amount {
+    color: #000 !important;
+    background: none !important;
+  }
+
+  .pricing-badge {
+    background: #000 !important;
+    color: #fff !important;
   }
 }

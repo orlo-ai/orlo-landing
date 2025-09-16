@@ -54,8 +54,8 @@ const ButtonLink = forwardRef<HTMLAnchorElement, ButtonLinkProps>(
         'bg-transparent text-blue-600 hover:text-blue-700 underline-offset-4 hover:underline p-0': 
           variant === 'link',
         
-        // Gradient - 保留漸變選項
-        'bg-gradient-to-r from-slate-600 to-slate-800 text-white hover:from-slate-700 hover:to-slate-900 shadow-lg': 
+        // Gradient - 參考 mockup 的按鈕顏色
+        'bg-indigo-600 text-white hover:bg-indigo-700 shadow-md hover:shadow-lg transform hover:scale-[1.02] active:scale-[0.98]':
           variant === 'gradient',
       },
       

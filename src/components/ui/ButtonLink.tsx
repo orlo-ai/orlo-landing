@@ -12,20 +12,42 @@ interface ButtonLinkProps extends Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 
   radius?: ButtonProps['radius'];
   fullWidth?: boolean;
   external?: boolean;
+  trackingEvent?: {
+    event: string;
+    category?: string;
+    label?: string;
+  };
 }
 
 const ButtonLink = forwardRef<HTMLAnchorElement, ButtonLinkProps>(
-  ({ 
-    className, 
+  ({
+    className,
     href,
-    variant = 'primary', 
-    size = 'md', 
+    variant = 'primary',
+    size = 'md',
     radius = 'md',
     fullWidth = false,
     external = false,
+    trackingEvent,
     children,
-    ...props 
+    onClick,
+    ...props
   }, ref) => {
+    // 處理點擊事件和追蹤
+    const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+      if (trackingEvent && typeof window !== 'undefined' && window.gtag) {
+        window.gtag('event', trackingEvent.event, {
+          event_category: trackingEvent.category || 'engagement',
+          event_label: trackingEvent.label || href,
+          page_location: window.location.href,
+        });
+      }
+
+      if (onClick) {
+        onClick(e);
+      }
+    };
+
     const linkClassName = cn(
       // 基礎樣式
       'inline-flex items-center justify-center font-medium transition-all duration-200',
@@ -95,6 +117,7 @@ const ButtonLink = forwardRef<HTMLAnchorElement, ButtonLinkProps>(
           className={linkClassName}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={handleClick}
           {...props}
         >
           {children}
@@ -108,6 +131,7 @@ const ButtonLink = forwardRef<HTMLAnchorElement, ButtonLinkProps>(
         ref={ref}
         href={href}
         className={linkClassName}
+        onClick={handleClick}
         {...props}
       >
         {children}

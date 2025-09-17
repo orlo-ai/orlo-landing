@@ -71,6 +71,11 @@ export default function Navigation() {
                 variant="primary"
                 size="md"
                 external
+                trackingEvent={{
+                  event: 'get_started_click',
+                  category: 'cta',
+                  label: 'navigation_desktop'
+                }}
               >
                 Get Started
               </ButtonLink>
@@ -85,6 +90,11 @@ export default function Navigation() {
               variant="primary"
               size="sm"
               external
+              trackingEvent={{
+                event: 'get_started_click',
+                category: 'cta',
+                label: 'navigation_mobile'
+              }}
             >
               Get Started
             </ButtonLink>
@@ -156,6 +166,11 @@ export default function Navigation() {
                   className="justify-center"
                   onClick={() => setIsMobileMenuOpen(false)}
                   external
+                  trackingEvent={{
+                    event: 'get_started_click',
+                    category: 'cta',
+                    label: 'navigation_mobile_menu'
+                  }}
                 >
                   Get Started
                 </ButtonLink>

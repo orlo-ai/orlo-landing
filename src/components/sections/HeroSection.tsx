@@ -55,6 +55,11 @@ export default function HeroSection({
                 size="lg"
                 radius="lg"
                 className="shadow-lg"
+                trackingEvent={{
+                  event: 'get_started_click',
+                  category: 'cta',
+                  label: 'hero_primary'
+                }}
               >
                 {buttons[0].icon && <i className={`${buttons[0].icon} mr-2`} />}
                 {buttons[0].text}

@@ -79,6 +79,11 @@ export default function PricingSection({ pricing }: PricingSectionProps) {
                         : 'border-2 border-slate-300 hover:border-indigo-400 hover:bg-slate-50'
                       }
                     `}
+                    trackingEvent={{
+                      event: 'pricing_plan_select',
+                      category: 'conversion',
+                      label: `pricing_${plan.id}`
+                    }}
                   >
                     {plan.cta.text}
                   </ButtonLink>

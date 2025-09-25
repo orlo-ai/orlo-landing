@@ -27,11 +27,11 @@ export default function AIConversationDemo() {
             id="demo-title"
             className="text-4xl font-bold mb-4 text-gray-900 leading-tight"
           >
-            Orlo <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Accompanies Your Entire Day</span>
+            Orlo: <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Your Day's Rhythm Ally</span>
           </h2>
           
           <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
-            From morning planning to evening closure, AI makes every day complete
+            From dawn to dusk, AI guides your flow with gentle insights.
           </p>
         </div>
 

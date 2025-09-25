@@ -19,7 +19,7 @@ export function generateReleaseNoteSEO(note: ReleaseNote): ReleaseNoteSEO {
       note.version,
       'AI productivity',
       'time management',
-      'chief of staff'
+      'rhythm ally'
     ],
     openGraph: {
       title: `${note.title} - ORLO ${note.version}`,
@@ -52,8 +52,8 @@ export function generateReleaseNotesListSEO() {
   const baseUrl = 'https://orlo.cc';
   
   return {
-    title: 'Release Notes | ORLO - AI Chief of Staff Updates',
-    description: 'Stay updated with the latest ORLO features, improvements, and AI-powered productivity enhancements. Discover what\'s new in your AI Chief of Staff.',
+    title: 'Release Notes | ORLO - AI Rhythm Ally Updates',
+    description: 'Stay updated with the latest ORLO features, improvements, and AI-powered productivity enhancements. Discover what\'s new in your AI Rhythm Ally.',
     keywords: [
       'ORLO',
       'release notes',
@@ -61,12 +61,12 @@ export function generateReleaseNotesListSEO() {
       'AI features',
       'productivity app',
       'software updates',
-      'AI chief of staff',
+      'AI rhythm ally',
       'time management',
       'productivity tools'
     ],
     openGraph: {
-      title: 'ORLO Release Notes - Latest AI Chief of Staff Updates',
+      title: 'ORLO Release Notes - Latest AI Rhythm Ally Updates',
       description: 'Discover the latest features and improvements in ORLO, your AI-powered productivity companion.',
       type: 'website',
       url: `${baseUrl}/release-notes`,
@@ -82,7 +82,7 @@ export function generateReleaseNotesListSEO() {
     twitter: {
       card: 'summary_large_image',
       title: 'ORLO Release Notes',
-      description: 'Latest updates and features for your AI Chief of Staff',
+      description: 'Latest updates and features for your AI Rhythm Ally',
       images: [`${baseUrl}/img/release-notes/og-release-notes.jpg`]
     }
   };
@@ -234,7 +234,7 @@ export function generateRSSFeed(releaseNotes: ReleaseNote[]): string {
     <title>ORLO Release Notes</title>
     <link>${baseUrl}/release-notes</link>
     <atom:link href="${baseUrl}/release-notes/rss.xml" rel="self" type="application/rss+xml" />
-    <description>Latest updates and features for ORLO AI Chief of Staff</description>
+    <description>Latest updates and features for ORLO AI Rhythm Ally</description>
     <language>zh-TW</language>
     <lastBuildDate>${buildDate}</lastBuildDate>
     <generator>ORLO Release Notes System</generator>

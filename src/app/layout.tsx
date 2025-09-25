@@ -6,15 +6,15 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://orlo.cc'),
-  title: 'Orlo - Your AI Chief of Staff | One Less Thing to Think About',
+  title: 'Orlo - Your AI Rhythm Ally | Less Worry, More Flow',
   description:
-    'Stop managing calendars. Start making decisions. AI handles your scheduling complexity in real-time.',
+    'Skip calendar chaos. Find your rhythm with an AI guide for effortless, joyful days.',
   keywords:
-    'AI, Chief of Staff, time management, AI assistant, productivity, personal assistant, AI partnership, executive assistant',
+    'AI, Rhythm Ally, time management, AI assistant, productivity, personal assistant, AI partnership, executive assistant',
   authors: [{ name: 'Orlo Team' }],
   openGraph: {
-    title: 'Orlo - Your AI Chief of Staff | One Less Thing to Think About',
-    description: 'Stop managing calendars. Start making decisions. AI handles your scheduling complexity in real-time.',
+    title: 'Orlo - Your AI Rhythm Ally | Less Worry, More Flow',
+    description: 'Skip calendar chaos. Find your rhythm with an AI guide for effortless, joyful days.',
     url: 'https://orlo.cc',
     siteName: 'Orlo',
     images: [
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
         url: '/img/orlo-home-1200x630-v1.png',
         width: 1200,
         height: 630,
-        alt: 'Orlo - Your AI Chief of Staff | One Less Thing to Think About',
+        alt: 'Orlo - Your AI Rhythm Ally | Less Worry, More Flow',
       },
     ],
     locale: 'en_US',
@@ -30,8 +30,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Orlo - Your AI Chief of Staff | One Less Thing to Think About',
-    description: 'Stop managing calendars. Start making decisions. AI handles your scheduling complexity in real-time.',
+    title: 'Orlo - Your AI Rhythm Ally | Less Worry, More Flow',
+    description: 'Skip calendar chaos. Find your rhythm with an AI guide for effortless, joyful days.',
     images: ['/img/orlo-home-1200x630-v1.png'],
   },
   icons: {

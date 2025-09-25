@@ -5,7 +5,7 @@ import { UserPersona, TimeBlock, AIInsight } from '@/types/user';
 // 測試用的網站配置
 export const testSiteConfig: SiteConfig = {
   name: 'Orlo',
-  description: 'AI Chief of Staff - 重建你的生活，而不只是你的時程表',
+  description: 'AI Rhythm Ally - 重建你的生活，而不只是你的時程表',
   url: 'https://orlo.cc',
   ogImage: '/img/orlo-social-share.png',
   links: {

@@ -7,11 +7,11 @@ import Footer from '@/components/layout/Footer';
 
 // Generate page metadata
 export const metadata: Metadata = {
-  title: 'Releases | ORLO - AI Chief of Staff Updates',
-  description: 'Stay updated with the latest ORLO features, improvements, and AI-powered productivity enhancements. Discover what\'s new in your AI Chief of Staff.',
+  title: 'Releases | ORLO - AI Rhythm Ally Updates',
+  description: 'Stay updated with the latest ORLO features, improvements, and AI-powered productivity enhancements. Discover what\'s new in your AI Rhythm Ally.',
   keywords: ['ORLO', 'releases', 'updates', 'AI features', 'productivity app', 'changelog'],
   openGraph: {
-    title: 'ORLO Releases - Latest AI Chief of Staff Updates',
+    title: 'ORLO Releases - Latest AI Rhythm Ally Updates',
     description: 'Discover the latest features and improvements in ORLO, your AI-powered productivity companion.',
     type: 'website',
     url: 'https://orlo.cc/release-notes',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'ORLO Releases',
-    description: 'Latest updates and features for your AI Chief of Staff',
+    description: 'Latest updates and features for your AI Rhythm Ally',
     images: ['/img/release-notes/og-release-notes.jpg']
   }
 };

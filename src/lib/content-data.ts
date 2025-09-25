@@ -4,20 +4,20 @@ import { UserPersona, ChatMessage, TimeBlock } from '@/types/user';
 // 主要頁面內容數據
 export const pageContent: PageContent = {
   meta: {
-    title: 'Orlo - Your AI Chief of Staff | Stop Managing Time, Start Partnering with AI',
+    title: 'Orlo - Your AI Rhythm Ally | Stop Managing Time, Start Partnering with AI',
     description: 'Stop managing time. Start partnering with AI that manages it for you. Like having a senior executive\'s personal assistant - but for your entire life.',
-    keywords: ['AI', 'Chief of Staff', 'time management', 'AI assistant', 'productivity', 'personal assistant', 'AI partnership'],
+    keywords: ['AI', 'Rhythm Ally', 'time management', 'AI assistant', 'productivity', 'personal assistant', 'AI partnership'],
     ogImage: 'https://orlo.cc/img/orlo-social-share.png'
   },
   
   hero: {
     badge: 'Join 500+ professionals',
     headline: 'Your AI',
-    subheadline: 'Chief of Staff',
-    description: 'Your AI partner that manages time, so you don\'t have to.',
+    subheadline: 'Rhythm Ally',
+    description: 'Your AI guide to fulfilling days, effortless and balanced.',
     buttons: [
       {
-        text: 'Meet Your AI Chief of Staff',
+        text: 'Meet Your AI Rhythm Ally',
         href: 'https://my.orlo.cc',
         variant: 'primary',
         icon: 'fas fa-handshake'
@@ -292,7 +292,7 @@ export const pageContent: PageContent = {
       role: 'Solo Consultant',
       avatar: '/img/testimonials/sarah.jpg',
       rating: 5,
-      content: 'Managing multiple client projects and proposals as a solo consultant was chaotic until my AI Chief of Staff stepped in. It helps me prioritize high-value client work and streamlines my admin tasks perfectly.',
+      content: 'Managing multiple client projects and proposals as a solo consultant was chaotic until my AI Rhythm Ally stepped in. It helps me prioritize high-value client work and streamlines my admin tasks perfectly.',
       metrics: {
         timeSaved: '7.5 hours/week',
         stressReduction: '82%'
@@ -304,7 +304,7 @@ export const pageContent: PageContent = {
       role: 'Designer & Dad',
       avatar: '/img/testimonials/marcus.jpg',
       rating: 5,
-      content: 'Balancing client design projects with family responsibilities felt impossible until my AI Chief of Staff created clear boundaries. It schedules my creative work during peak hours and protects quality time with my kids.',
+      content: 'Balancing client design projects with family responsibilities felt impossible until my AI Rhythm Ally created clear boundaries. It schedules my creative work during peak hours and protects quality time with my kids.',
       metrics: {
         timeSaved: '5.2 hours/week',
         stressReduction: '65%'
@@ -316,7 +316,7 @@ export const pageContent: PageContent = {
       role: 'Freelance Developer',
       avatar: '/img/testimonials/alex.jpg',
       rating: 5,
-      content: 'Managing multiple client projects and deadlines was chaotic until my AI Chief of Staff took over the scheduling. Now I can focus on writing quality code while it handles the juggling.',
+      content: 'Managing multiple client projects and deadlines was chaotic until my AI Rhythm Ally took over the scheduling. Now I can focus on writing quality code while it handles the juggling.',
       metrics: {
         timeSaved: '6.8 hours/week',
         stressReduction: '73%'
@@ -325,7 +325,7 @@ export const pageContent: PageContent = {
   ],
 
   pricing: {
-    title: 'Meet Your AI Chief of Staff',
+    title: 'Meet Your AI Rhythm Ally',
     description: 'Start with full access today, then choose the partnership level that fits your needs.',
     plans: [
       {
@@ -353,7 +353,7 @@ export const pageContent: PageContent = {
         name: 'Pro',
         price: '$8',
         period: '/month',
-        description: 'Unlock the full power of your AI Chief of Staff',
+        description: 'Unlock the full power of your AI Rhythm Ally',
         priceNote: 'Billed annually at $96/year',
         features: [
           'Everything in Starter, plus:',
@@ -375,8 +375,8 @@ export const pageContent: PageContent = {
 
   sections: [],
   cta: {
-    title: 'Meet Your AI Chief of Staff',
-    description: 'Transform how you manage time with AI that works like a senior executive assistant.',
+    title: 'Meet Your AI Rhythm Ally',
+    description: 'Achieve fulfilling rhythm with your AI ally — less fatigue, more balance.',
     buttons: [
       {
         text: 'Get Started Free',

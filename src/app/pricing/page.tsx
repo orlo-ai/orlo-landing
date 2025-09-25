@@ -4,11 +4,11 @@ import { pageContent } from '@/lib/content-data';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Pricing - Orlo | Your AI Chief of Staff',
+  title: 'Pricing - Orlo | Your AI Rhythm Ally',
   description: 'Choose the perfect AI partnership level for your needs. Start with full access today, then select the plan that fits your productivity goals.',
-  keywords: ['AI pricing', 'Chief of Staff pricing', 'productivity app cost', 'AI assistant plans'],
+  keywords: ['AI pricing', 'Rhythm Ally pricing', 'productivity app cost', 'AI assistant plans'],
   openGraph: {
-    title: 'Pricing - Orlo | Your AI Chief of Staff',
+    title: 'Pricing - Orlo | Your AI Rhythm Ally',
     description: 'Choose the perfect AI partnership level for your needs. Start with full access today, then select the plan that fits your productivity goals.',
     images: ['https://orlo.cc/img/orlo-social-share.png'],
   },

@@ -64,17 +64,17 @@ export default function Footer() {
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
           {/* Brand Section */}
           <div className="lg:w-80 flex-shrink-0">
-            <Link href="/" className="inline-block mb-6" aria-label="Orlo - AI Chief of Staff">
+            <Link href="/" className="inline-block mb-6" aria-label="Orlo - AI Rhythm Ally">
               <Image
                 src="/img/orlo-logo-w.png"
-                alt="Orlo - AI Chief of Staff for time management" 
+                alt="Orlo - AI Rhythm Ally for time management" 
                 width={120}
                 height={40}
                 style={{ height: 'auto', width: 'auto', maxWidth: '120px', maxHeight: '40px' }}
               />
             </Link>
             <p className="text-gray-300 text-sm leading-relaxed mb-6">
-              Your AI Chief of Staff for time management and life optimization.
+              Your AI Rhythm Ally for time management and life optimization.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social) => (
@@ -85,7 +85,7 @@ export default function Footer() {
                   aria-label={`Follow Orlo on ${social.name}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  title={`Orlo AI Chief of Staff on ${social.name}`}
+                  title={`Orlo AI Rhythm Ally on ${social.name}`}
                 >
                   {social.icon}
                 </a>
@@ -106,7 +106,7 @@ export default function Footer() {
                       <Link
                         href={link.href}
                         className="text-gray-300 hover:text-white transition-colors duration-200 text-sm"
-                        title={`${link.name} - Orlo AI Chief of Staff`}
+                        title={`${link.name} - Orlo AI Rhythm Ally`}
                       >
                         {link.name}
                       </Link>
@@ -125,7 +125,7 @@ export default function Footer() {
               © {currentYear} Orlo. All rights reserved.
             </div>
             <div className="text-center md:text-left">
-              Built to be your perfect AI Chief of Staff.
+              Built to be your perfect AI Rhythm Ally.
             </div>
           </div>
         </div>

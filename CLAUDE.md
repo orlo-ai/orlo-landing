@@ -13,6 +13,12 @@
 - 效能優化：找出真正瓶頸
 - 功能開發：理解核心需求而非複製競品
 
+## 設計原則
+- KISS (Keep It Simple, Stupid)
+- YAGNI (You Aren't Gonna Need It)
+- APO (Avoid Premature Optimization)
+- Boy Scout: 每次改動，讓程式碼比之前好一點。完成任務需求時，順手修復小問題、重構小段程式，持續改進，減少大型重構。
+
 ## 工作流程
 - 在完成一系列程式碼變更後，請務必執行型別檢查
 - 為了效能，請優先執行單一測試，而非整個測試套件

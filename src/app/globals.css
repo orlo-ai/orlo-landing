@@ -124,6 +124,7 @@ body {
   background-clip: text;
   color: transparent;
   font-weight: 700;
+  line-height: 1.15;
 }
 
 .gradient-bg {

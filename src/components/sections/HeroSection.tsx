@@ -22,20 +22,6 @@ export default function HeroSection({
         <div className="grid lg:grid-cols-5 gap-8 lg:gap-16 items-center">
           {/* Left: Hero Content */}
           <div className="hero-content lg:col-span-2">
-            {/* Social Proof Badge */}
-            <div className="mb-8 sm:mb-12">
-              <div className="inline-flex items-center text-sm font-medium text-gray-600 bg-white/60 backdrop-blur-sm px-4 py-2.5 rounded-full border border-gray-200/50 shadow-sm">
-                <div className="flex items-center mr-3">
-                  <div className="flex -space-x-1">
-                    <div className="w-5 h-5 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full border-2 border-white"></div>
-                    <div className="w-5 h-5 bg-gradient-to-r from-green-400 to-blue-500 rounded-full border-2 border-white"></div>
-                    <div className="w-5 h-5 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full border-2 border-white"></div>
-                  </div>
-                </div>
-                <span className="text-gray-700 font-medium">{badge}</span>
-              </div>
-            </div>
-
             {/* Main Headline */}
             <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-7xl font-bold mb-8 sm:mb-12">
               <div className="mb-4">{headline}</div>

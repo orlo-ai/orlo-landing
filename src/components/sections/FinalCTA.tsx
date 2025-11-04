@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { CTAContent } from '@/types/content';
+import { FeatureIcon } from '@/components/ui/FeatureIcon';
 
 interface FinalCTAProps {
   cta: CTAContent;
@@ -32,8 +33,9 @@ export default function FinalCTA({ cta }: FinalCTAProps) {
           ))}
         </div>
 
-        <p className="text-sm opacity-75">
-          ✨ <strong>Beta Offer:</strong> Lock in Pro features for life
+        <p className="text-sm opacity-75 flex items-center justify-center gap-2">
+          <FeatureIcon name="sparkles" className="w-4 h-4" />
+          <span><strong>Beta Offer:</strong> Lock in Pro features for life</span>
         </p>
       </div>
     </section>

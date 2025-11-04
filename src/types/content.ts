@@ -19,7 +19,7 @@ export interface PageContent {
 }
 
 export interface HeroContent {
-  badge: string;
+  badge?: string;
   headline: string;
   subheadline: string;
   description: string;

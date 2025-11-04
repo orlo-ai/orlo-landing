@@ -11,10 +11,9 @@ export const pageContent: PageContent = {
   },
   
   hero: {
-    badge: 'Join 500+ professionals',
-    headline: 'Your AI',
-    subheadline: 'Rhythm Ally',
-    description: 'Your AI guide to fulfilling days, effortless and balanced.',
+    headline: 'Your Rhythm',
+    subheadline: 'Reimagined',
+    description: 'Your chaos, transformed into productive rhythm.',
     buttons: [
       {
         text: 'Meet Your AI Rhythm Ally',

@@ -50,6 +50,9 @@ export default function HeroSection({
                 {buttons[0].icon && <i className={`${buttons[0].icon} mr-2`} />}
                 {buttons[0].text}
               </ButtonLink>
+              <p className="text-sm text-slate-500 mt-2">
+                Start your 14-day free trial
+              </p>
             </div>
 
             {/* Secondary CTA Link */}

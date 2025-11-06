@@ -1,5 +1,6 @@
 import { Layout } from '@/components/layout';
 import HeroSection from '@/components/sections/HeroSection';
+import CorePhilosophy from '@/components/sections/CorePhilosophy';
 import AIConversationDemo from '@/components/sections/AIConversationDemo';
 import MultiScenarioShowcase from '@/components/sections/MultiScenarioShowcase';
 import CrossPlatformSupport from '@/components/sections/CrossPlatformSupport';
@@ -10,6 +11,7 @@ export default function Home() {
   return (
     <Layout>
       <HeroSection {...pageContent.hero} />
+      <CorePhilosophy />
       <AIConversationDemo />
       <MultiScenarioShowcase scenarios={pageContent.scenarios} />
       <CrossPlatformSupport />

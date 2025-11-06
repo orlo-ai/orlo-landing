@@ -13,33 +13,28 @@ interface ProductivityFeature {
   title: string;
   description: string;
   icon: React.ComponentType<{ className?: string }>;
-  gradient: string;
 }
 
 const features: ProductivityFeature[] = [
   {
     title: 'Move with Joy',
     description: 'Push goals forward with focus and delight',
-    icon: SparklesIcon,
-    gradient: 'from-purple-600 to-pink-700'
+    icon: SparklesIcon
   },
   {
     title: 'Mental Peace',
     description: 'Release all thoughts safely to your second brain',
-    icon: HeartIcon,
-    gradient: 'from-blue-600 to-cyan-700'
+    icon: HeartIcon
   },
   {
     title: 'More Your Way',
     description: 'Let your habits do the heavy lifting',
-    icon: FlagIcon,
-    gradient: 'from-green-600 to-emerald-600'
+    icon: FlagIcon
   },
   {
     title: 'Never Alone',
     description: 'Reflect and plan with guidance',
-    icon: UserGroupIcon,
-    gradient: 'from-orange-600 to-red-600'
+    icon: UserGroupIcon
   }
 ];
 
@@ -80,7 +75,7 @@ function ProductivitySection() {
         </div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8 lg:gap-10 max-w-7xl mx-auto">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 max-w-6xl mx-auto">
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}
@@ -99,15 +94,18 @@ function ProductivitySection() {
               className="group relative"
             >
               {/* Card */}
-              <div className="relative h-full bg-white/60 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-5 sm:p-8 border border-gray-200/50 shadow-lg shadow-gray-200/50 transition-all duration-300 group-hover:shadow-2xl group-hover:shadow-gray-300/50 group-hover:border-gray-300/50">
+              <div className="relative h-full bg-white/60 backdrop-blur-xl rounded-2xl p-5 sm:p-6 border border-gray-200/50 shadow-lg shadow-gray-200/50 transition-all duration-300 group-hover:shadow-2xl group-hover:shadow-gray-300/50 group-hover:border-gray-300/50">
                 {/* Gradient border overlay on hover */}
-                <div className={`absolute inset-0 rounded-2xl sm:rounded-3xl bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}></div>
+                <div
+                  className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-10 transition-opacity duration-300"
+                  style={{ background: 'var(--primary-gradient)' }}
+                ></div>
 
                 <div className="relative">
                   {/* Icon */}
-                  <div className="mb-3 sm:mb-6">
-                    <div className={`inline-flex items-center justify-center w-10 h-10 sm:w-16 sm:h-16 rounded-lg sm:rounded-xl bg-gradient-to-br ${feature.gradient} shadow-lg transform transition-transform duration-300 group-hover:scale-110`}>
-                      <feature.icon className="w-6 h-6 sm:w-10 sm:h-10 text-white" />
+                  <div className="mb-3 sm:mb-4">
+                    <div className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-slate-700 shadow-lg transform transition-transform duration-300 group-hover:scale-110">
+                      <feature.icon className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                     </div>
                   </div>
 

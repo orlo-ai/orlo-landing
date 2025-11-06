@@ -27,40 +27,6 @@ export const pageContent: PageContent = {
         variant: 'outline',
         icon: 'fas fa-play'
       }
-    ],
-    metrics: [
-      {
-        value: '5+ hours',
-        label: 'Weekly time saved',
-        icon: 'fas fa-clock'
-      },
-      {
-        value: '73%',
-        label: 'Less decision fatigue',
-        icon: 'fas fa-brain'
-      },
-      {
-        value: 'Zero',
-        label: 'Setup complexity',
-        icon: 'fas fa-check-circle'
-      }
-    ]
-  },
-
-  socialProof: {
-    metrics: [
-      {
-        value: '500+',
-        label: 'Beta Users'
-      },
-      {
-        value: '4.8/5',
-        label: 'User Rating'
-      },
-      {
-        value: '5h+',
-        label: 'Weekly Time Saved'
-      }
     ]
   },
 

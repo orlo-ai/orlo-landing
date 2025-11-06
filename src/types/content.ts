@@ -7,7 +7,6 @@ export interface PageContent {
     ogImage: string;
   };
   hero: HeroContent;
-  socialProof: SocialProofContent;
   problems: ProblemItem[];
   features: FeatureItem[];
   aiDemo: AIConversationContent;
@@ -24,11 +23,7 @@ export interface HeroContent {
   subheadline: string;
   description: string;
   buttons: CTAButton[];
-  metrics: Metric[];
-}
-
-export interface SocialProofContent {
-  metrics: Metric[];
+  metrics?: Metric[];
 }
 
 export interface ProblemItem {

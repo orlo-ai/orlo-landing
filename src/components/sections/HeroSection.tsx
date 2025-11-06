@@ -10,8 +10,7 @@ export default function HeroSection({
   headline,
   subheadline,
   description,
-  buttons,
-  metrics
+  buttons
 }: HeroSectionProps) {
   return (
     <section className="pt-20 sm:pt-32 pb-16 sm:pb-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
@@ -90,35 +89,6 @@ export default function HeroSection({
                 className="w-full rounded-lg shadow-lg"
               />
             </video>
-          </div>
-        </div>
-        
-        {/* Key Benefits - Moved to bottom */}
-        <div className="mt-12 lg:mt-16">
-          {/* Mobile: Horizontal card layout */}
-          <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-3 border border-gray-100/50 shadow-sm sm:hidden">
-            <div className="grid grid-cols-3 gap-3">
-              {metrics.map((metric, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-base font-medium text-gray-700 mb-1">
-                    {metric.value}
-                  </div>
-                  <div className="text-xs text-gray-500 font-normal leading-tight">{metric.label}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Desktop: Original 3-column vertical layout */}
-          <div className="hidden sm:grid sm:grid-cols-3 gap-12 pt-8 border-t border-gray-100 max-w-5xl mx-auto">
-            {metrics.map((metric, index) => (
-              <div key={index} className="text-center">
-                <div className="text-2xl lg:text-3xl font-bold gradient-text mb-2">
-                  {metric.value}
-                </div>
-                <div className="text-sm text-gray-600 font-medium">{metric.label}</div>
-              </div>
-            ))}
           </div>
         </div>
       </div>

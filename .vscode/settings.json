@@ -8,5 +8,11 @@
   "workbench.editor.enablePreview": false,
   "scm.defaultViewMode": "tree",
   "git.suggestSmartCommit": false,
-  "github.copilot.chat.welcomeMessage": "never"
+  "github.copilot.chat.welcomeMessage": "never",
+  "css.lint.unknownAtRules": "ignore",
+  "scss.lint.unknownAtRules": "ignore",
+  "tailwindCSS.experimental.classRegex": [
+    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+    ["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+  ]
 }

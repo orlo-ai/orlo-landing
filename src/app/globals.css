@@ -4,14 +4,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
-body {
-  font-family: 'Inter', sans-serif;
-  background-color: #fafafa;
-  color: #333;
-}
-
-
-
 .btn-primary {
   background: var(--primary-gradient);
   transition: all 0.3s ease;
@@ -235,17 +227,6 @@ html {
 }
 
 /* Animation utilities */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 @keyframes fadeInDown {
   from {
     opacity: 0;
@@ -277,10 +258,6 @@ html {
     opacity: 1;
     transform: translateX(0);
   }
-}
-
-.animate-fade-in-up {
-  animation: fadeInUp 0.6s ease-out;
 }
 
 .animate-fade-in-down {
@@ -357,6 +334,13 @@ html {
 
 .animate-float {
   animation: floatBackground 20s infinite ease-in-out;
+  transition: all 0.3s ease;
+}
+
+.animate-float:hover {
+  animation-duration: 15s;
+  opacity: 0.08 !important;
+  filter: blur(0.5px);
 }
 
 /* iOS 風格字體大小 */
@@ -513,18 +497,6 @@ html {
     transform: scale(4);
     opacity: 0;
   }
-}
-
-/* 背景圓圈的響應式魅力 */
-.animate-float {
-  animation: floatBackground 20s infinite ease-in-out;
-  transition: all 0.3s ease;
-}
-
-.animate-float:hover {
-  animation-duration: 15s;
-  opacity: 0.08 !important;
-  filter: blur(0.5px);
 }
 
 /* 背景圓圈與內容的呼應效果 */

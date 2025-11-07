@@ -25,12 +25,12 @@ export default function AIConversationDemo() {
         <div className="text-center mb-12">
           <h2 
             id="demo-title"
-            className="text-4xl font-bold mb-4 text-gray-900 leading-tight"
+            className="text-2xl sm:text-5xl font-bold mb-4 text-gray-900 leading-tight"
           >
             Orlo: <span className="gradient-text text-transparent">Your Day&apos;s Rhythm Ally</span>
           </h2>
           
-          <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-base sm:text-xl lg:text-2xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
             From dawn to dusk, AI guides your flow with gentle insights.
           </p>
         </div>

@@ -5,6 +5,15 @@ import Link from 'next/link';
 import { Layout } from '@/components/layout';
 import { getBlogPost, getRelatedPosts, getAllBlogPosts, blogCategories } from '@/lib/blog-articles';
 import { formatDate } from '@/lib/content-utils';
+import { ButtonLink } from '@/components/ui/ButtonLink';
+import {
+  BoltIcon,
+  ClockIcon,
+  CpuChipIcon,
+  ChartBarIcon,
+  LightBulbIcon,
+  DocumentTextIcon
+} from '@heroicons/react/24/outline';
 
 interface BlogPostPageProps {
   params: Promise<{
@@ -71,22 +80,19 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const relatedPosts = getRelatedPosts(post, 3);
   const categoryInfo = blogCategories.find(cat => cat.id === post.category);
 
+  // 分類圖標映射
+  const categoryIcons = {
+    'productivity': BoltIcon,
+    'time-management': ClockIcon,
+    'ai-tools': CpuChipIcon,
+    'case-study': ChartBarIcon,
+    'insights': LightBulbIcon,
+    'default': DocumentTextIcon
+  } as const;
+
   return (
     <Layout>
       <div className="min-h-screen bg-white">
-        {/* Breadcrumb */}
-        <div className="bg-gray-50 border-b">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-            <nav className="text-sm text-gray-600">
-              <Link href="/" className="hover:text-blue-600">Home</Link>
-              <span className="mx-2">›</span>
-              <Link href="/blog" className="hover:text-blue-600">Blog</Link>
-              <span className="mx-2">›</span>
-              <span className="text-gray-900">{post.title}</span>
-            </nav>
-          </div>
-        </div>
-
         <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           {/* Article Header */}
           <header className="mb-8">
@@ -135,13 +141,13 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           )}
 
           {/* Article Content */}
-          <div 
-            className="prose prose-lg max-w-none 
-              prose-headings:text-gray-900 prose-headings:tracking-tight
-              prose-h1:text-3xl prose-h1:mt-12 prose-h1:mb-6 prose-h1:font-bold
-              prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-5 prose-h2:font-semibold
-              prose-h3:text-lg prose-h3:mt-8 prose-h3:mb-4 prose-h3:font-medium
-              prose-p:text-gray-700 prose-p:leading-relaxed prose-p:mb-6
+          <div
+            className="prose prose-lg max-w-none
+              prose-headings:text-gray-900 prose-headings:tracking-normal
+              prose-h1:text-4xl prose-h1:mt-12 prose-h1:mb-8 prose-h1:font-semibold
+              prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:font-medium
+              prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-5 prose-h3:font-normal
+              prose-p:text-gray-700 prose-p:leading-loose prose-p:mb-8
               prose-strong:text-gray-900 prose-strong:font-medium
               prose-ul:my-6 prose-li:mb-3
               prose-a:text-blue-600 prose-a:font-medium hover:prose-a:text-blue-700 prose-a:no-underline hover:prose-a:underline
@@ -167,13 +173,32 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             </div>
           )}
 
+          {/* CTA Section */}
+          <section className="mt-12 pt-12 border-t border-gray-200">
+            <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-8 text-center">
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                Ready to optimize your time?
+              </h3>
+              <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+                Transform these strategies into action with Orlo's AI-powered time management.
+              </p>
+              <ButtonLink
+                href={`https://my.orlo.cc?utm_source=blog&utm_medium=article&utm_campaign=${post.category}&utm_content=${post.slug}`}
+                variant="primary"
+                size="lg"
+                external
+              >
+                Get Started
+              </ButtonLink>
+            </div>
+          </section>
+
         </article>
 
         {/* Related Posts */}
         {relatedPosts.length > 0 && (
           <section className="bg-gray-50 py-12">
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-8">Related Articles</h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {relatedPosts.map(relatedPost => (
                   <Link
@@ -181,6 +206,35 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                     href={`/blog/${relatedPost.slug}`}
                     className="group block bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-md transition-shadow duration-200"
                   >
+                    {/* Cover Image */}
+                    {relatedPost.coverImage ? (
+                      <div className="w-full aspect-[4/3] bg-gray-100">
+                        <img
+                          src={relatedPost.coverImage}
+                          alt={relatedPost.title}
+                          className="w-full h-full object-cover"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      </div>
+                    ) : (
+                      <div className="w-full aspect-[4/3] flex items-center justify-center">
+                        <div className={`w-16 h-16 rounded-lg flex items-center justify-center ${
+                          relatedPost.category === 'productivity' ? 'bg-gradient-to-br from-blue-500 to-blue-600' :
+                          relatedPost.category === 'time-management' ? 'bg-gradient-to-br from-green-500 to-green-600' :
+                          relatedPost.category === 'ai-tools' ? 'bg-gradient-to-br from-purple-500 to-purple-600' :
+                          relatedPost.category === 'case-study' ? 'bg-gradient-to-br from-orange-500 to-orange-600' :
+                          relatedPost.category === 'insights' ? 'bg-gradient-to-br from-red-500 to-red-600' :
+                          'bg-gradient-to-br from-gray-500 to-gray-600'
+                        }`}>
+                          {(() => {
+                            const IconComponent = categoryIcons[relatedPost.category as keyof typeof categoryIcons] || categoryIcons.default;
+                            return <IconComponent className="w-8 h-8 text-white" />;
+                          })()}
+                        </div>
+                      </div>
+                    )}
+
                     <div className="p-6">
                       <div className="flex items-center mb-3">
                         <span className="inline-block px-2 py-1 text-xs font-medium bg-gray-100 text-gray-700 rounded">

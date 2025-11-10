@@ -180,7 +180,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 Ready to optimize your time?
               </h3>
               <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-                Transform these strategies into action with Orlo's AI-powered time management.
+                Transform these strategies into action with Orlo&apos;s AI-powered time management.
               </p>
               <ButtonLink
                 href={`https://my.orlo.cc?utm_source=blog&utm_medium=article&utm_campaign=${post.category}&utm_content=${post.slug}`}

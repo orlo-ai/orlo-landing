@@ -30,15 +30,6 @@ echo "🌐 你的網站現在可以在 Firebase Hosting 上訪問了"
 echo ""
 echo "📡 通知搜尋引擎更新索引..."
 
-# Google Sitemap Ping
-echo "  → 通知 Google..."
-GOOGLE_RESPONSE=$(curl -s -o /dev/null -w "%{http_code}" "https://www.google.com/webmasters/sitemaps/ping?sitemap=https://orlo.cc/sitemap.xml")
-if [ "$GOOGLE_RESPONSE" -eq 200 ]; then
-    echo "  ✅ Google sitemap ping 成功"
-else
-    echo "  ⚠️  Google sitemap ping 回應: $GOOGLE_RESPONSE"
-fi
-
 # IndexNow (Bing, Yandex 等)
 if [ -f "scripts/indexnow.js" ]; then
     echo "  → 通知 Bing/Yandex (IndexNow)..."

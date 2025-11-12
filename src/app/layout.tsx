@@ -72,18 +72,20 @@ export default function RootLayout({
           crossOrigin="anonymous"
           referrerPolicy="no-referrer"
         />
-        <script
-          async
-          src={`https://www.googletagmanager.com/gtag/js?id=G-J6HLEC8EJZ`}
-        />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
+        {process.env.NODE_ENV === 'production' && process.env.NEXT_PUBLIC_GA_ID && (
+          <>
+            <script
+              async
+              src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
+            />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'G-J6HLEC8EJZ');
-              
+              gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}');
+
               // Custom analytics object for tracking
               window.orloAnalytics = {
                 track: function(eventName, properties) {
@@ -91,8 +93,10 @@ export default function RootLayout({
                 }
               };
             `,
-          }}
-        />
+              }}
+            />
+          </>
+        )}
       </head>
       <body className={inter.className}>{children}</body>
     </html>

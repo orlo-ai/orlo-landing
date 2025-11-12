@@ -1,0 +1,13 @@
+# https://www.robotstxt.org/robotstxt.html
+
+User-agent: *
+Allow: /
+
+# 禁止爬取的頁面
+Disallow: /pricing
+Disallow: /example
+Disallow: /privacy-policy
+Disallow: /terms
+
+# Sitemap
+Sitemap: https://orlo.cc/sitemap.xml

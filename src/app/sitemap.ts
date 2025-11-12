@@ -16,52 +16,36 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // 如果讀取失敗,繼續使用空陣列,確保 sitemap 仍能生成
   }
 
-  // 靜態頁面 (排除 pricing、example、privacy-policy、terms)
+  // 靜態頁面 - 省略 lastModified (變動不頻繁,省略比不準確更好)
+  // 移除已棄用的 changeFrequency 和 priority (Google/Bing 已忽略)
   const staticPages: MetadataRoute.Sitemap = [
     {
-      url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 1.0,
+      url: `${baseUrl}/`,
     },
     {
-      url: `${baseUrl}/blog`,
-      lastModified: new Date(),
-      changeFrequency: 'daily',
-      priority: 0.9,
+      url: `${baseUrl}/blog/`,
     },
     {
-      url: `${baseUrl}/features`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
+      url: `${baseUrl}/features/`,
     },
     {
-      url: `${baseUrl}/install-guide`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
+      url: `${baseUrl}/install-guide/`,
     },
     {
-      url: `${baseUrl}/support`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.6,
+      url: `${baseUrl}/support/`,
     },
     {
-      url: `${baseUrl}/release-notes`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.7,
+      url: `${baseUrl}/release-notes/`,
     },
   ];
 
-  // Blog 文章頁面
+  // Blog 文章頁面 - 使用實際的更新時間
   const blogPages: MetadataRoute.Sitemap = blogPosts.map((post) => ({
-    url: `${baseUrl}/blog/${post.slug}`,
-    lastModified: new Date(post.updatedAt || post.publishedAt),
-    changeFrequency: 'monthly' as const,
-    priority: 0.7,
+    url: `${baseUrl}/blog/${post.slug}/`,
+    // 使用簡化的日期格式 (YYYY-MM-DD)
+    lastModified: new Date(post.updatedAt || post.publishedAt)
+      .toISOString()
+      .split('T')[0],
   }));
 
   return [...staticPages, ...blogPages];

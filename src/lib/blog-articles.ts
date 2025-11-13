@@ -6,6 +6,16 @@ import { parseMarkdownToHTML, estimateReadingTime, formatDate } from '@/lib/cont
 
 const blogContentPath = join(process.cwd(), 'content/blog');
 
+// 預設封面圖片映射表
+const DEFAULT_COVER_IMAGES: Record<string, string> = {
+  'productivity': '/img/blog/default/productivity.jpg',
+  'time-management': '/img/blog/default/time-management.jpg',
+  'ai-tools': '/img/blog/default/ai-tools.jpg',
+  'case-study': '/img/blog/default/case-study.jpg',
+  'insights': '/img/blog/default/insights.jpg',
+};
+const FALLBACK_IMAGE = '/img/blog/default/default.jpg';
+
 // Blog categories definition
 export const blogCategories: BlogCategory[] = [
   {
@@ -83,7 +93,9 @@ export function getAllBlogPosts(): BlogPostMetadata[] {
           readTime: frontmatter.readTime || `${estimateReadingTime(content)} min read`,
           featured: frontmatter.featured || false,
           excerpt,
-          coverImage: frontmatter.coverImage,
+          coverImage: frontmatter.coverImage ||
+                      DEFAULT_COVER_IMAGES[frontmatter.category || 'insights'] ||
+                      FALLBACK_IMAGE,
         };
         
         posts.push(post);
@@ -134,7 +146,9 @@ export function getBlogPost(slug: string): BlogPost | null {
       readTime: frontmatter.readTime || `${estimateReadingTime(content)} min read`,
       featured: frontmatter.featured || false,
       excerpt,
-      coverImage: frontmatter.coverImage,
+      coverImage: frontmatter.coverImage ||
+                  DEFAULT_COVER_IMAGES[frontmatter.category || 'insights'] ||
+                  FALLBACK_IMAGE,
       seoKeywords: frontmatter.seoKeywords || [],
     };
     

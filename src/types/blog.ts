@@ -1,3 +1,9 @@
+export interface TableOfContentsItem {
+  id: string;
+  title: string;
+  level: number;
+}
+
 export interface BlogPost {
   id: string;
   title: string;
@@ -18,6 +24,7 @@ export interface BlogPost {
   excerpt: string;
   coverImage?: string;
   seoKeywords?: string[];
+  tableOfContents?: TableOfContentsItem[];
 }
 
 export interface BlogPostMetadata {

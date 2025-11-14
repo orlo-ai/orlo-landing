@@ -3,6 +3,7 @@ import { join } from 'path';
 import matter from 'gray-matter';
 import { BlogPost, BlogPostMetadata, BlogCategory } from '@/types/blog';
 import { parseMarkdownToHTML, estimateReadingTime, formatDate } from '@/lib/content-utils';
+import { ContentProcessor } from '@/lib/content';
 
 const blogContentPath = join(process.cwd(), 'content/blog');
 
@@ -120,14 +121,18 @@ export function getBlogPost(slug: string): BlogPost | null {
     const filePath = join(blogContentPath, `${slug}.mdx`);
     const fileContent = readFileSync(filePath, 'utf8');
     const { data: frontmatter, content } = matter(fileContent);
-    
+
     if (!frontmatter.title || !frontmatter.description) {
       return null;
     }
-    
+
     const htmlContent = parseMarkdownToHTML(content);
     const excerpt = frontmatter.excerpt || content.substring(0, 200) + '...';
-    
+
+    // 生成目錄，只保留 H2
+    const allToc = ContentProcessor.generateTableOfContents(content);
+    const tableOfContents = allToc.filter(item => item.level === 2);
+
     const post: BlogPost = {
       id: slug,
       title: frontmatter.title,
@@ -150,8 +155,9 @@ export function getBlogPost(slug: string): BlogPost | null {
                   DEFAULT_COVER_IMAGES[frontmatter.category || 'insights'] ||
                   FALLBACK_IMAGE,
       seoKeywords: frontmatter.seoKeywords || [],
+      tableOfContents,
     };
-    
+
     return post;
   } catch (error) {
     console.error(`Error reading blog post: ${slug}`, error);

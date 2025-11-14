@@ -8,6 +8,64 @@ export interface ParsedContent {
   content: string;
 }
 
+// 生成標題錨點 ID 的輔助函式
+export function generateHeadingId(text: string, usedIds?: Set<string>): string {
+  // 先解碼 HTML 實體，確保與原始 Markdown 文字一致
+  const decoded = text
+    // 解碼數字型 HTML 實體（如 &#39; → '）
+    .replace(/&#(\d+);/g, (match, dec) => String.fromCharCode(parseInt(dec)))
+    // 解碼十六進制 HTML 實體（如 &#x27; → '）
+    .replace(/&#x([0-9a-f]+);/gi, (match, hex) => String.fromCharCode(parseInt(hex, 16)))
+    // 解碼常見的命名 HTML 實體
+    .replace(/&quot;/g, '"')
+    .replace(/&apos;/g, "'")
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&nbsp;/g, ' ');
+
+  // 然後正常處理：轉小寫、移除特殊字元、空格轉連字號
+  let id = decoded
+    .toLowerCase()
+    .replace(/[^\w\s\u4e00-\u9fff]/g, '')
+    .replace(/\s+/g, '-');
+
+  // 如果提供了 usedIds Set，進行去重處理
+  if (usedIds) {
+    let counter = 1;
+    let uniqueId = id;
+
+    while (usedIds.has(uniqueId)) {
+      counter++;
+      uniqueId = `${id}-${counter}`;
+    }
+
+    usedIds.add(uniqueId);
+    return uniqueId;
+  }
+
+  return id;
+}
+
+// 配置 marked renderer，為標題添加 ID
+const renderer = new marked.Renderer();
+
+// 用於追蹤已使用的 ID，每次渲染時重置
+let currentUsedIds = new Set<string>();
+
+renderer.heading = function({ tokens, depth }) {
+  const text = this.parser.parseInline(tokens);
+  const id = generateHeadingId(text, currentUsedIds);
+
+  return `<h${depth} id="${id}">${text}</h${depth}>\n`;
+};
+
+marked.setOptions({
+  renderer: renderer,
+  gfm: true,
+  breaks: false,
+});
+
 // 檢查是否應該顯示草稿
 export function shouldShowDraft(isDraft?: boolean): boolean {
   if (!isDraft) return true; // 非草稿總是顯示
@@ -55,6 +113,8 @@ export function parseMarkdownFile(
 
 // 統一的 Markdown 轉 HTML
 export function parseMarkdownToHTML(content: string): string {
+  // 每次渲染前重置已使用的 ID Set，確保去重邏輯正常工作
+  currentUsedIds = new Set<string>();
   return marked(content) as string;
 }
 

@@ -1,4 +1,5 @@
 import { PageContent, Section } from '@/types/content';
+import { generateHeadingId } from '@/lib/content-utils';
 
 // 內容處理工具函數
 export class ContentProcessor {
@@ -80,15 +81,13 @@ export class ContentProcessor {
   }> {
     const headingRegex = /^(#{1,6})\s+(.+)$/gm;
     const toc: Array<{ id: string; title: string; level: number }> = [];
+    const usedIds = new Set<string>();
     let match;
 
     while ((match = headingRegex.exec(content)) !== null) {
       const level = match[1].length;
       const title = match[2].trim();
-      const id = title
-        .toLowerCase()
-        .replace(/[^\w\s\u4e00-\u9fff]/g, '')
-        .replace(/\s+/g, '-');
+      const id = generateHeadingId(title, usedIds);
 
       toc.push({ id, title, level });
     }

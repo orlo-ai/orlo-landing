@@ -6,6 +6,7 @@ import { Layout } from '@/components/layout';
 import { getBlogPost, getRelatedPosts, getAllBlogPosts, blogCategories } from '@/lib/blog-articles';
 import { formatDate } from '@/lib/content-utils';
 import { ButtonLink } from '@/components/ui/ButtonLink';
+import { BlogTableOfContents } from '@/components/blog/BlogTableOfContents';
 import {
   BoltIcon,
   ClockIcon,
@@ -93,9 +94,19 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   return (
     <Layout>
       <div className="min-h-screen bg-white">
-        <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          {/* Article Header */}
-          <header className="mb-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="flex gap-16">
+            {/* Table of Contents - 左側 */}
+            {post.tableOfContents && post.tableOfContents.length > 0 && (
+              <aside className="hidden lg:block w-64 shrink-0">
+                <BlogTableOfContents items={post.tableOfContents} />
+              </aside>
+            )}
+
+            {/* Main Article Content - 中間 */}
+            <article className="flex-1 max-w-3xl">
+              {/* Article Header */}
+              <header className="mb-8">
             
             <div className="flex items-center mb-4">
               <span className={`inline-block px-3 py-1 text-sm font-medium rounded-full ${
@@ -173,27 +184,28 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             </div>
           )}
 
-          {/* CTA Section */}
-          <section className="mt-12 pt-12 border-t border-gray-200">
-            <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-8 text-center">
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">
-                Ready to optimize your time?
-              </h3>
-              <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-                Transform these strategies into action with Orlo&apos;s AI-powered time management.
-              </p>
-              <ButtonLink
-                href={`https://my.orlo.cc?utm_source=blog&utm_medium=article&utm_campaign=${post.category}&utm_content=${post.slug}`}
-                variant="primary"
-                size="lg"
-                external
-              >
-                Get Started
-              </ButtonLink>
-            </div>
-          </section>
-
-        </article>
+              {/* CTA Section */}
+              <section className="mt-12 pt-12 border-t border-gray-200">
+                <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-8 text-center">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                    Ready to optimize your time?
+                  </h3>
+                  <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+                    Transform these strategies into action with Orlo&apos;s AI-powered time management.
+                  </p>
+                  <ButtonLink
+                    href={`https://my.orlo.cc?utm_source=blog&utm_medium=article&utm_campaign=${post.category}&utm_content=${post.slug}`}
+                    variant="primary"
+                    size="lg"
+                    external
+                  >
+                    Get Started
+                  </ButtonLink>
+                </div>
+              </section>
+            </article>
+          </div>
+        </div>
 
         {/* Related Posts */}
         {relatedPosts.length > 0 && (

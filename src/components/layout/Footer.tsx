@@ -90,6 +90,24 @@ export default function Footer() {
                   {social.icon}
                 </a>
               ))}
+   
+
+            {/* Startup Fame Badge */}
+              <a
+                href="https://startupfa.me/s/orlo?utm_source=orlo.cc"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block opacity-60 hover:opacity-100 transition-opacity duration-200"
+                aria-label="Orlo featured on Startup Fame"
+              >
+                <Image
+                  src="https://startupfa.me/badges/featured/light-small.webp"
+                  alt="Orlo - Featured on Startup Fame"
+                  width={124}
+                  height={20}
+                  className="h-5 w-auto"
+                />
+              </a>
             </div>
           </div>
 

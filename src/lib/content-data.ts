@@ -324,13 +324,35 @@ export const pageContent: PageContent = {
           'Everything in Starter, plus:',
           'Unlimited AI planning and task optimization',
           'Advanced day summaries with actionable insights',
-          'Weekly and monthly reviews with AI coaching',
           'Priority email support',
           'Early access to new features'
         ],
         cta: {
           text: 'Start Free',
           href: 'https://my.orlo.cc',
+          variant: 'primary'
+        },
+        highlight: false
+      },
+      {
+        id: 'lifetime',
+        name: 'Life Time',
+        price: '$144',
+        originalPrice: '$240',
+        period: 'one-time',
+        description: 'One-time purchase, lifetime Pro features & updates.',
+        priceNote: 'One-time purchase to access all features.',
+        badge: 'Black Friday 40% Off',
+        features: [
+          'Everything in Starter, plus:',
+          'Unlimited AI planning and task optimization',
+          'Advanced day summaries with actionable insights',
+          'Priority email support',
+          'Early access to new features'
+        ],
+        cta: {
+          text: 'Get Lifetime Access',
+          href: 'https://buy.polar.sh/polar_cl_x20xaDFB1eHc9iNla7YVQtyhhLdcDT6OoydID12FjNZ',
           variant: 'primary'
         },
         highlight: true

@@ -110,6 +110,7 @@ export interface PricingPlan {
   id: string;
   name: string;
   price: string;
+  originalPrice?: string;
   period: string;
   description: string;
   features: string[];

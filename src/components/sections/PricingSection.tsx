@@ -6,6 +6,8 @@ interface PricingSectionProps {
 }
 
 export default function PricingSection({ pricing }: PricingSectionProps) {
+  const lifetimePlan = pricing.plans.find(p => p.id === 'lifetime');
+
   return (
     <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-50 to-white">
       <div className="max-w-6xl mx-auto">
@@ -14,43 +16,61 @@ export default function PricingSection({ pricing }: PricingSectionProps) {
           <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-slate-900">
             Choose Your <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Partnership</span>
           </h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto mb-6">
             Start with full access today, then choose the level that fits your ambitions.
           </p>
+          {lifetimePlan?.badge && (
+            <a
+              href="#lifetime"
+              className="mt-4 inline-block lg:hidden bg-indigo-100 text-indigo-600 px-4 py-2 rounded-full text-sm font-medium transition-transform hover:scale-105 active:scale-95 animate-pulse hover:animate-none"
+            >
+              Black Friday: Get 40% off Lifetime ↓
+            </a>
+          )}
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid lg:grid-cols-2 gap-8 max-w-4xl mx-auto mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto mb-16">
           {pricing.plans.map((plan) => (
             <div
               key={plan.id}
+              id={plan.id}
               className={`
-                pricing-card relative bg-white rounded-3xl p-8 shadow-sm border
+                pricing-card relative bg-white rounded-3xl p-8 shadow-sm border scroll-mt-20
                 ${plan.highlight
                   ? 'pricing-card-featured border-2 border-indigo-200 shadow-lg ring-1 ring-indigo-100'
                   : 'border border-slate-200'
                 }
               `}
             >
-              {/* Badge */}
-              {plan.badge && (
-                <div className="absolute top-4 right-6 z-10">
-                  <div className="bg-slate-100 text-slate-600 px-3 py-1 rounded text-xs font-medium">
-                    {plan.badge}
-                  </div>
-                </div>
-              )}
-
               {/* Plan Header */}
-              <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-slate-900 mb-6">{plan.name}</h3>
+              <div className="text-left mb-8">
+                <div className="flex items-center justify-between mb-6">
+                  <h3 className="text-2xl font-bold text-slate-900">{plan.name}</h3>
+                  {plan.badge && (
+                    <div className="bg-indigo-100 text-indigo-600 px-3 py-1 rounded-full text-xs font-medium">
+                      {plan.badge}
+                    </div>
+                  )}
+                </div>
 
                 {/* Price */}
                 <div className="mb-2">
                   {plan.price === 'Free' ? (
                     <div className="pricing-amount text-5xl font-bold">Free</div>
+                  ) : plan.originalPrice ? (
+                    <div className="flex items-baseline justify-start gap-2">
+                      <div className="flex items-baseline gap-1">
+                        <span className="text-2xl font-medium text-slate-400 line-through decoration-2 decoration-red-500">${plan.originalPrice.replace('$', '')}</span>
+                      </div>
+                      <div className="flex items-baseline gap-1">
+                        <span className="text-2xl font-medium text-slate-600">$</span>
+                        <span className="pricing-amount text-5xl font-bold">{plan.price.replace('$', '')}</span>
+                      </div>
+                      <span className="text-xl text-slate-600">{plan.period}</span>
+                    </div>
                   ) : (
-                    <div className="flex items-baseline justify-center gap-1">
+                    <div className="flex items-baseline justify-start gap-1">
                       <span className="text-2xl font-medium text-slate-600">$</span>
                       <span className="pricing-amount text-5xl font-bold">{plan.price.replace('$', '')}</span>
                       <span className="text-xl text-slate-600">{plan.period}</span>

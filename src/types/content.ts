@@ -118,6 +118,19 @@ export interface PricingPlan {
   highlight?: boolean;
   badge?: string;
   priceNote?: string;
+  // 支援多計費週期的動態定價
+  billingOptions?: {
+    monthly?: {
+      price: string;
+      priceNote?: string;
+      originalPrice?: string;
+    };
+    yearly?: {
+      price: string;
+      priceNote?: string;
+      originalPrice?: string;
+    };
+  };
 }
 
 export interface Section {

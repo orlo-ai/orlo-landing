@@ -302,7 +302,7 @@ export const pageContent: PageContent = {
         priceNote: 'Forever free, no credit card required',
         features: [
           'Includes:',
-          'Today Focus Board',
+          'Complete Productivity Suite',
           'Calendar & Timeboxing',
           'Morning Kickoff & Day Close',
           'Short-term AI Memory',
@@ -326,14 +326,23 @@ export const pageContent: PageContent = {
         period: '/month',
         description: 'For professionals seeking deep focus and AI automation',
         priceNote: 'Billed annually at $96/year',
+        billingOptions: {
+          monthly: {
+            price: '$12',
+            priceNote: 'Billed monthly, cancel anytime'
+          },
+          yearly: {
+            price: '$8',
+            priceNote: 'Billed annually at $96/year'
+          }
+        },
         features: [
           'Everything in Free, plus:',
           'Continuously Optimized Memory',
           'Unlimited Tasks',
           'Unlimited Captures',
           'Unlimited Goals',
-          'Unlimited AI Planning',
-          'Unlimited Task Splitting',
+          'Unlimited AI Generations',
           'Deep Coach Insights',
           'Permanent History',
           'Priority Support'

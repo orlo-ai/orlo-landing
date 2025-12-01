@@ -295,19 +295,25 @@ export const pageContent: PageContent = {
     plans: [
       {
         id: 'free',
-        name: 'Starter',
-        price: 'Free',
-        period: 'Forever free, no credit card required',
-        description: 'Perfect for getting started with AI-powered time management',
+        name: 'Free',
+        price: '$0',
+        period: '/month',
+        description: 'Perfect for individuals building their first productivity system',
+        priceNote: 'Forever free, no credit card required',
         features: [
-          'Core time boxing with daily planning',
-          'Quick capture for ideas and tasks',
-          'Today view dashboard',
-          'Basic AI suggestions (daily limit)',
-          'Mobile and web access'
+          'Includes:',
+          'Today Focus Board',
+          'Calendar & Timeboxing',
+          'Morning Kickoff & Day Close',
+          'Short-term AI Memory',
+          '50 Active Tasks',
+          '50 Quick Captures',
+          '2 Goals',
+          'Limited AI Generations',
+          '30-Day History'
         ],
         cta: {
-          text: 'Start Free',
+          text: 'Get Started',
           href: 'https://my.orlo.cc',
           variant: 'secondary'
         },
@@ -318,17 +324,22 @@ export const pageContent: PageContent = {
         name: 'Pro',
         price: '$8',
         period: '/month',
-        description: 'Unlock the full power of your AI Rhythm Ally',
+        description: 'For professionals seeking deep focus and AI automation',
         priceNote: 'Billed annually at $96/year',
         features: [
-          'Everything in Starter, plus:',
-          'Unlimited AI planning and task optimization',
-          'Advanced day summaries with actionable insights',
-          'Priority email support',
-          'Early access to new features'
+          'Everything in Free, plus:',
+          'Continuously Optimized Memory',
+          'Unlimited Tasks',
+          'Unlimited Captures',
+          'Unlimited Goals',
+          'Unlimited AI Planning',
+          'Unlimited Task Splitting',
+          'Deep Coach Insights',
+          'Permanent History',
+          'Priority Support'
         ],
         cta: {
-          text: 'Start Free',
+          text: 'Start 14-Day Free Trial',
           href: 'https://my.orlo.cc',
           variant: 'primary'
         },
@@ -336,19 +347,20 @@ export const pageContent: PageContent = {
       },
       {
         id: 'lifetime',
-        name: 'Life Time',
+        name: 'Lifetime',
         price: '$144',
         originalPrice: '$240',
         period: 'one-time',
-        description: 'One-time purchase, lifetime Pro features & updates.',
         priceNote: 'One-time purchase to access all features.',
+        description: 'Get full Pro access for life and support independent development',
         badge: 'Black Friday 40% Off',
         features: [
-          'Everything in Starter, plus:',
-          'Unlimited AI planning and task optimization',
-          'Advanced day summaries with actionable insights',
-          'Priority email support',
-          'Early access to new features'
+          'Everything in Pro, plus:',
+          'One-time payment',
+          'Lifetime access',
+          'All future updates',
+          'Lock in current price',
+          'Priority support'
         ],
         cta: {
           text: 'Get Lifetime Access',

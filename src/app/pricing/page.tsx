@@ -1,5 +1,6 @@
 import { Layout } from '@/components/layout';
 import PricingSection from '@/components/sections/PricingSection';
+import PlanComparisonSection from '@/components/sections/PlanComparisonSection';
 import { pageContent } from '@/lib/content-data';
 import { Metadata } from 'next';
 
@@ -19,6 +20,9 @@ export default function PricingPage() {
     <Layout>
       <div className="pt-16">
         <PricingSection pricing={pageContent.pricing} />
+        {pageContent.pricing.comparison && (
+          <PlanComparisonSection comparison={pageContent.pricing.comparison} />
+        )}
       </div>
     </Layout>
   );

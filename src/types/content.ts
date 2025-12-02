@@ -104,6 +104,41 @@ export interface PricingContent {
   title: string;
   description: string;
   plans: PricingPlan[];
+  comparison?: PlanComparisonTable;
+}
+
+// 方案對比表相關型別
+export interface PlanComparisonTable {
+  title: string;
+  description?: string;
+  categories: ComparisonCategory[];
+  plans: ComparisonPlanHeader[];
+}
+
+export interface ComparisonPlanHeader {
+  id: string;
+  name: string;
+}
+
+export interface ComparisonCategory {
+  id: string;
+  name: string;
+  description?: string;
+  features: ComparisonFeature[];
+}
+
+export interface ComparisonFeature {
+  id: string;
+  name: string;
+  description?: string;
+  values: ComparisonValue[];
+}
+
+export interface ComparisonValue {
+  planId: string;
+  type: 'full' | 'limited' | 'unavailable' | 'unlimited';
+  display: string;
+  icon?: 'check' | 'hourglass' | 'bolt' | 'x';
 }
 
 export interface PricingPlan {

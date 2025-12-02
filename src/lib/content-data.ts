@@ -378,7 +378,200 @@ export const pageContent: PageContent = {
         },
         highlight: true
       }
-    ]
+    ],
+    comparison: {
+      title: 'Compare Plans',
+      description: "See what's included in each plan",
+      plans: [
+        { id: 'free', name: 'Free' },
+        { id: 'pro', name: 'Pro' }
+      ],
+      categories: [
+        {
+          id: 'core-productivity',
+          name: 'Core Productivity',
+          description: 'Essential tools to organize your day',
+          features: [
+            {
+              id: 'today-focus',
+              name: 'Today Focus Board',
+              description: 'Visual board for daily priorities',
+              values: [
+                { planId: 'free', type: 'full', display: 'Full access', icon: 'check' },
+                { planId: 'pro', type: 'full', display: 'Full access', icon: 'check' }
+              ]
+            },
+            {
+              id: 'calendar',
+              name: 'Calendar & Timeboxing',
+              description: 'Schedule tasks in your calendar',
+              values: [
+                { planId: 'free', type: 'full', display: 'Full access', icon: 'check' },
+                { planId: 'pro', type: 'full', display: 'Full access', icon: 'check' }
+              ]
+            },
+            {
+              id: 'captures',
+              name: 'Captures',
+              description: 'Quick capture of thoughts and ideas',
+              values: [
+                { planId: 'free', type: 'limited', display: '50 captures', icon: 'check' },
+                { planId: 'pro', type: 'unlimited', display: 'Unlimited', icon: 'check' }
+              ]
+            },
+            {
+              id: 'tasks',
+              name: 'Tasks',
+              description: 'Organize and track your tasks',
+              values: [
+                { planId: 'free', type: 'limited', display: '50 tasks', icon: 'check' },
+                { planId: 'pro', type: 'unlimited', display: 'Unlimited', icon: 'check' }
+              ]
+            },
+            {
+              id: 'goals',
+              name: 'Goals',
+              description: 'Set and track long-term objectives',
+              values: [
+                { planId: 'free', type: 'limited', display: '2 goals', icon: 'hourglass' },
+                { planId: 'pro', type: 'unlimited', display: 'Unlimited', icon: 'check' }
+              ]
+            }
+          ]
+        },
+        {
+          id: 'ai-memory',
+          name: 'AI & Memory Limits',
+          description: 'Smart features powered by AI',
+          features: [
+            {
+              id: 'memory',
+              name: 'Memory',
+              description: 'AI learns from your patterns',
+              values: [
+                { planId: 'free', type: 'limited', display: 'Last 10 memories', icon: 'hourglass' },
+                { planId: 'pro', type: 'full', display: 'Infinite & Evolving', icon: 'check' }
+              ]
+            },
+            {
+              id: 'morning-kickoff',
+              name: 'Morning Kickoff',
+              description: 'AI-powered day planning',
+              values: [
+                { planId: 'free', type: 'limited', display: '1 /day', icon: 'bolt' },
+                { planId: 'pro', type: 'unlimited', display: 'Unlimited', icon: 'check' }
+              ]
+            },
+            {
+              id: 'day-close',
+              name: 'Day Close',
+              description: 'Reflect on your day',
+              values: [
+                { planId: 'free', type: 'full', display: 'Full access', icon: 'check' },
+                { planId: 'pro', type: 'full', display: 'Full access', icon: 'check' }
+              ]
+            },
+            {
+              id: 'day-plan',
+              name: 'Day Plan',
+              description: 'Generate daily schedules',
+              values: [
+                { planId: 'free', type: 'limited', display: '2 /day', icon: 'bolt' },
+                { planId: 'pro', type: 'unlimited', display: 'Unlimited', icon: 'check' }
+              ]
+            },
+            {
+              id: 'smart-suggestion',
+              name: 'Smart Suggestion',
+              description: 'AI task recommendations',
+              values: [
+                { planId: 'free', type: 'limited', display: '3 /day', icon: 'bolt' },
+                { planId: 'pro', type: 'unlimited', display: 'Unlimited', icon: 'check' }
+              ]
+            },
+            {
+              id: 'capture-to-task',
+              name: 'Capture to Task',
+              description: 'Turn rough notes into actionable tasks ',
+              values: [
+                { planId: 'free', type: 'limited', display: '5 /day', icon: 'bolt' },
+                { planId: 'pro', type: 'unlimited', display: 'Unlimited', icon: 'check' }
+              ]
+            },
+            {
+              id: 'task-clarify',
+              name: 'Task Clarify',
+              description: 'AI helps clarify task details',
+              values: [
+                { planId: 'free', type: 'limited', display: '5 /day', icon: 'bolt' },
+                { planId: 'pro', type: 'unlimited', display: 'Unlimited', icon: 'check' }
+              ]
+            },
+            {
+              id: 'find-slots',
+              name: 'Find Slots',
+              description: 'Find slots in upcoming days',
+              values: [
+                { planId: 'free', type: 'limited', display: 'Next 3 days', icon: 'hourglass' },
+                { planId: 'pro', type: 'unlimited', display: 'Next 7 days', icon: 'check' }
+              ]
+            },
+            {
+              id: 'task-split',
+              name: 'Task Split',
+              description: 'Break down complex tasks',
+              values: [
+                { planId: 'free', type: 'limited', display: '5 /day', icon: 'bolt' },
+                { planId: 'pro', type: 'unlimited', display: 'Unlimited', icon: 'check' }
+              ]
+            },
+            {
+              id: 'coach-feedback',
+              name: 'Coach Feedback',
+              description: 'Personalized productivity insights',
+              values: [
+                { planId: 'free', type: 'limited', display: 'Basic' },
+                { planId: 'pro', type: 'full', display: 'In-depth' }
+              ]
+            }
+          ]
+        },
+        {
+          id: 'growth-retention',
+          name: 'Growth & Retention',
+          description: 'Scale your system as you grow',
+          features: [
+            {
+              id: 'history',
+              name: 'History',
+              description: 'Access to past data',
+              values: [
+                { planId: 'free', type: 'limited', display: '30 days', icon: 'hourglass' },
+                { planId: 'pro', type: 'unlimited', display: 'Permanent', icon: 'check' }
+              ]
+            },
+            {
+              id: 'support',
+              name: 'Support',
+              description: 'Customer support options',
+              values: [
+                { planId: 'free', type: 'limited', display: 'Community & Docs' },
+                { planId: 'pro', type: 'full', display: 'Email Support' }
+              ]
+            },
+            {
+              id: 'new-features',
+              name: 'New Features',
+              description: 'Early access to updates',
+              values: [
+                { planId: 'free', type: 'unavailable', display: 'Standard Release' },
+                { planId: 'pro', type: 'full', display: 'Priority Access' }
+              ]
+            }
+          ]
+        }
+      ]
+    }
   },
 
   sections: [],

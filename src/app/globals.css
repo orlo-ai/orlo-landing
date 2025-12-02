@@ -813,3 +813,30 @@ html {
     color: #fff !important;
   }
 }
+
+/* ✨ Pricing Features Collapse Animation */
+
+/* Key Features 按鈕的懸停效果 */
+.pricing-features-toggle {
+  transition: all 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.pricing-features-toggle:active {
+  transform: scale(0.98);
+}
+
+/* 無障礙：尊重減少動畫偏好 */
+@media (prefers-reduced-motion: reduce) {
+  .pricing-features-collapse,
+  .pricing-features-toggle {
+    transition: none !important;
+  }
+}
+
+/* 觸控裝置優化 */
+@media (hover: none) and (pointer: coarse) {
+  .pricing-features-toggle {
+    min-height: 44px; /* 符合觸控尺寸標準 */
+  }
+}

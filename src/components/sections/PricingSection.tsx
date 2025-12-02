@@ -10,6 +10,11 @@ interface PricingSectionProps {
 
 export default function PricingSection({ pricing }: PricingSectionProps) {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('yearly');
+  const [expandedPlans, setExpandedPlans] = useState<Record<string, boolean>>({
+    free: false,
+    pro: false,
+    lifetime: false,
+  });
   const lifetimePlan = pricing.plans.find(p => p.id === 'lifetime');
   const proPlan = pricing.plans.find(p => p.id === 'pro');
 
@@ -22,6 +27,14 @@ export default function PricingSection({ pricing }: PricingSectionProps) {
   };
 
   const proPricing = getProPricing();
+
+  // 切換功能列表展開/收合
+  const togglePlanFeatures = (planId: string) => {
+    setExpandedPlans(prev => ({
+      ...prev,
+      [planId]: !prev[planId]
+    }));
+  };
 
   return (
     <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-50 to-white">
@@ -44,47 +57,6 @@ export default function PricingSection({ pricing }: PricingSectionProps) {
           )}
         </div>
 
-        {/* Desktop: Billing Cycle Segmented Control */}
-        <div className="hidden lg:flex flex-col items-center mb-12">
-          {/* 內聯容器 - 寬度由 Segmented Control 決定 */}
-          <div className="inline-flex flex-col">
-            <div className="relative inline-flex items-center bg-slate-100 rounded-lg p-1">
-              {/* Sliding Background Indicator */}
-              <div
-                className={`absolute top-1 bottom-1 left-1 right-1 w-[calc(50%-0.25rem)] bg-white rounded-md shadow-sm transition-all duration-200 ${
-                  billingCycle === 'yearly' ? 'left-auto right-1' : ''
-                }`}
-              />
-
-              {/* Month Button */}
-              <button
-                onClick={() => setBillingCycle('monthly')}
-                className={`relative z-10 px-6 py-2 text-sm font-medium transition-colors ${
-                  billingCycle === 'monthly' ? 'text-slate-900' : 'text-slate-600'
-                }`}
-              >
-                Month
-              </button>
-
-              {/* Year Button */}
-              <button
-                onClick={() => setBillingCycle('yearly')}
-                className={`relative z-10 px-6 py-2 text-sm font-medium transition-colors ${
-                  billingCycle === 'yearly' ? 'text-slate-900' : 'text-slate-600'
-                }`}
-              >
-                Year
-              </button>
-            </div>
-
-            {/* Save Badge - Below and aligned to right with fixed height to prevent layout shift */}
-            <div className="flex justify-end mt-2 h-5">
-              {billingCycle === 'yearly' && (
-                <span className="text-xs text-gray-600 font-medium">Save 33%</span>
-              )}
-            </div>
-          </div>
-        </div>
 
         {/* Pricing Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto mb-16">
@@ -109,41 +81,34 @@ export default function PricingSection({ pricing }: PricingSectionProps) {
                 <div className="flex items-center justify-between mb-6">
                   <h3 className="text-2xl font-bold text-slate-900">{displayPlan.name}</h3>
 
-                  {/* Mobile: Billing Cycle Segmented Control (Pro plan only) */}
+                  {/* Billing Cycle Toggle (Pro plan only) */}
                   {plan.id === 'pro' && (
-                    <div className="lg:hidden">
-                      <div className="relative inline-flex items-center bg-slate-100 rounded-lg p-0.5">
-                        {/* Sliding Background Indicator */}
-                        <div
-                          className={`absolute top-0.5 bottom-0.5 left-0.5 right-0.5 w-[calc(50%-0.25rem)] bg-white rounded-md shadow-sm transition-all duration-200 ${
-                            billingCycle === 'yearly' ? 'left-auto right-0.5' : ''
-                          }`}
-                        />
-
-                        {/* Month Button */}
-                        <button
-                          onClick={() => setBillingCycle('monthly')}
-                          className={`relative z-10 px-4 py-1 text-xs font-medium transition-colors ${
-                            billingCycle === 'monthly' ? 'text-slate-900' : 'text-slate-600'
-                          }`}
-                        >
-                          Month
-                        </button>
-
-                        {/* Year Button - Mobile without Save badge */}
-                        <button
-                          onClick={() => setBillingCycle('yearly')}
-                          className={`relative z-10 px-4 py-1 text-xs font-medium transition-colors ${
-                            billingCycle === 'yearly' ? 'text-slate-900' : 'text-slate-600'
-                          }`}
-                        >
-                          Year
-                        </button>
-                      </div>
+                    <div className="inline-flex items-center gap-2 bg-slate-50 rounded-xl p-1.5  border-slate-200">
+                      <button
+                        onClick={() => setBillingCycle('monthly')}
+                        className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 ${
+                          billingCycle === 'monthly'
+                            ? 'bg-white text-slate-900 shadow-sm  border-slate-200'
+                            : 'text-slate-500 hover:text-slate-700 hover:bg-slate-100'
+                        }`}
+                      >
+                        Month
+                      </button>
+                      <button
+                        onClick={() => setBillingCycle('yearly')}
+                        className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 ${
+                          billingCycle === 'yearly'
+                            ? 'bg-white text-slate-900 shadow-sm  border-slate-200'
+                            : 'text-slate-500 hover:text-slate-700 hover:bg-slate-100'
+                        }`}
+                      >
+                        Year
+                      </button>
                     </div>
                   )}
 
-                  {displayPlan.badge && (
+                  {/* Badge - For non-Pro plans */}
+                  {displayPlan.badge && plan.id !== 'pro' && (
                     <div className="bg-indigo-100 text-indigo-600 px-3 py-1 rounded-full text-xs font-medium">
                       {displayPlan.badge}
                     </div>
@@ -207,30 +172,77 @@ export default function PricingSection({ pricing }: PricingSectionProps) {
               </div>
 
               {/* Features */}
-              <div className="border-t border-slate-100 pt-8 mb-8">
-                <ul className="space-y-4">
-                  {displayPlan.features.map((feature, index) => {
-                    const isFirstItem = index === 0;
-                    return (
-                      <li key={index} className="flex items-start">
-                        {!isFirstItem && (
-                          <div className="flex-shrink-0 w-5 h-5 flex items-center justify-center mr-3 mt-0.5">
-                            <svg className="w-4 h-4 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                          </div>
-                        )}
-                        <span
-                          className={`text-slate-700 leading-relaxed ${
-                            isFirstItem ? 'font-semibold' : ''
-                          }`}
-                        >
-                          {feature}
-                        </span>
-                      </li>
-                    );
-                  })}
-                </ul>
+              <div className="border-t border-slate-100 pt-4">
+                {/* Mobile: Key Features Button (collapsed state - top) */}
+                {!expandedPlans[plan.id] && (
+                  <button
+                    onClick={() => togglePlanFeatures(plan.id)}
+                    className="lg:hidden w-full flex items-center justify-between py-3 px-4 mb-0 text-slate-700 hover:bg-slate-50 rounded-lg transition-colors duration-200"
+                    aria-expanded={expandedPlans[plan.id]}
+                    aria-label={`Expand features for ${plan.name} plan`}
+                  >
+                    <span className="font-semibold text-sm">Key features</span>
+                    <svg
+                      className="w-5 h-5 text-slate-600"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                )}
+
+                {/* Features List - Collapsible on mobile, always expanded on desktop */}
+                <div
+                  className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                    expandedPlans[plan.id]
+                      ? 'max-h-[2000px] opacity-100'
+                      : 'max-h-0 opacity-0 lg:max-h-[2000px] lg:opacity-100'
+                  }`}
+                >
+                  <ul className="space-y-4 mb-4 lg:mb-0">
+                    {displayPlan.features.map((feature, index) => {
+                      const isFirstItem = index === 0;
+                      return (
+                        <li key={index} className="flex items-start">
+                          {!isFirstItem && (
+                            <div className="flex-shrink-0 w-5 h-5 flex items-center justify-center mr-3 mt-0.5">
+                              <svg className="w-4 h-4 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                              </svg>
+                            </div>
+                          )}
+                          <span
+                            className={`text-slate-700 leading-relaxed ${
+                              isFirstItem ? 'font-semibold' : ''
+                            }`}
+                          >
+                            {feature}
+                          </span>
+                        </li>
+                      );
+                    })}
+                  </ul>
+
+                  {/* Mobile: Key Features Button (expanded state - bottom) */}
+                  <button
+                    onClick={() => togglePlanFeatures(plan.id)}
+                    className="lg:hidden w-full flex items-center justify-between py-3 px-4  text-slate-700 hover:bg-slate-50 rounded-lg transition-colors duration-200"
+                    aria-expanded={expandedPlans[plan.id]}
+                    aria-label={`Collapse features for ${plan.name} plan`}
+                  >
+                    <span className="font-semibold text-sm">Key features</span>
+                    <svg
+                      className="w-5 h-5 text-slate-600 rotate-180"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                </div>
               </div>
             </div>
             );

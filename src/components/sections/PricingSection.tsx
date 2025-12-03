@@ -45,7 +45,7 @@ export default function PricingSection({ pricing }: PricingSectionProps) {
             Choose Your <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Partnership</span>
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto mb-6">
-            Start with full access today, then choose the level that fits your ambitions.
+            Start with full access. Choose the plan that fits you best
           </p>
           {lifetimePlan?.badge && (
             <a

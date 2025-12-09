@@ -357,12 +357,12 @@ export const pageContent: PageContent = {
       {
         id: 'lifetime',
         name: 'Lifetime',
-        price: '$144',
+        price: '$168',
         originalPrice: '$240',
         period: 'one-time',
         priceNote: 'One-time purchase to access all features.',
         description: 'Get full Pro access for life and support independent development',
-        badge: 'Black Friday 40% Off',
+        badge: 'Year-End Sale 30% Off',
         features: [
           'Everything in Pro, plus:',
           'One-time payment',
@@ -373,7 +373,7 @@ export const pageContent: PageContent = {
         ],
         cta: {
           text: 'Get Lifetime Access',
-          href: 'https://buy.polar.sh/polar_cl_x20xaDFB1eHc9iNla7YVQtyhhLdcDT6OoydID12FjNZ',
+          href: 'https://buy.polar.sh/polar_cl_yocgefm7vMHlLfKEOqSmhcglc2YLbUFb11M2X4SH30b',
           variant: 'primary'
         },
         highlight: true

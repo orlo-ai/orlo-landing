@@ -52,7 +52,7 @@ export default function PricingSection({ pricing }: PricingSectionProps) {
               href="#lifetime"
               className="mt-4 inline-block lg:hidden bg-indigo-100 text-indigo-600 px-4 py-2 rounded-full text-sm font-medium transition-transform hover:scale-105 active:scale-95 animate-pulse hover:animate-none"
             >
-              Black Friday: Get 40% off Lifetime ↓
+              Year-End Sale: 30% off Lifetime ↓
             </a>
           )}
         </div>
